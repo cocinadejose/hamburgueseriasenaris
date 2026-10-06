@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida del Pellegrino per Santiago | Señarís Burger Bar</title>
+    <meta name="description" content="La guida definitiva per il pellegrino del Cammino di Santiago. Consigli, tappe, mappe e segreti locali dal tuo amichevole burger bar a Santiago.">
+    <link rel="canonical" href="https://hamburgueseriasenaris.com/it/camino/" />
+    
+    <!-- HREFLANG per 9 lingue + Standard -->
+    <link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/camino/" />
+    <link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/camino/" />
+    <link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/camino/" />
+    <link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/camino/" />
+    <link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/camino/" />
+    <link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/camino/" />
+    <link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/camino/" />
+    <link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/camino/" />
+    <link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/camino/" />
+    <link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/camino/" />
+
+    <!-- Percorsi dei file (salendo di due livelli per trovare le risorse ) -->
+    <link rel="icon" href="../../favicon.ico" sizes="any">
+    <link rel="stylesheet" href="../../css/style-index.css">
+    <style>
+        /* Stili per le schede degli articoli */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .article-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .article-card-content h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #333;
+        }
+        .article-card-content p {
+            flex-grow: 1;
+            color: #666;
+        }
+        .article-card-content .btn {
+            margin-top: 1rem;
+            align-self: flex-start;
+        }
+        .card-disabled {
+    position: relative; /* Necesario para posicionar el badge */
+    opacity: 0.6;       /* Hace toda la tarjeta semitransparente */
+    pointer-events: none; /* El usuario no podrá interactuar con nada de la tarjeta */
+}
+
+.badge-proximamente {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #d63031; /* Un color que llame la atención */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 10; /* Para que se ponga por encima de la imagen */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra di Navigazione Principale -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">SEÑARÍS BURGER BAR</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#inicio">Home</a></li>
+                <li><a href="../#quienes-somos">Chi siamo</a></li>
+                <li><a href="../#nuestro-local">Il nostro locale</a></li>
+                <li><a href="../#contacto">Contatti</a></li>
+                <!-- NUOVO LINK IN EVIDENZA! -->
+                <li><a href="./" style="color: #f0c674; font-weight: bold;">Guida del Pellegrino</a></li>
+                <li><a href="../menu">Menu</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">...</div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Sezione Hero della Guida -->
+        <section id="guia-hero" class="hero" style="min-height: 50vh;">
+            <div class="hero-container">
+                <h1 class="brand-name">Guida del Pellegrino</h1>
+                <h2>A cura dello staff del Señarís Burger Bar</h2>
+                <p>
+                    Da oltre 25 anni serviamo caffè e hamburger accanto al Cammino. Questa guida è il nostro modo per restituirvi un po' di tutto quello che ci avete dato. Qui troverete consigli onesti e un aiuto concreto per la vostra avventura.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sezione dei Portali Tematici -->
+        <section id="portales" class="section">
+            <div class="section-container">
+                <div class="article-grid">
+
+                    <!-- ================================================== -->
+                    <!-- PORTALE 1: IL PERCORSO (TAPPE) -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/catedral.avif" alt="Vista panoramica della cattedrale di Santiago de Compostela">
+                        <div class="article-card-content">
+                            <h3>Il Percorso: Il Tuo Cammino, Giorno per Giorno</h3>
+                            <p>La guida dettagliata alle 6 tappe chiave da Sarria. Mappe, profili altimetrici, cosa vedere in ogni paese e i nostri consigli segreti per ogni tappa.</p>
+                            <a href="etapas/" class="btn btn-primary">Esplora le Tappe</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- PORTALE 2: CONSIGLI PRATICI -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/camino-peregrinos.avif" alt="Consigli per il Camino di Santiago">
+                        <div class="article-card-content">
+                            <h3>Consigli: La Saggezza del Veterano</h3>
+                            <p>Tutto ciò che devi sapere prima e durante il tuo Cammino. Dalla scelta degli scarponi e la preparazione dello zaino, a dove dormire e cosa mangiare.</p>
+                            <a href="consejos/" class="btn btn-primary">Vedi tutti i Consigli</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- PORTALE 3: CURIOSITÀ E STORIE -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/curiosidades.avif" alt="Pellegrini sul Cammino di Santiago che condividono storie">
+                        <div class="article-card-content">
+                            <h3>Curiosità e Storie</h3>
+                            <p>Immergiti nella magia del Cammino. Scopri il significato dei suoi simboli, le leggende sussurrate negli ostelli e la storia nascosta in ogni pietra. Rifletti sul perché e sul come percorrere il Cammino basandoti sulle esperienze reali dei pellegrini.</p>
+                            <a href="curiosidades/" class="btn btn-primary">Scopri le Storie</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- PORTALE 4: IL CAMMINO EFFICIENTE: PORTO -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/porto-portada.avif" alt="Vista del Ponte Don Luigi I a Porto">
+                        <div class="article-card-content">
+                            <h3>⚡ Il Cammino Efficiente: Porto</h3>
+                            <p>Stanco di volare a Madrid per poi fare la fila per l'autobus? Scopri come volare diretto a Porto con voli economici da tutta Europa, treno diretto per Tui e le migliori tappe del Cammino Portoghese.</p>
+                            <a href="oporto/guida-cammino-portoghese-porto" class="btn btn-primary">Leggi la Guida →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (copia e incolla) -->
+    <footer class="footer">    <div class="section-container">
+        <p>
+            <a href="../termini-legali-privacy-it" style="color: #fff; margin-right: 15px; text-decoration: underline;">Informativa sulla Privacy</a> |
+            &copy; 2026 Señarís Burger Bar. Tutti i diritti riservati.
+        </p>
+        <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: 881 08 25 71</p>
+    </div>
+</footer>
+
+    <!-- JAVASCRIPT (copia e incolla) -->
+    <script>        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        </script>
+</body>
+</html>

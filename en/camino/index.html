@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilgrim's Guide to Santiago | Señarís Burger Bar</title>
+    <meta name="description" content="The ultimate guide for the Camino de Santiago pilgrim. Tips, stages, maps, and local secrets from your friendly burger bar in Santiago.">
+    <link rel="canonical" href="https://hamburgueseriasenaris.com/en/camino/" />
+    <!-- HREFLANG für 9 Sprachen + Standard -->
+<link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/camino/" />
+<link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/camino/" />
+<link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/camino/" />
+<link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/camino/" />
+<link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/camino/" />
+<link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/camino/" />
+<link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/camino/" />
+<link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/camino/" />
+<link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/camino/" />
+<link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/camino/" />
+
+    
+    <!-- File paths (going up two levels to find assets) -->
+    <link rel="icon" href="../../favicon.ico" sizes="any">
+    <link rel="stylesheet" href="../../css/style-index.css">
+    <style>
+        /* Styles for article cards */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .article-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .article-card-content h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #333;
+        }
+        .article-card-content p {
+            flex-grow: 1;
+            color: #666;
+        }
+        .article-card-content .btn {
+            margin-top: 1rem;
+            align-self: flex-start;
+        }
+        .card-disabled {
+    position: relative; /* Necesario para posicionar el badge */
+    opacity: 0.6;       /* Hace toda la tarjeta semitransparente */
+    pointer-events: none; /* El usuario no podrá interactuar con nada de la tarjeta */
+}
+
+.badge-proximamente {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #d63031; /* Un color que llame la atención */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 10; /* Para que se ponga por encima de la imagen */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">SEÑARÍS BURGER BAR</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#inicio">Home</a></li>
+                <li><a href="../#quienes-somos">About Us</a></li>
+                <li><a href="../#nuestro-local">Our Place</a></li>
+                <li><a href="../#contacto">Contact</a></li>
+                <!-- NEW FEATURED LINK! -->
+                <li><a href="./" style="color: #f0c674; font-weight: bold;">Pilgrim's Guide</a></li>
+                <li><a href="../menu">Menu</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">...</div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Guide Hero Section -->
+        <section id="guia-hero" class="hero" style="min-height: 50vh;">
+            <div class="hero-container">
+                <h1 class="brand-name">Pilgrim's Guide</h1>
+                <h2>By the people of Señarís Burger Bar</h2>
+                <p>
+                    We've been serving coffee and burgers next to the Camino for over 25 years. This guide is our way of giving back a little of all you've given us. Here you'll find honest advice and real help for your adventure.
+                </p>
+            </div>
+        </section>
+
+        <!-- Thematic Portals Section -->
+        <section id="portales" class="section">
+            <div class="section-container">
+                <div class="article-grid">
+
+                    <!-- ================================================== -->
+                    <!-- PORTAL 1: THE ROUTE (STAGES) -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/catedral.avif" alt="panoramic view of the santiago de compostela cathedral">
+                        <div class="article-card-content">
+                            <h3>The Route: Your Way, Day by Day</h3>
+                            <p>The detailed guide to the 6 key stages from Sarria. Maps, elevation profiles, what to see in each village, and our secret tips for each stage.</p>
+                            <a href="etapas/" class="btn btn-primary">Explore the Stages</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- PORTAL 2: PRACTICAL TIPS -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/camino-peregrinos.avif" alt="Tips for the Camino de Santiago">
+                        <div class="article-card-content">
+                            <h3>Tips: The Veteran's Wisdom</h3>
+                            <p>Everything you need to know before and during your Camino. From how to choose your boots and pack your backpack, to where to sleep and what to eat.</p>
+                            <a href="consejos/" class="btn btn-primary">See all Tips</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- PORTAL 3: CURIOSITIES AND STORIES -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/curiosidades.avif" alt="Pilgrims on the Camino de Santiago sharing stories">
+                        <div class="article-card-content">
+                            <h3>Curiosities and Stories</h3>
+                            <p>Immerse yourself in the magic of the Camino. Discover the meaning of its symbols, the legends whispered in the hostels, and the history hidden in every stone. Reflect on why and how to walk the Camino based on real pilgrim experiences.</p>
+                            <a href="curiosidades/" class="btn btn-primary">Discover the Stories</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- PORTAL 4: THE EFFICIENT WAY: PORTO -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/porto-portada.avif" alt="View of the Don Luis I Bridge in Porto">
+                        <div class="article-card-content">
+                            <h3>⚡ The Efficient Way: Porto</h3>
+                            <p>Tired of flying to Madrid just to queue for a bus? Forget it. Discover how to fly direct to Porto with cheap flights from across Europe, take the direct train to Tui, and walk the best stages of the Portuguese Way. Your adventure starts here.</p>
+                            <a href="oporto/porto-camino-guide" class="btn btn-primary">Read the Guide →</a>
+                        </div>
+                    </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER (copy and paste) -->
+    <footer class="footer">    <div class="section-container">
+        <p>
+            <a href="../privacy-policy-en" style="color: #fff; margin-right: 15px; text-decoration: underline;">Privacy Policy</a> |
+            &copy; 2026 Señarís Burger Bar. All rights reserved.
+        </p>
+        <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: 881 08 25 71</p>
+    </div>
+</footer>
+
+    <!-- JAVASCRIPT (copy and paste) -->
+    <script>        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        </script>
+</body>
+</html>

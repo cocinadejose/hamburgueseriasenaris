@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンティアゴ巡礼ガイド | セニャリス・バーガーバー</title>
+    <meta name="description" content="サンティアゴ・デ・コンポステーラ巡礼路の巡礼者のための究極ガイド。サンティアゴのフレンドリーなバーガーバーが提供するヒント、ステージ、地図、そして地元の秘密。">
+    <link rel="canonical" href="https://hamburgueseriasenaris.com/ja/camino/" />
+    
+    <!-- 9言語+デフォルト対応のHREFLANG -->
+    <link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/camino/" />
+    <link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/camino/" />
+    <link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/camino/" />
+    <link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/camino/" />
+    <link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/camino/" />
+    <link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/camino/" />
+    <link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/camino/" />
+    <link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/camino/" />
+    <link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/camino/" />
+    <link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/camino/" />
+
+    <!-- ファイルパス（アセットを見つけるために2階層上がる） -->
+    <link rel="icon" href="../../favicon.ico" sizes="any">
+    <link rel="stylesheet" href="../../css/style-index.css">
+    <style>
+        /* 記事カードのスタイル */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .article-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .article-card-content h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #333;
+        }
+        .article-card-content p {
+            flex-grow: 1;
+            color: #666;
+        }
+        .article-card-content .btn {
+            margin-top: 1rem;
+            align-self: flex-start;
+        }
+        .card-disabled {
+    position: relative; /* Necesario para posicionar el badge */
+    opacity: 0.6;       /* Hace toda la tarjeta semitransparente */
+    pointer-events: none; /* El usuario no podrá interactuar con nada de la tarjeta */
+}
+
+.badge-proximamente {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #d63031; /* Un color que llame la atención */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 10; /* Para que se ponga por encima de la imagen */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- メインナビゲーションバー -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">セニャリス・バーガーバー</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#inicio">ホーム</a></li>
+                <li><a href="../#quienes-somos">私たちについて</a></li>
+                <li><a href="../#nuestro-local">私たちのお店</a></li>
+                <li><a href="../#contacto">お問い合わせ</a></li>
+                <!-- 新しい注目リンク！ -->
+                <li><a href="./" style="color: #f0c674; font-weight: bold;">巡礼ガイド</a></li>
+                <li><a href="../menu">メニュー</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">...</div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ガイドのヒーローセクション -->
+        <section id="guia-hero" class="hero" style="min-height: 50vh;">
+            <div class="hero-container">
+                <h1 class="brand-name">巡礼ガイド</h1>
+                <h2>セニャリス・バーガーバーのスタッフより</h2>
+                <p>
+                    私たちは25年以上にわたり、巡礼路のそばでコーヒーとハンバーガーを提供してきました。このガイドは、皆様からいただいたすべてのものへのささやかなお返しです。ここでは、あなたの冒険のための正直なアドバイスと実践的な助けを見つけることができます。
+                </p>
+            </div>
+        </section>
+
+        <!-- テーマ別ポータルセクション -->
+        <section id="portales" class="section">
+            <div class="section-container">
+                <div class="article-grid">
+
+                    <!-- ================================================== -->
+                    <!-- ポータル1：ルート（ステージ） -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/catedral.avif" alt="サンティアゴ・デ・コンポステーラ大聖堂のパノラマビュー">
+                        <div class="article-card-content">
+                            <h3>ルート：あなただけの道、一日一日</h3>
+                            <p>サリアからの6つの主要ステージの詳細ガイド。地図、標高プロファイル、各村の見どころ、そして各ステージごとの私たちの秘密のヒント。</p>
+                            <a href="etapas/" class="btn btn-primary">ステージを探索する</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- ポータル2：実践的なヒント -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/camino-peregrinos.avif" alt="サンティアゴ巡礼路のヒント">
+                        <div class="article-card-content">
+                            <h3>ヒント：ベテランの知恵</h3>
+                            <p>巡礼前と巡礼中に知っておくべきすべてのこと。ブーツの選び方やバックパックの準備から、宿泊場所や食事まで。</p>
+                            <a href="consejos/" class="btn btn-primary">すべてのヒントを見る</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- ポータル3：好奇心と物語 -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/curiosidades.avif" alt="サンティアゴ巡礼路で物語を共有する巡礼者たち">
+                        <div class="article-card-content">
+                            <h3>好奇心と物語</h3>
+                            <p>巡礼路の魔法に浸りましょう。そのシンボルの意味、ホステルで囁かれる伝説、そしてすべての石に隠された歴史を発見してください。実際の巡礼者の経験に基づいて、なぜ、どのように巡礼路を歩くのかを考えてみましょう。</p>
+                            <a href="curiosidades/" class="btn btn-primary">物語を発見する</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- ポータル4：効率的なカミーノ：ポルト -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/porto-portada.avif" alt="ポルトのドン・ルイス1世橋の眺め">
+                        <div class="article-card-content">
+                            <h3>⚡ 効率的なカミーノ: ポルト</h3>
+                            <p>マドリードまで飛んでバスに並ぶのにうんざりしていませんか？ヨーロッパ各地からの格安航空券でポルトに直行し、直通列車でトゥイへ、そしてポルトガルの道の最高の区間を歩く方法をご紹介します。</p>
+                            <a href="oporto/porto-camino-guide" class="btn btn-primary">ガイドを読む →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター（コピー＆ペースト） -->
+    <footer class="footer">    <div class="section-container">
+        <p>
+            <a href="../privacy-policy-ja" style="color: #fff; margin-right: 15px; text-decoration: underline;">プライバシーポリシー</a> |
+            &copy; 2026 セニャリス・バーガーバー。全著作権所有。
+        </p>
+        <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: 881 08 25 71</p>
+    </div>
+</footer>
+
+    <!-- JAVASCRIPT（コピー＆ペースト） -->
+    <script>        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        </script>
+</body>
+</html>

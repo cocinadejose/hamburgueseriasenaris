@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣地亚哥朝圣者指南 | 塞尼亚里斯汉堡吧</title>
+    <meta name="description" content="圣地亚哥朝圣之路朝圣者的终极指南。来自圣地亚哥友好汉堡吧的提示、阶段、地图和当地秘密。">
+    <link rel="canonical" href="https://hamburgueseriasenaris.com/zh/camino/" />
+    
+    <!-- 9种语言+默认值的HREFLANG -->
+    <link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/camino/" />
+    <link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/camino/" />
+    <link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/camino/" />
+    <link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/camino/" />
+    <link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/camino/" />
+    <link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/camino/" />
+    <link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/camino/" />
+    <link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/camino/" />
+    <link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/camino/" />
+    <link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/camino/" />
+
+    <!-- 文件路径（向上两层以找到资源） -->
+    <link rel="icon" href="../../favicon.ico" sizes="any">
+    <link rel="stylesheet" href="../../css/style-index.css">
+    <style>
+        /* 文章卡片样式 */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .article-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .article-card-content h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #333;
+        }
+        .article-card-content p {
+            flex-grow: 1;
+            color: #666;
+        }
+        .article-card-content .btn {
+            margin-top: 1rem;
+            align-self: flex-start;
+        }
+        .card-disabled {
+    position: relative; /* Necesario para posicionar el badge */
+    opacity: 0.6;       /* Hace toda la tarjeta semitransparente */
+    pointer-events: none; /* El usuario no podrá interactuar con nada de la tarjeta */
+}
+
+.badge-proximamente {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #d63031; /* Un color que llame la atención */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 10; /* Para que se ponga por encima de la imagen */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 主导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">塞尼亚里斯汉堡吧</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../#inicio">首页</a></li>
+                <li><a href="../#quienes-somos">关于我们</a></li>
+                <li><a href="../#nuestro-local">我们的店铺</a></li>
+                <li><a href="../#contacto">联系方式</a></li>
+                <!-- 新的突出链接！ -->
+                <li><a href="./" style="color: #f0c674; font-weight: bold;">朝圣者指南</a></li>
+                <li><a href="../menu">菜单</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">...</div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 指南英雄部分 -->
+        <section id="guia-hero" class="hero" style="min-height: 50vh;">
+            <div class="hero-container">
+                <h1 class="brand-name">朝圣者指南</h1>
+                <h2>塞尼亚里斯汉堡吧团队诚意奉献</h2>
+                <p>
+                    我们在朝圣之路旁提供咖啡和汉堡已有二十五年之久。本指南是我们对您给予我们的一切的小小回馈。在这里，您将找到真诚的建议和实用的帮助，助您完成朝圣之旅。
+                </p>
+            </div>
+        </section>
+
+        <!-- 主题门户部分 -->
+        <section id="portales" class="section">
+            <div class="section-container">
+                <div class="article-grid">
+
+                    <!-- ================================================== -->
+                    <!-- 门户1：路线（阶段） -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/catedral.avif" alt="圣地亚哥德孔波斯特拉大教堂全景">
+                        <div class="article-card-content">
+                            <h3>路线：您的朝圣之路，日复一日</h3>
+                            <p>从萨里亚出发的6个关键阶段的详细指南。包含地图、海拔剖面图、每个村庄的看点，以及我们为每个阶段准备的秘密提示。</p>
+                            <a href="etapas/" class="btn btn-primary">探索各阶段</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- 门户2：实用建议 -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/camino-peregrinos.avif" alt="圣地亚哥朝圣之路建议">
+                        <div class="article-card-content">
+                            <h3>建议：资深朝圣者的智慧</h3>
+                            <p>朝圣前后需要了解的一切。从选择靴子和准备背包，到住宿和饮食安排。</p>
+                            <a href="consejos/" class="btn btn-primary">查看所有建议</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- 门户3：奇闻轶事 -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/images-rute/curiosidades.avif" alt="圣地亚哥朝圣之路上分享故事的朝圣者">
+                        <div class="article-card-content">
+                            <h3>奇闻轶事</h3>
+                            <p>沉浸在朝圣之路的魔力中。探索其符号的意义、在旅舍中流传的传说，以及每块石头中隐藏的历史。基于真实朝圣者的经验，思考为何以及如何踏上朝圣之路。</p>
+                            <a href="curiosidades/" class="btn btn-primary">发现故事</a>
+                        </div>
+                    </div>
+
+                    <!-- ================================================== -->
+                    <!-- 门户4：高效的朝圣之路：波尔图 -->
+                    <!-- ================================================== -->
+                    <div class="article-card">
+                        <img src="../../imagenes/porto-portada.avif" alt="波尔图唐路易一世大桥景观">
+                        <div class="article-card-content">
+                            <h3>⚡ 高效的朝圣之路: 波尔图</h3>
+                            <p>厌倦了先飞马德里再排队等巴士？了解如何直飞波尔图，从欧洲各地都有廉价航班，搭乘直达列车前往图伊，走葡萄牙之路的最佳路段。</p>
+                            <a href="oporto/porto-camino-guide" class="btn btn-primary">阅读指南 →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚（复制粘贴） -->
+    <footer class="footer">    <div class="section-container">
+        <p>
+            <a href="../privacy-policy-zh" style="color: #fff; margin-right: 15px; text-decoration: underline;">隐私政策</a> |
+            &copy; 2026 塞尼亚里斯汉堡吧。保留所有权利。
+        </p>
+        <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: 881 08 25 71</p>
+    </div>
+</footer>
+
+    <!-- JAVASCRIPT（复制粘贴） -->
+    <script>        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        </script>
+</body>
+</html>

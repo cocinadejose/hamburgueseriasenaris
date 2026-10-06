@@ -1,0 +1,32 @@
+# ===============================================================
+# robots.txt para hamburgueseriasenaris.com
+# Reglas generales para todos los rastreadores
+# ===============================================================
+
+User-agent: *
+
+# Permitir el acceso completo a todo el sitio.
+# Esta línea es explícita y anula cualquier posible "Disallow" accidental.
+Allow: /
+
+# Bloquear directorios técnicos o privados que no aportan valor al SEO.
+Disallow: /cgi-bin/
+
+
+# ===============================================================
+# Regla específica para Naver Yeti (rastreador de Naver)
+# Yeti es el crawler de Naver Search Advisor (Corea)
+# ===============================================================
+
+User-agent: Yeti
+Allow: /
+# Disallow: /admin/  (Ejemplo: si tuvieras un panel de administración)
+# Disallow: /tmp/    (Ejemplo: si tuvieras una carpeta temporal)
+
+
+# ===============================================================
+# Ubicación del Sitemap
+# Proporciona a los rastreadores un mapa del sitio.
+# ===============================================================
+
+Sitemap: https://hamburgueseriasenaris.com/sitemap.xml

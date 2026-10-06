@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist di Preparazione per il Cammino di Santiago | Guida del Pellegrino</title>
+    <meta name="description" content="Lista completa di tutto ciò che serve per il Cammino di Santiago da Sarria. Spunta ogni elemento man mano che lo prepari.">
+    <link rel="canonical" href="https://hamburgueseriasenaris.com/it/camino/consejos/checklist-preparacion" />
+    <!-- HREFLANG -->
+<link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/camino/consejos/checklist-preparacion" />
+<link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/camino/consejos/checklist-preparacion" />
+
+    
+    <!-- File paths (going up three levels to find assets) -->
+    <link rel="icon" href="../../../favicon.ico" sizes="any">
+    <link rel="stylesheet" href="../../../css/style-index.css">
+    <style>
+        .checklist-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .checklist-intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .checklist-intro h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .checklist-category {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .checklist-category:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #333;
+            flex-grow: 1;
+        }
+
+        .category-progress {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .checklist-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .checklist-item.checked {
+            background-color: #e8f5e9;
+            opacity: 0.7;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 1rem;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        .item-label {
+            flex-grow: 1;
+            font-size: 1.05rem;
+            color: #333;
+            user-select: none;
+        }
+
+        .checklist-item.checked .item-label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .item-note {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            margin-left: 2.5rem;
+            margin-top: -0.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .priority-essential {
+            border-left: 4px solid #e74c3c;
+        }
+
+        .priority-important {
+            border-left: 4px solid #f39c12;
+        }
+
+        .priority-optional {
+            border-left: 4px solid #3498db;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .reset-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .reset-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .overall-progress {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../it/" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../../../it/#inicio">Home</a></li>
+                <li><a href="../../../it/#quienes-somos">Chi Siamo</a></li>
+                <li><a href="../../../it/#nuestro-local">Il Nostro Locale</a></li>
+                <li><a href="../../../it/#contacto">Contatti</a></li>
+                <li><a href="../../" style="color: #f0c674; font-weight: bold;">Guida del Pellegrino</a></li>
+                <li><a href="../../../it/menu">Menu</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">...</div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="checklist-container">
+            <!-- Introduction -->
+            <div class="checklist-intro">
+                <h1>📋 Checklist di Preparazione per il Cammino</h1>
+                <p style="margin-bottom: 0; line-height: 1.6;">
+                    Basata sull'esperienza dei pellegrini che si fermano nel nostro ristorante, abbiamo creato questa lista completa di tutto ciò di cui hai bisogno. Spunta ogni elemento mentre ti prepari e assicurati di non dimenticare nulla di importante. Lo zaino perfetto ti aspetta!
+                </p>
+            </div>
+
+            <!-- Overall Progress -->
+            <div class="overall-progress">
+                <h2 style="margin-top: 0;">Il Tuo Progresso</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%;">0%</div>
+                </div>
+                <p style="color: #666; margin-bottom: 0;"><span id="itemsChecked">0</span> di <span id="totalItems">0</span> elementi completati</p>
+            </div>
+
+            <!-- Priority Legend -->
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #e74c3c;"></div>
+                    <span>Essenziale</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f39c12;"></div>
+                    <span>Importante</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #3498db;"></div>
+                    <span>Opzionale</span>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Documentation -->
+            <div class="checklist-category" data-category="documentacion">
+                <div class="category-header">
+                    <span class="category-icon">📄</span>
+                    <h3 class="category-title">Documentazione</h3>
+                    <span class="category-progress">0/4</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="doc1">
+                    <label class="item-label" for="doc1">Documento d'Identità o Passaporto</label>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="doc2">
+                    <label class="item-label" for="doc2">Credenziale del Pellegrino</label>
+                </div>
+                <div class="item-note">Disponibile a Sarria, ma meglio se la porti da casa</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="doc3">
+                    <label class="item-label" for="doc3">Tessera Europea di Assicurazione Malattia</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="doc4">
+                    <label class="item-label" for="doc4">Assicurazione di Viaggio (se acquistata)</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Backpack -->
+            <div class="checklist-category" data-category="mochila">
+                <div class="category-header">
+                    <span class="category-icon">🎒</span>
+                    <h3 class="category-title">Zaino e Bagagli</h3>
+                    <span class="category-progress">0/6</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="moch1">
+                    <label class="item-label" for="moch1">Zaino 30-40L (ergonomico)</label>
+                </div>
+                <div class="item-note">Massimo 10% del tuo peso corporeo</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="moch2">
+                    <label class="item-label" for="moch2">Coperta impermeabile per lo zaino</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="moch3">
+                    <label class="item-label" for="moch3">Sacchetti di plastica per i vestiti</label>
+                </div>
+                <div class="item-note">Per tenere tutto asciutto e organizzato</div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="moch4">
+                    <label class="item-label" for="moch4">Piccola cintura o marsupio</label>
+                </div>
+                <div class="item-note">Per telefono, denaro e credenziale durante la camminata</div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="moch5">
+                    <label class="item-label" for="moch5">Lucchetto piccolo</label>
+                </div>
+                <div class="item-note">Per gli armadietti negli ostelli</div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="moch6">
+                    <label class="item-label" for="moch6">Sacco di compressione</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Footwear -->
+            <div class="checklist-category" data-category="calzado">
+                <div class="category-header">
+                    <span class="category-icon">👟</span>
+                    <h3 class="category-title">Calzature</h3>
+                    <span class="category-progress">0/5</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="calz1">
+                    <label class="item-label" for="calz1">Stivali o scarpe da trekking (già usati!)</label>
+                </div>
+                <div class="item-note">MAI indossare nuove scarpe sul Cammino</div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="calz2">
+                    <label class="item-label" for="calz2">Calzini tecnici (3-4 paia)</label>
+                </div>
+                <div class="item-note">Senza cuciture, traspiranti</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="calz3">
+                    <label class="item-label" for="calz3">Infradito o sandali leggeri</label>
+                </div>
+                <div class="item-note">Per riposare i piedi all'arrivo</div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="calz4">
+                    <label class="item-label" for="calz4">Plantari ortopedici (se li usi)</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="calz5">
+                    <label class="item-label" for="calz5">Ghette (per giorni piovosi)</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Clothing -->
+            <div class="checklist-category" data-category="ropa">
+                <div class="category-header">
+                    <span class="category-icon">👕</span>
+                    <h3 class="category-title">Abbigliamento</h3>
+                    <span class="category-progress">0/11</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="ropa1">
+                    <label class="item-label" for="ropa1">T-shirt tecnici (2-3)</label>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="ropa2">
+                    <label class="item-label" for="ropa2">Pantaloni lunghi da trekking (1-2)</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="ropa3">
+                    <label class="item-label" for="ropa3">Pantaloncini (1)</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="ropa4">
+                    <label class="item-label" for="ropa4">Biancheria intima (3-4 cambi)</label>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="ropa5">
+                    <label class="item-label" for="ropa5">Giacca impermeabile o poncho impermeabile</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="ropa6">
+                    <label class="item-label" for="ropa6">Felpa o giacca leggera</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="ropa7">
+                    <label class="item-label" for="ropa7">Cappello o berretto</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="ropa8">
+                    <label class="item-label" for="ropa8">Buff o sciarpa multiuso</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="ropa9">
+                    <label class="item-label" for="ropa9">Guanti leggeri</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="ropa10">
+                    <label class="item-label" for="ropa10">Abiti comodi per l'ostello</label>
+                </div>
+                <div class="item-note">Qualcosa di comodo dopo la camminata</div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="ropa11">
+                    <label class="item-label" for="ropa11">Costume da bagno (se gli ostelli hanno piscine)</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Hygiene -->
+            <div class="checklist-category" data-category="higiene">
+                <div class="category-header">
+                    <span class="category-icon">🧴</span>
+                    <h3 class="category-title">Igiene e Cura Personale</h3>
+                    <span class="category-progress">0/12</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="hig1">
+                    <label class="item-label" for="hig1">Crema solare (SPF alto)</label>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="hig2">
+                    <label class="item-label" for="hig2">Vaselina o crema anti-vesciche</label>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="hig3">
+                    <label class="item-label" for="hig3">Kit igiene di base (spazzolino, dentifricio, sapone)</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="hig4">
+                    <label class="item-label" for="hig4">Asciugamano in microfibra</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="hig5">
+                    <label class="item-label" for="hig5">Carta igienica e fazzoletti</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="hig6">
+                    <label class="item-label" for="hig6">Deodorante</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="hig7">
+                    <label class="item-label" for="hig7">Disinfettante per le mani</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="hig8">
+                    <label class="item-label" for="hig8">Shampoo e balsamo (formato da viaggio)</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="hig9">
+                    <label class="item-label" for="hig9">Rasoio</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="hig10">
+                    <label class="item-label" for="hig10">Prodotti per l'igiene femminile</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="hig11">
+                    <label class="item-label" for="hig11">Pinzetta (per le schegge)</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="hig12">
+                    <label class="item-label" for="hig12">Tagliaunghie</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: First Aid -->
+            <div class="checklist-category" data-category="botiquin">
+                <div class="category-header">
+                    <span class="category-icon">💊</span>
+                    <h3 class="category-title">Pronto Soccorso</h3>
+                    <span class="category-progress">0/10</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="bot1">
+                    <label class="item-label" for="bot1">Cerotti e patch per vesciche</label>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="bot2">
+                    <label class="item-label" for="bot2">Compeed o patch speciali</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="bot3">
+                    <label class="item-label" for="bot3">Antidolorifici (paracetamolo, ibuprofene)</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="bot4">
+                    <label class="item-label" for="bot4">Bende e nastro adesivo</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="bot5">
+                    <label class="item-label" for="bot5">Betadine o disinfettante</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="bot6">
+                    <label class="item-label" for="bot6">Farmaci personali abituali</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="bot7">
+                    <label class="item-label" for="bot7">Antistaminici</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="bot8">
+                    <label class="item-label" for="bot8">Repellente per insetti</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="bot9">
+                    <label class="item-label" for="bot9">Crema anti-irritazione</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="bot10">
+                    <label class="item-label" for="bot10">Piccole forbici</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Technology -->
+            <div class="checklist-category" data-category="tecnologia">
+                <div class="category-header">
+                    <span class="category-icon">📱</span>
+                    <h3 class="category-title">Tecnologia</h3>
+                    <span class="category-progress">0/6</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="tec1">
+                    <label class="item-label" for="tec1">Telefono cellulare</label>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="tec2">
+                    <label class="item-label" for="tec2">Caricabatterie per telefono</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="tec3">
+                    <label class="item-label" for="tec3">Power bank</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="tec4">
+                    <label class="item-label" for="tec4">Auricolari</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="tec5">
+                    <label class="item-label" for="tec5">Fotocamera (se non usi il telefono)</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="tec6">
+                    <label class="item-label" for="tec6">Orologio o fitness tracker</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Food & Hydration -->
+            <div class="checklist-category" data-category="alimentacion">
+                <div class="category-header">
+                    <span class="category-icon">💧</span>
+                    <h3 class="category-title">Cibo e Idratazione</h3>
+                    <span class="category-progress">0/5</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="ali1">
+                    <label class="item-label" for="ali1">Bottiglia d'acqua (1-1,5L)</label>
+                </div>
+                <div class="item-note">O sistema di idratazione stile CamelBak</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="ali2">
+                    <label class="item-label" for="ali2">Barrette energetiche o noci</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="ali3">
+                    <label class="item-label" for="ali3">Compresse di purificazione dell'acqua</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="ali4">
+                    <label class="item-label" for="ali4">Contenitori leggeri</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="ali5">
+                    <label class="item-label" for="ali5">Posate pieghevoli</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Sleep & Rest -->
+            <div class="checklist-category" data-category="descanso">
+                <div class="category-header">
+                    <span class="category-icon">😴</span>
+                    <h3 class="category-title">Sonno e Riposo</h3>
+                    <span class="category-progress">0/4</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="desc1">
+                    <label class="item-label" for="desc1">Sacco a pelo leggero</label>
+                </div>
+                <div class="item-note">Gli ostelli hanno coperte, ma il sacco è obbligatorio per l'igiene</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="desc2">
+                    <label class="item-label" for="desc2">Tappi per le orecchie</label>
+                </div>
+                <div class="item-note">Gli ostelli russano!</div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="desc3">
+                    <label class="item-label" for="desc3">Maschera per il sonno</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="desc4">
+                    <label class="item-label" for="desc4">Cuscino gonfiabile</label>
+                </div>
+            </div>
+
+            <!-- CATEGORY: Other Essentials -->
+            <div class="checklist-category" data-category="otros">
+                <div class="category-header">
+                    <span class="category-icon">🔦</span>
+                    <h3 class="category-title">Altri Essenziali</h3>
+                    <span class="category-progress">0/9</span>
+                </div>
+                <div class="checklist-item priority-essential">
+                    <input type="checkbox" id="otr1">
+                    <label class="item-label" for="otr1">Bastoni da trekking (o due)</label>
+                </div>
+                <div class="item-note">Molto utile in discesa e protegge le ginocchia</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="otr2">
+                    <label class="item-label" for="otr2">Lampada frontale</label>
+                </div>
+                <div class="item-note">Per partire prima dell'alba o ostelli senza luce</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="otr3">
+                    <label class="item-label" for="otr3">Piccolo coltello multi-funzione</label>
+                </div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="otr4">
+                    <label class="item-label" for="otr4">Mollette per i panni</label>
+                </div>
+                <div class="item-note">Per appendere i vestiti allo zaino</div>
+                <div class="checklist-item priority-important">
+                    <input type="checkbox" id="otr5">
+                    <label class="item-label" for="otr5">Occhiali da sole</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="otr6">
+                    <label class="item-label" for="otr6">Quaderno e penna</label>
+                </div>
+                <div class="item-note">Per riflessioni, timbri e contatti</div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="otr7">
+                    <label class="item-label" for="otr7">Guida del Cammino in carta</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="otr8">
+                    <label class="item-label" for="otr8">Libro o lettore e-book</label>
+                </div>
+                <div class="checklist-item priority-optional">
+                    <input type="checkbox" id="otr9">
+                    <label class="item-label" for="otr9">Corda o corda da bucato portatile</label>
+                </div>
+            </div>
+
+            <!-- Reset Button -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <button class="reset-button" onclick="resetChecklist()">🔄 Ripristina Checklist</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="section-container">
+            <p>
+                <a href="../../termini-legali-privacy-it" style="color: #fff; margin-right: 15px; text-decoration: underline;">Termini legali e privacy</a> |
+                &copy; 2026 Hamburguesería Señarís. Tutti i diritti riservati.
+            </p>
+            <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: 881 08 25 71</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Checklist functionality
+        const STORAGE_KEY = 'caminoChecklistData';
+
+        function loadChecklistState() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                const checkedItems = JSON.parse(saved);
+                checkedItems.forEach(id => {
+                    const checkbox = document.getElementById(id);
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        checkbox.closest('.checklist-item').classList.add('checked');
+                    }
+                });
+            }
+            updateAllProgress();
+        }
+
+        function saveChecklistState() {
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const checkedItems = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.id);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(checkedItems));
+        }
+
+        function updateCategoryProgress(category) {
+            const categoryElement = category.closest('.checklist-category');
+            const checkboxes = categoryElement.querySelectorAll('input[type="checkbox"]');
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const total = checkboxes.length;
+            const progressSpan = categoryElement.querySelector('.category-progress');
+            progressSpan.textContent = `${checked}/${total}`;
+        }
+
+        function updateOverallProgress() {
+            const allCheckboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const totalItems = allCheckboxes.length;
+            const checkedItems = Array.from(allCheckboxes).filter(cb => cb.checked).length;
+            const percentage = Math.round((checkedItems / totalItems) * 100);
+
+            document.getElementById('totalItems').textContent = totalItems;
+            document.getElementById('itemsChecked').textContent = checkedItems;
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressFill').textContent = percentage + '%';
+        }
+
+        function updateAllProgress() {
+            const categories = document.querySelectorAll('.checklist-category');
+            categories.forEach(cat => updateCategoryProgress(cat));
+            updateOverallProgress();
+        }
+
+        document.querySelectorAll('.checklist-item').forEach(item => {
+            const checkbox = item.querySelector('input[type="checkbox"]');
+            
+            item.addEventListener('click', (e) => {
+                if (e.target !== checkbox) {
+                    checkbox.checked = !checkbox.checked;
+                    handleCheckboxChange(checkbox);
+                }
+            });
+
+            checkbox.addEventListener('change', () => {
+                handleCheckboxChange(checkbox);
+            });
+        });
+
+        function handleCheckboxChange(checkbox) {
+            const item = checkbox.closest('.checklist-item');
+            if (checkbox.checked) {
+                item.classList.add('checked');
+            } else {
+                item.classList.remove('checked');
+            }
+            updateCategoryProgress(checkbox);
+            updateOverallProgress();
+            saveChecklistState();
+        }
+
+        function resetChecklist() {
+            if (confirm('Sei sicuro di voler ripristinare l\'intera checklist?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(cb => {
+                    cb.checked = false;
+                    cb.closest('.checklist-item').classList.remove('checked');
+                });
+                updateAllProgress();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadChecklistState();
+        });
+    </script>
+</body>
+</html>

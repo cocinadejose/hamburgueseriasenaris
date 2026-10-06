@@ -1,0 +1,17 @@
+# Editor / sistema
+.vscode/
+Thumbs.db
+Desktop.ini
+
+# Archivos locales de trabajo (no forman parte de la web)
+Untitled-1.txt
+*.ffs_batch
+sync.ffs_db
+.ftpquota
+
+# Tooling Node (por si vuelve a crearse)
+node_modules/
+package-lock.json
+
+# Logs
+*.log

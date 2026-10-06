@@ -1,0 +1,55 @@
+RewriteEngine On
+
+# ============================================
+# 1. PROTECCIÓN DE ARCHIVOS SENSIBLES (PRIMERO)
+# ============================================
+# Bloquear acceso a archivos y directorios sensibles
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Proteger archivos específicos
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|bak|config|ffs_batch|ffs_db|py)$">
+    Require all denied
+</FilesMatch>
+
+# ============================================
+# 2. FORZAR HTTPS Y NO-WWW (REDIRECCIÓN EXTERNA)
+# ============================================
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# ============================================
+# 3. REDIRECCIÓN DE IDIOMA (SOLO RAÍZ)
+# ============================================
+RewriteCond %{REQUEST_URI} ^/(index\.html)?$
+RewriteCond %{HTTP:Accept-Language} ^([a-z]{2}) [NC]
+RewriteCond %{DOCUMENT_ROOT}/%1 -d
+RewriteRule ^(index\.html)?$ /%1/ [R=301,L]
+
+# Fallback a /es/ si no hay idioma detectado
+RewriteCond %{REQUEST_URI} ^/(index\.html)?$
+RewriteRule ^(index\.html)?$ /es/ [R=301,L]
+
+# ============================================
+# 4. QUITAR .HTML DE LA URL (REDIRECCIÓN EXTERNA)
+# ============================================
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# ============================================
+# 5. SERVIR .HTML INTERNAMENTE (SIN MOSTRAR EXTENSIÓN)
+# ============================================
+# Solo aplicar si no es un archivo o directorio existente
+# Y solo para rutas que no tengan extensión conocida
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|png|gif|avif|webp|svg|ico|xml|txt|pdf|woff|woff2|ttf|eot)$ [NC]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+
+
+
