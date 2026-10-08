@@ -13,6 +13,9 @@ RewriteEngine On
     Require all denied
 </FilesMatch>
 
+# Bloquear la carpeta de copias de seguridad (evita contenido duplicado)
+RewriteRule ^backup/ - [F,L]
+
 # ============================================
 # 2. FORZAR HTTPS Y NO-WWW (REDIRECCIÓN EXTERNA)
 # ============================================
@@ -32,6 +35,22 @@ RewriteRule ^(index\.html)?$ /%1/ [R=301,L]
 # Fallback a /es/ si no hay idioma detectado
 RewriteCond %{REQUEST_URI} ^/(index\.html)?$
 RewriteRule ^(index\.html)?$ /es/ [R=301,L]
+
+# ============================================
+# 3b. REDIRECCIONES 301 — URLs ATEMPORALES (familia A: Fiestas del Apóstol)
+# ============================================
+# Estas páginas se publicaron con "-2026" en la URL. Ahora son atemporales:
+# se redirigen 301 las URLs antiguas (con y sin .html) a las nuevas sin año,
+# para no perder enlaces, hreflang ni posicionamiento.
+RewriteRule ^es/blog/fiestas-apostol-santiago-2026(\.html)?/?$ /es/blog/fiestas-apostol-santiago [R=301,L]
+RewriteRule ^en/blog/apostle-santiago-festivals-2026(\.html)?/?$ /en/blog/apostle-santiago-festivals [R=301,L]
+RewriteRule ^fr/blog/fetes-apotre-saint-jacques-2026(\.html)?/?$ /fr/blog/fetes-apotre-saint-jacques [R=301,L]
+RewriteRule ^de/blog/apostel-jakobus-feste-2026(\.html)?/?$ /de/blog/apostel-jakobus-feste [R=301,L]
+RewriteRule ^it/blog/feste-apostolo-giacomo-2026(\.html)?/?$ /it/blog/feste-apostolo-giacomo [R=301,L]
+RewriteRule ^pt/blog/festas-apostolo-santiago-2026(\.html)?/?$ /pt/blog/festas-apostolo-santiago [R=301,L]
+RewriteRule ^ja/blog/apostle-santiago-festivals-2026(\.html)?/?$ /ja/blog/apostle-santiago-festivals [R=301,L]
+RewriteRule ^zh/blog/apostle-santiago-festivals-2026(\.html)?/?$ /zh/blog/apostle-santiago-festivals [R=301,L]
+RewriteRule ^ko/blog/apostle-santiago-festivals-2026(\.html)?/?$ /ko/blog/apostle-santiago-festivals [R=301,L]
 
 # ============================================
 # 4. QUITAR .HTML DE LA URL (REDIRECCIÓN EXTERNA)
