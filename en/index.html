@@ -198,7 +198,7 @@
             <li><a href="/en/blog/" class="p-link-accent">Blog</a></li>
             <li><a href="/en/camino/" class="p-link-gold">Pilgrim Guide</a></li>
             <li><a href="/en/#contacto">Contact</a></li>
-            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞+34 881 08 25 71</a></li>
 
             <!-- Selector de idioma integrado -->
             <li class="nav-lang-dropdown">
@@ -276,23 +276,45 @@
                 that has stood the test of time for over 25 years.
             </p>
 
-            <div class="p-actions">
-                <a href="#contacto" class="p-btn p-btn--primary">📍 Visit us</a>
-                <a href="menu" class="p-btn p-btn--glass">🥘 See Our Menu</a>
-            </div>
+                        <ul class="p-hero-cards">
+                <li>
+                    <a class="p-hero-card" href="#contacto">
+                        <img src="../imagenes/fachada.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Where we are</strong>
+                            <small>Av. Quiroga Palacios, 5 · San Pedro</small>
+                        </span>
+                    </a>
+                </li>
 
-            <ul class="p-hero-facts">
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">📍</span>
-                    <span><strong>Where we are</strong>Av. Quiroga Palacios, 5</span>
+                    <a class="p-hero-card p-hero-card--destacado" href="#empanadillas">
+                        <img src="../imagenes/empanadillas.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Homemade Empanadillas</strong>
+                            <small>New this autumn-winter · €1.50</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">🥾</span>
-                    <span><strong>Pilgrim menu</strong>€12 · Served at your table</span>
+                    <a class="p-hero-card" href="#churros">
+                        <img src="../imagenes/chocolate-churros.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Breakfasts</strong>
+                            <small>Churros with chocolate · €4.50</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">☕</span>
-                    <span><strong>Breakfasts</strong>Churros with chocolate</span>
+                    <a class="p-hero-card" href="menu">
+                        <img src="../imagenes/tortilla-bocadillos.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>See Our Menu</strong>
+                            <small>Sandwiches, burgers and more</small>
+                        </span>
+                    </a>
                 </li>
             </ul>
 
@@ -313,25 +335,17 @@
                 </div>
             </div>
 
-            <a class="p-infobar-cell" href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer">
-                <span class="p-fact-ico" aria-hidden="true">📍</span>
-                <div>
-                    <span class="p-ib-label">Address</span>
-                    <span class="p-ib-value">Av. Quiroga Palacios, 5</span>
-                </div>
-            </a>
+
 
             <a class="p-infobar-cell" href="tel:+34881082571">
                 <span class="p-fact-ico" aria-hidden="true">📞</span>
                 <div>
                     <span class="p-ib-label">Phone</span>
-                    <span class="p-ib-value">881 08 25 71</span>
+                    <span class="p-ib-value">+34 881 08 25 71</span>
                 </div>
             </a>
 
-            <div class="p-infobar-cta">
-                <a href="menu" class="p-btn p-btn--dark p-btn--block">See Our Menu →</a>
-            </div>
+
 
         </div>
     </div>
@@ -400,20 +414,21 @@
 
         <div class="p-cards">
 
-            <a class="p-card p-reveal" href="pilgrim-menu" data-delay="1">
+                        <div class="p-card p-card--wide p-reveal" id="empanadillas" data-delay="1">
                 <div class="p-card-media">
-                    <img src="../imagenes/menu-peregrino-chorizo-grelos.avif" alt="Pilgrim's menu with grilled chorizo and grelos turnip greens" loading="lazy">
-                    <span class="p-card-tag p-card-tag--gold">Pilgrims only</span>
+                    <img src="../imagenes/empanadillas.avif" alt="Large homemade empanadillas, freshly fried" loading="lazy">
+                    <span class="p-card-tag p-card-tag--gold">New · Autumn-Winter</span>
                 </div>
                 <div class="p-card-body">
-                    <h3>🥾 Pilgrim's Menu</h3>
-                    <p>Quality Galician produce, served at your table. Exclusive to pilgrims.</p>
+                    <h3>🥟 Homemade Empanadillas</h3>
+                    <p>Big, freshly fried empanadillas — the ones we always make when the cold sets in. Available to take away too.</p>
+                    <p class="p-challenge">Dare you try them? Come along and tell us what you think: we are sure you will be delighted.</p>
                     <div class="p-card-foot">
-                        <span class="p-price">€12<small>per person</small></span>
-                        <span class="p-arrow">View menu →</span>
+                        <span class="p-price">€1.50<small>each</small></span>
+                        <span class="p-meta">Large orders, in advance</span>
                     </div>
                 </div>
-            </a>
+            </div>
 
             <a class="p-card p-reveal" href="sandwiches-for-groups-santiago" data-delay="2">
                 <div class="p-card-media">
@@ -446,7 +461,7 @@
 
         <div class="p-specials">
 
-            <article class="p-special p-reveal">
+            <article class="p-special p-reveal" id="churros">
                 <img src="../imagenes/chocolate-churros.avif" alt="Hot chocolate with homemade churros" loading="lazy">
                 <div class="p-special-body">
                     <h3><span aria-hidden="true">☕</span> Hot Chocolate with Churros</h3>
@@ -487,7 +502,7 @@
         <p class="p-note p-reveal">📦 Omelettes also available to take away · Order in advance</p>
 
         <div class="p-center p-reveal">
-            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 Call us: 881 08 25 71</a>
+            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 Call us: +34 881 08 25 71</a>
         </div>
 
     </div>
@@ -580,7 +595,7 @@
                             <span class="p-fact-ico" aria-hidden="true">📞</span>
                             <span>
                                 <strong>Phone</strong>
-                                <em>881 08 25 71</em>
+                                <em>+34 881 08 25 71</em>
                             </span>
                         </a>
                     </li>
@@ -676,7 +691,7 @@
 
             <div>
                 <h3>Contact</h3>
-                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p><a href="tel:+34881082571" class="p-footer-tel">+34 881 08 25 71</a></p>
                 <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
                 <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp news channel</a></p>
             </div>

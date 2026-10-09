@@ -184,7 +184,7 @@
             <li><a href="/pt/blog/" class="p-link-accent">Blog</a></li>
             <li><a href="/pt/camino/" class="p-link-gold">Guia do Caminho</a></li>
             <li><a href="/pt/#contacto">Contactos</a></li>
-            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞+34 881 08 25 71</a></li>
 
             <!-- Selector de idioma integrado -->
             <li class="nav-lang-dropdown">
@@ -262,23 +262,45 @@
                 que nos acompanha há mais de 25 anos.
             </p>
 
-            <div class="p-actions">
-                <a href="#contacto" class="p-btn p-btn--primary">📍 Visite-nos</a>
-                <a href="menu" class="p-btn p-btn--glass">🥘 Ver Ementa</a>
-            </div>
+                        <ul class="p-hero-cards">
+                <li>
+                    <a class="p-hero-card" href="#contacto">
+                        <img src="../imagenes/fachada.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Onde estamos</strong>
+                            <small>Av. Quiroga Palacios, 5 · San Pedro</small>
+                        </span>
+                    </a>
+                </li>
 
-            <ul class="p-hero-facts">
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">📍</span>
-                    <span><strong>Onde estamos</strong>Av. Quiroga Palacios, 5</span>
+                    <a class="p-hero-card p-hero-card--destacado" href="#empanadillas">
+                        <img src="../imagenes/empanadillas.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Empanadillas caseiras</strong>
+                            <small>Novidade outono-inverno · 1,50 €</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">🥾</span>
-                    <span><strong>Menu do Peregrino</strong>12 € · Servido à mesa</span>
+                    <a class="p-hero-card" href="#churros">
+                        <img src="../imagenes/chocolate-churros.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Pequenos-almoços</strong>
+                            <small>Churros com chocolate · 4,50 €</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">☕</span>
-                    <span><strong>Pequenos-almoços</strong>Churros com chocolate</span>
+                    <a class="p-hero-card" href="menu">
+                        <img src="../imagenes/tortilla-bocadillos.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Ver Ementa</strong>
+                            <small>Sandes, hambúrgueres e mais</small>
+                        </span>
+                    </a>
                 </li>
             </ul>
 
@@ -299,25 +321,17 @@
                 </div>
             </div>
 
-            <a class="p-infobar-cell" href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer">
-                <span class="p-fact-ico" aria-hidden="true">📍</span>
-                <div>
-                    <span class="p-ib-label">Morada</span>
-                    <span class="p-ib-value">Av. Quiroga Palacios, 5</span>
-                </div>
-            </a>
+
 
             <a class="p-infobar-cell" href="tel:+34881082571">
                 <span class="p-fact-ico" aria-hidden="true">📞</span>
                 <div>
                     <span class="p-ib-label">Telefone</span>
-                    <span class="p-ib-value">881 08 25 71</span>
+                    <span class="p-ib-value">+34 881 08 25 71</span>
                 </div>
             </a>
 
-            <div class="p-infobar-cta">
-                <a href="menu" class="p-btn p-btn--dark p-btn--block">Ver Ementa →</a>
-            </div>
+
 
         </div>
     </div>
@@ -387,20 +401,21 @@
 
         <div class="p-cards">
 
-            <a class="p-card p-reveal" href="pilgrim-menu" data-delay="1">
+                        <div class="p-card p-card--wide p-reveal" id="empanadillas" data-delay="1">
                 <div class="p-card-media">
-                    <img src="../imagenes/menu-peregrino-chorizo-grelos.avif" alt="Menu do Peregrino com chouriço assado e grelos" loading="lazy">
-                    <span class="p-card-tag p-card-tag--gold">Só peregrinos</span>
+                    <img src="../imagenes/empanadillas.avif" alt="Empanadillas caseiras grandes, acabadas de fritar" loading="lazy">
+                    <span class="p-card-tag p-card-tag--gold">Novidade · Outono-Inverno</span>
                 </div>
                 <div class="p-card-body">
-                    <h3>🥾 Menu do Peregrino</h3>
-                    <p>Produto galego de qualidade, servido à mesa. Exclusivo para peregrinos.</p>
+                    <h3>🥟 Empanadillas caseiras</h3>
+                    <p>Empanadillas grandes, acabadas de fritar, as que fazemos sempre que chega o frio. Também para levar.</p>
+                    <p class="p-challenge">Atreves-te? Vem prová-las e diz-nos o que achas: temos a certeza de que vais gostar.</p>
                     <div class="p-card-foot">
-                        <span class="p-price">12 €<small>por pessoa</small></span>
-                        <span class="p-arrow">Ver menu →</span>
+                        <span class="p-price">1,50 €<small>por unidade</small></span>
+                        <span class="p-meta">Encomendas grandes, com antecedência</span>
                     </div>
                 </div>
-            </a>
+            </div>
 
             <a class="p-card p-reveal" href="sanduiches-para-grupos-santiago" data-delay="2">
                 <div class="p-card-media">
@@ -433,7 +448,7 @@
 
         <div class="p-specials">
 
-            <article class="p-special p-reveal">
+            <article class="p-special p-reveal" id="churros">
                 <img src="../imagenes/chocolate-churros.avif" alt="Chocolate quente com churros caseiros" loading="lazy">
                 <div class="p-special-body">
                     <h3><span aria-hidden="true">☕</span> Chocolate com Churros</h3>
@@ -474,7 +489,7 @@
         <p class="p-note p-reveal">📦 Tortas de batata também disponíveis para levar · Encomende com antecedência</p>
 
         <div class="p-center p-reveal">
-            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 Ligue-nos: 881 08 25 71</a>
+            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 Ligue-nos: +34 881 08 25 71</a>
         </div>
 
     </div>
@@ -567,7 +582,7 @@
                             <span class="p-fact-ico" aria-hidden="true">📞</span>
                             <span>
                                 <strong>Telefone</strong>
-                                <em>881 08 25 71</em>
+                                <em>+34 881 08 25 71</em>
                             </span>
                         </a>
                     </li>
@@ -663,7 +678,7 @@
 
             <div>
                 <h3>Contactos</h3>
-                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p><a href="tel:+34881082571" class="p-footer-tel">+34 881 08 25 71</a></p>
                 <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
                 <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 Canal de novidades no WhatsApp</a></p>
             </div>

@@ -510,6 +510,20 @@ body.portada .p-hero h1 em {
     color: rgba(255, 255, 255, .82);
 }
 
+/* Enlace modesto dentro del hero: lleva directamente al banner destacado */
+.p-hero-fact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+    transition: color .25s var(--p-ease);
+}
+
+.p-hero-fact-link:hover {
+    color: #fff;
+}
+
 .p-hero-facts strong {
     display: block;
     font-family: 'Outfit', sans-serif;
@@ -531,6 +545,79 @@ body.portada .p-hero h1 em {
     font-size: 1.05rem;
 }
 
+/* --- 4 banners rápidos del hero -----------------------------------------
+   Sustituyen a los dos botones grandes del hero y a la antigua lista de
+   datos: mismo lenguaje visual que las tarjetas (.p-card) pero compacto. */
+.p-hero-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 660px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.p-hero-cards > li {
+    min-width: 0;
+}
+
+.p-hero-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    padding: 10px 14px 10px 10px;
+    border: 1px solid var(--p-line);
+    border-radius: 16px;
+    background: var(--p-paper);
+    box-shadow: var(--p-shadow-sm);
+    text-decoration: none;
+    color: var(--p-ink);
+    transition: transform .3s var(--p-ease), box-shadow .3s var(--p-ease), border-color .3s var(--p-ease);
+}
+
+.p-hero-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 48, 44, .30);
+    box-shadow: var(--p-shadow-md);
+}
+
+.p-hero-card img {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 11px;
+    object-fit: cover;
+    background: #ded8cd;
+}
+
+.p-hero-card-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.p-hero-card-txt strong {
+    font-family: 'Outfit', sans-serif;
+    font-size: .94rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+}
+
+.p-hero-card-txt small {
+    font-size: .78rem;
+    line-height: 1.35;
+    color: var(--p-muted);
+}
+
+.p-hero-card--destacado .p-hero-card-txt small {
+    font-weight: 700;
+    color: var(--p-brand);
+}
+
 /* ==========================================================================
    4. BARRA DE INFORMACIÓN (solapa el hero)
    ========================================================================== */
@@ -543,7 +630,7 @@ body.portada .p-hero h1 em {
 
 .p-infobar-inner {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) auto;
+    grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
     padding: 8px;
     border: 1px solid var(--p-line);
@@ -608,12 +695,6 @@ body.portada .p-hero h1 em {
 
 .p-ib-value--green {
     color: var(--p-green);
-}
-
-.p-infobar-cta {
-    display: flex;
-    align-items: center;
-    padding: 8px;
 }
 
 /* ==========================================================================
@@ -810,6 +891,30 @@ body.portada .p-hero h1 em {
 
 .p-card:hover .p-arrow {
     gap: 12px;
+}
+
+/* Banner panorámico: se muestra la foto entera (proporción real 1200x629)
+   para no recortar el texto de la imagen, ni en móvil ni en escritorio. */
+.p-card--wide .p-card-media {
+    aspect-ratio: 1200 / 629;
+}
+
+.p-card--wide:hover .p-card-media img {
+    transform: none;
+}
+
+/* Texto-reto dentro de la tarjeta (sustituye al enlace "Ver en la carta") */
+.p-card-body > p.p-challenge {
+    flex: 0 0 auto;
+    margin: 0 0 20px;
+    padding: 13px 16px;
+    border-left: 3px solid var(--p-brand);
+    border-radius: 0 10px 10px 0;
+    background: rgba(201, 48, 44, .07);
+    font-size: .93rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--p-ink);
 }
 
 /* Especialidades */
@@ -1585,11 +1690,26 @@ html.js .p-reveal[data-delay="4"] { transition-delay: .32s; }
         gap: 14px;
     }
 
+    .p-hero-cards { gap: 10px; }
+
+    .p-hero-card {
+        gap: 10px;
+        padding: 9px 12px 9px 9px;
+        border-radius: 14px;
+    }
+
+    .p-hero-card img {
+        width: 44px;
+        height: 44px;
+        border-radius: 9px;
+    }
+
+    .p-hero-card-txt strong { font-size: .84rem; }
+    .p-hero-card-txt small { font-size: .72rem; }
+
     .p-infobar { margin-top: -44px; }
     .p-infobar-inner { grid-template-columns: 1fr; padding: 6px; }
     .p-infobar-cell { padding: 15px 16px; }
-    .p-infobar-cta { padding: 6px; }
-    .p-infobar-cta .p-btn { width: 100%; }
 
     .p-section { padding: 60px 0; }
     .p-section--tight { padding: 52px 0; }
@@ -1634,6 +1754,12 @@ html.js .p-reveal[data-delay="4"] { transition-delay: .32s; }
         justify-content: flex-start;
         text-align: left;
     }
+}
+
+/* En pantallas estrechas los cuatro banners del hero pasan a una columna:
+   a dos columnas ya no cabe el texto junto a la miniatura. */
+@media (max-width: 480px) {
+    .p-hero-cards { grid-template-columns: 1fr; }
 }
 
 /* ==========================================================================

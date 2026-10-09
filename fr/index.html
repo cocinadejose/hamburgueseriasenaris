@@ -191,7 +191,7 @@
             <li><a href="/fr/blog/" class="p-link-accent">Blog</a></li>
             <li><a href="/fr/camino/" class="p-link-gold">Guide du Pèlerin</a></li>
             <li><a href="/fr/#contacto">Contact</a></li>
-            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞+34 881 08 25 71</a></li>
 
             <!-- Selector de idioma integrado -->
             <li class="nav-lang-dropdown">
@@ -269,23 +269,45 @@
                 qui fait notre réputation depuis plus de 25 ans.
             </p>
 
-            <div class="p-actions">
-                <a href="#contacto" class="p-btn p-btn--primary">📍 Nous rendre visite</a>
-                <a href="menu" class="p-btn p-btn--glass">🥘 Voir la Carte</a>
-            </div>
+                        <ul class="p-hero-cards">
+                <li>
+                    <a class="p-hero-card" href="#contacto">
+                        <img src="../imagenes/fachada.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Où nous sommes</strong>
+                            <small>Av. Quiroga Palacios, 5 · San Pedro</small>
+                        </span>
+                    </a>
+                </li>
 
-            <ul class="p-hero-facts">
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">📍</span>
-                    <span><strong>Où nous sommes</strong>Av. Quiroga Palacios, 5</span>
+                    <a class="p-hero-card p-hero-card--destacado" href="#empanadillas">
+                        <img src="../imagenes/empanadillas.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Empanadillas maison</strong>
+                            <small>Nouveauté automne-hiver · 1,50 €</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">🥾</span>
-                    <span><strong>Menu du Pèlerin</strong>12 € · Servi à table</span>
+                    <a class="p-hero-card" href="#churros">
+                        <img src="../imagenes/chocolate-churros.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Petits-déjeuners</strong>
+                            <small>Churros au chocolat · 4,50 €</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">☕</span>
-                    <span><strong>Petits-déjeuners</strong>Churros au chocolat</span>
+                    <a class="p-hero-card" href="menu">
+                        <img src="../imagenes/tortilla-bocadillos.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>Voir la Carte</strong>
+                            <small>Sandwichs, burgers et plus</small>
+                        </span>
+                    </a>
                 </li>
             </ul>
 
@@ -306,25 +328,17 @@
                 </div>
             </div>
 
-            <a class="p-infobar-cell" href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer">
-                <span class="p-fact-ico" aria-hidden="true">📍</span>
-                <div>
-                    <span class="p-ib-label">Adresse</span>
-                    <span class="p-ib-value">Av. Quiroga Palacios, 5</span>
-                </div>
-            </a>
+
 
             <a class="p-infobar-cell" href="tel:+34881082571">
                 <span class="p-fact-ico" aria-hidden="true">📞</span>
                 <div>
                     <span class="p-ib-label">Téléphone</span>
-                    <span class="p-ib-value">881 08 25 71</span>
+                    <span class="p-ib-value">+34 881 08 25 71</span>
                 </div>
             </a>
 
-            <div class="p-infobar-cta">
-                <a href="menu" class="p-btn p-btn--dark p-btn--block">Voir la Carte →</a>
-            </div>
+
 
         </div>
     </div>
@@ -394,20 +408,21 @@
 
         <div class="p-cards">
 
-            <a class="p-card p-reveal" href="pilgrim-menu" data-delay="1">
+                        <div class="p-card p-card--wide p-reveal" id="empanadillas" data-delay="1">
                 <div class="p-card-media">
-                    <img src="../imagenes/menu-peregrino-chorizo-grelos.avif" alt="Menu du Pèlerin avec chorizo grillé et grelos" loading="lazy">
-                    <span class="p-card-tag p-card-tag--gold">Réservé aux pèlerins</span>
+                    <img src="../imagenes/empanadillas.avif" alt="Grandes empanadillas maison fraîchement frites" loading="lazy">
+                    <span class="p-card-tag p-card-tag--gold">Nouveauté · Automne-Hiver</span>
                 </div>
                 <div class="p-card-body">
-                    <h3>🥾 Menu du Pèlerin</h3>
-                    <p>Produit galicien de qualité, servi à table. Exclusif aux pèlerins.</p>
+                    <h3>🥟 Empanadillas maison</h3>
+                    <p>De grandes empanadillas fraîchement frites, celles que nous préparons dès que le froid arrive. Également à emporter.</p>
+                    <p class="p-challenge">Vous osez ? Venez les goûter et dites-nous : nous sommes sûrs que vous serez conquis.</p>
                     <div class="p-card-foot">
-                        <span class="p-price">12 €<small>par personne</small></span>
-                        <span class="p-arrow">Voir le menu →</span>
+                        <span class="p-price">1,50 €<small>l'unité</small></span>
+                        <span class="p-meta">Grosses commandes, à l'avance</span>
                     </div>
                 </div>
-            </a>
+            </div>
 
             <a class="p-card p-reveal" href="sandwichs-pour-groupes-saint-jacques" data-delay="2">
                 <div class="p-card-media">
@@ -440,7 +455,7 @@
 
         <div class="p-specials">
 
-            <article class="p-special p-reveal">
+            <article class="p-special p-reveal" id="churros">
                 <img src="../imagenes/chocolate-churros.avif" alt="Chocolat chaud avec churros maison" loading="lazy">
                 <div class="p-special-body">
                     <h3><span aria-hidden="true">☕</span> Chocolat Chaud aux Churros</h3>
@@ -481,7 +496,7 @@
         <p class="p-note p-reveal">📦 Tortillas également disponibles à emporter · Commandez à l'avance</p>
 
         <div class="p-center p-reveal">
-            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 Appelez-nous : 881 08 25 71</a>
+            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 Appelez-nous : +34 881 08 25 71</a>
         </div>
 
     </div>
@@ -574,7 +589,7 @@
                             <span class="p-fact-ico" aria-hidden="true">📞</span>
                             <span>
                                 <strong>Téléphone</strong>
-                                <em>881 08 25 71</em>
+                                <em>+34 881 08 25 71</em>
                             </span>
                         </a>
                     </li>
@@ -670,7 +685,7 @@
 
             <div>
                 <h3>Contact</h3>
-                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p><a href="tel:+34881082571" class="p-footer-tel">+34 881 08 25 71</a></p>
                 <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
                 <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 Canal d'actualités WhatsApp</a></p>
             </div>

@@ -185,7 +185,7 @@
             <li><a href="/zh/blog/" class="p-link-accent">博客</a></li>
             <li><a href="/zh/camino/" class="p-link-gold">朝圣指南</a></li>
             <li><a href="/zh/#contacto">联系我们</a></li>
-            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞+34 881 08 25 71</a></li>
 
             <!-- Selector de idioma integrado -->
             <li class="nav-lang-dropdown">
@@ -262,23 +262,45 @@
                 新鮮食材、傳統食譜，以及超過25年如一日的家庭式款待。
             </p>
 
-            <div class="p-actions">
-                <a href="#contacto" class="p-btn p-btn--primary">📍 來訪我們</a>
-                <a href="menu" class="p-btn p-btn--glass">🥘 查看菜單</a>
-            </div>
+                        <ul class="p-hero-cards">
+                <li>
+                    <a class="p-hero-card" href="#contacto">
+                        <img src="../imagenes/fachada.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>位置</strong>
+                            <small>基羅加·帕拉西奧斯大道5號 · 聖佩德羅</small>
+                        </span>
+                    </a>
+                </li>
 
-            <ul class="p-hero-facts">
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">📍</span>
-                    <span><strong>位置</strong>基羅加·帕拉西奧斯大道5號</span>
+                    <a class="p-hero-card p-hero-card--destacado" href="#empanadillas">
+                        <img src="../imagenes/empanadillas.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>自製西班牙餃子</strong>
+                            <small>秋冬新品 · 1.50 €</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">🥾</span>
-                    <span><strong>朝聖者套餐</strong>12 € · 桌邊服務</span>
+                    <a class="p-hero-card" href="#churros">
+                        <img src="../imagenes/chocolate-churros.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>早餐</strong>
+                            <small>巧克力油條 · 4.50 €</small>
+                        </span>
+                    </a>
                 </li>
+
                 <li>
-                    <span class="p-fact-ico" aria-hidden="true">☕</span>
-                    <span><strong>早餐</strong>巧克力油條</span>
+                    <a class="p-hero-card" href="menu">
+                        <img src="../imagenes/tortilla-bocadillos.avif" alt="" width="52" height="52">
+                        <span class="p-hero-card-txt">
+                            <strong>查看菜單</strong>
+                            <small>三明治、漢堡等</small>
+                        </span>
+                    </a>
                 </li>
             </ul>
 
@@ -299,25 +321,17 @@
                 </div>
             </div>
 
-            <a class="p-infobar-cell" href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer">
-                <span class="p-fact-ico" aria-hidden="true">📍</span>
-                <div>
-                    <span class="p-ib-label">地址</span>
-                    <span class="p-ib-value">基羅加·帕拉西奧斯大道5號</span>
-                </div>
-            </a>
+
 
             <a class="p-infobar-cell" href="tel:+34881082571">
                 <span class="p-fact-ico" aria-hidden="true">📞</span>
                 <div>
                     <span class="p-ib-label">電話</span>
-                    <span class="p-ib-value">881 08 25 71</span>
+                    <span class="p-ib-value">+34 881 08 25 71</span>
                 </div>
             </a>
 
-            <div class="p-infobar-cta">
-                <a href="menu" class="p-btn p-btn--dark p-btn--block">查看菜單 →</a>
-            </div>
+
 
         </div>
     </div>
@@ -385,20 +399,21 @@
 
         <div class="p-cards">
 
-            <a class="p-card p-reveal" href="pilgrim-menu" data-delay="1">
+                        <div class="p-card p-card--wide p-reveal" id="empanadillas" data-delay="1">
                 <div class="p-card-media">
-                    <img src="../imagenes/menu-peregrino-chorizo-grelos.avif" alt="配烤西班牙香腸與grelos的朝聖者套餐" loading="lazy">
-                    <span class="p-card-tag p-card-tag--gold">朝聖者限定</span>
+                    <img src="../imagenes/empanadillas.avif" alt="現炸的大顆自製西班牙餃子" loading="lazy">
+                    <span class="p-card-tag p-card-tag--gold">新品 · 秋冬</span>
                 </div>
                 <div class="p-card-body">
-                    <h3>🥾 朝聖者套餐</h3>
-                    <p>高品質加利西亞食材，桌邊服務。朝聖者限定。</p>
+                    <h3>🥟 自製西班牙餃子</h3>
+                    <p>大顆的西班牙餃子，現炸出鍋，天氣一冷我們就開始做。也可以外帶。</p>
+                    <p class="p-challenge">敢不敢來挑戰？歡迎來嚐嚐再告訴我們 —— 我們保證您會滿意。</p>
                     <div class="p-card-foot">
-                        <span class="p-price">12 €<small>每人</small></span>
-                        <span class="p-arrow">查看菜單 →</span>
+                        <span class="p-price">1.50 €<small>每個</small></span>
+                        <span class="p-meta">大量訂購請提前預約</span>
                     </div>
                 </div>
-            </a>
+            </div>
 
             <a class="p-card p-reveal" href="group-sandwiches-santiago" data-delay="2">
                 <div class="p-card-media">
@@ -431,7 +446,7 @@
 
         <div class="p-specials">
 
-            <article class="p-special p-reveal">
+            <article class="p-special p-reveal" id="churros">
                 <img src="../imagenes/chocolate-churros.avif" alt="熱巧克力配自製油條" loading="lazy">
                 <div class="p-special-body">
                     <h3><span aria-hidden="true">☕</span> 巧克力油條</h3>
@@ -472,7 +487,7 @@
         <p class="p-note p-reveal">📦 蛋餅也提供外帶 · 請提前預訂</p>
 
         <div class="p-center p-reveal">
-            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 致電我們：881 08 25 71</a>
+            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 致電我們：+34 881 08 25 71</a>
         </div>
 
     </div>
@@ -564,7 +579,7 @@
                             <span class="p-fact-ico" aria-hidden="true">📞</span>
                             <span>
                                 <strong>電話</strong>
-                                <em>881 08 25 71</em>
+                                <em>+34 881 08 25 71</em>
                             </span>
                         </a>
                     </li>
@@ -660,7 +675,7 @@
 
             <div>
                 <h3>联系我们</h3>
-                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p><a href="tel:+34881082571" class="p-footer-tel">+34 881 08 25 71</a></p>
                 <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
                 <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp 资讯频道</a></p>
             </div>
