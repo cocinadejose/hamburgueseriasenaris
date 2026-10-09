@@ -360,28 +360,85 @@
 	}
 	</script>
 
+<link rel="stylesheet" href="/css/style-portada.css">
 </head>
 <body>
 
     <!-- ============== 导航 ============== -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../#inicio">首页</a></li>
-                <li><a href="../#quienes-somos">关于我们</a></li>
-                <li><a href="../#nuestro-local">我们的店铺</a></li>
-                <li><a href="../#contacto">联系方式</a></li>
-                <li><a href="../blog/">博客</a></li>
-                <li><a href="../menu">菜单</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<!-- NAV:START -->
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
+    <div class="nav-container">
+
+        <a href="/zh/" class="p-brand" aria-label="Hamburguesería Señarís — 首页">
+            <img src="/cartel.avif" alt="Hamburguesería Señarís 标志" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/zh/#inicio">首页</a></li>
+            <li><a href="/zh/#quienes-somos">关于我们</a></li>
+            <li><a href="/zh/#nuestro-local">我们的店</a></li>
+            <li><a href="/zh/menu">菜单</a></li>
+            <li><a href="/zh/blog/" class="p-link-accent">博客</a></li>
+            <li><a href="/zh/camino/" class="p-link-gold">朝圣指南</a></li>
+            <li><a href="/zh/#contacto">联系我们</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
+            <li class="nav-lang-dropdown">
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>语言</span> ▼
+                </button>
+                <ul id="langDropdown" class="lang-dropdown-list">
+                    <li><a href="/es/">🇪🇸 Español</a></li>
+                    <li><a href="/en/">🇬🇧 English</a></li>
+                    <li><a href="/fr/">🇫🇷 Français</a></li>
+                    <li><a href="/pt/">🇵🇹 Português</a></li>
+                    <li><a href="/de/">🇩🇪 Deutsch</a></li>
+                    <li><a href="/it/">🇮🇹 Italiano</a></li>
+                    <li><a href="/ja/">🇯🇵 日本語</a></li>
+                    <li><a href="/zh/" class="active">🇨🇳 中文</a></li>
+                    <li><a href="/ko/">🇰🇷 한국어</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>
+
+<!-- NAV:END -->
 
 	<!-- ============== 主要内容 ============== -->
 	<main>
@@ -843,15 +900,63 @@
 	</main>
 
 	<!-- ============== 页脚 ============== -->
-    <footer class="footer">
-        <div class="section-container">
-            <p>
-                <a href="../privacy-policy-zh" style="color: #fff; margin-right: 15px; text-decoration: underline;">隐私政策和法律声明</a> |
-                &copy; 2026 Hamburguesería Señarís. All rights reserved.
-            </p>
-            <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - 电话: <a href="tel:+34881082571" style="color: #fff;">881 08 25 71</a></p>
+<!-- FOOTER:START -->
+<!-- Generado desde partials/footer.html por scripts/build-nav.mjs · no editar a mano -->
+<footer class="footer p-footer">
+    <div class="p-wrap">
+
+        <div class="p-footer-grid">
+
+            <div>
+                <div class="p-footer-brand">
+                    <img src="/cartel.avif" alt="Hamburguesería Señarís 标志" width="42" height="42" loading="lazy">
+                    <div>
+                        <strong>Señarís</strong>
+                        <span>Café-Bar · 圣地亚哥</span>
+                    </div>
+                </div>
+                <p>自 1999 年起在圣佩德罗街区供应家常菜、汉堡和三明治。</p>
+            </div>
+
+            <div>
+                <h3>导航</h3>
+                <ul>
+                    <li><a href="/zh/#inicio">首页</a></li>
+                    <li><a href="/zh/#quienes-somos">关于我们</a></li>
+                    <li><a href="/zh/#nuestro-local">我们的店</a></li>
+                    <li><a href="/zh/#contacto">联系我们</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>探索</h3>
+                <ul>
+                    <li><a href="/zh/menu">菜单</a></li>
+                    <li><a href="/zh/blog/">博客</a></li>
+                    <li><a href="/zh/camino/">朝圣指南</a></li>
+                    <li><a href="/zh/pilgrim-menu">朝圣者套餐</a></li>
+                    <li><a href="/zh/group-sandwiches-santiago">团体与大巴</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>联系我们</h3>
+                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
+                <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp 资讯频道</a></p>
+            </div>
+
         </div>
-    </footer>
+
+        <div class="p-footer-bottom">
+            <p>&copy; 2026 Hamburguesería Señarís. 版权所有。</p>
+            <p><a href="/zh/privacy-policy-zh">法律声明与隐私</a></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FOOTER:END -->
 
 	<!-- ============== JAVASCRIPT ============== -->
 	<script>

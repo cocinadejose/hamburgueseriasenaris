@@ -4,6 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JS disponible: activa las animaciones .p-reveal -->
+        <script>document.documentElement.classList.add('js');</script>
         <title>수제 버거·샌드위치·스페인식 오믈렛 | Señarís 산티아고</title>
         <meta name="description" content="1999년부터 산티아고 데 콤포스텔라에서 수제 요리를 제공합니다. 버거, 샌드위치, 스페인식 오믈렛, 초콜릿 추로스. 산페드로 지구, 소신학교와 벨비스 공원 옆.">
         <meta name="keywords" content="수제 버거 산티아고, 샌드위치 산티아고, 스페인식 오믈렛, 초콜릿 추로스, 수제 요리 산페드로, 소신학교 바, 세냐리스 산티아고">
@@ -14,6 +17,7 @@
         <meta name="ICBM" content="42.8777451, -8.5361164">
         <link rel="canonical" href="https://hamburgueseriasenaris.com/ko/" />
         <link rel="icon" href="../favicon.ico" sizes="any">
+        <meta name="theme-color" content="#15171c">
         <link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/" />
         <link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/" />
         <link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/" />
@@ -44,7 +48,6 @@
         <meta name="twitter:description" content="샌드위치, 수제 버거, 라쇼. 전통 레시피, 신선한 식재료, 가족의 환대.">
         <meta name="twitter:image" content="https://hamburgueseriasenaris.com/cartel.avif">
         <meta name="twitter:site" content="@HamburgueseriaSenaris">
-        <link rel="stylesheet" href="../css/style-index.css">
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -150,7 +153,7 @@
                 "name": "세냐리스 | 산티아고 수제 버거",
                 "description": "산티아고 데 콤포스텔라 최고의 수제 버거와 샌드위치를 만나보세요. Susana와 Antonio가 운영하는 믿을 수 있는 현지 맛집입니다.",
                 "datePublished": "2025-10-15",
-                "dateModified": "2026-07-02",
+                "dateModified": "2026-10-09",
                 "inLanguage": "ko",
                 "isPartOf": {
                     "@id": "https://hamburgueseriasenaris.com/#restaurant"
@@ -158,234 +161,666 @@
             }
 
         </script>
+            <link rel="preload" as="image" href="../imagenes/hamburguesacompleta.avif" fetchpriority="high">
+        <link rel="stylesheet" href="../css/style-index.css">
+        <link rel="stylesheet" href="../css/style-portada.css">
     </head>
+<body class="portada">
 
-    <body>
-        <nav class="navbar">
-            <div class="nav-container"><a href="#" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#inicio">홈</a></li>
-                    <li><a href="#quienes-somos">저희 소개</a></li>
-                    <li><a href="#nuestro-local">매장 안내</a></li>
-                    <li><a href="#contacto">연락처</a></li>
-                    <li><a href="blog/" style="color:#D32F2F;font-weight:bold;">블로그</a></li>
-                    <li><a href="camino/" style="color:#f0c674;font-weight:bold;">순례 가이드</a></li>
-                    <li><a href="menu">메뉴</a></li>
-                    <li class="nav-lang-dropdown"><button id="langDropdownBtn" aria-haspopup="true" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-size:1.1em;display:flex;align-items:center;gap:4px;">🌐 <span style="font-size:0.95em;">언어</span> ▼</button>
-                        <ul id="langDropdown" class="lang-dropdown-list" style="display:none;position:absolute;right:0;background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:8px 0;min-width:140px;z-index:2000;">
-                            <li><a href="../es/">🇪🇸 Español</a></li>
-                            <li><a href="../en/">🇬🇧 English</a></li>
-                            <li><a href="../fr/">🇫🇷 Français</a></li>
-                            <li><a href="../pt/">🇵🇹 Português</a></li>
-                            <li><a href="../de/">🇩🇪 Deutsch</a></li>
-                            <li><a href="../it/">🇮🇹 Italiano</a></li>
-                            <li><a href="../ja/">🇯🇵 日本語</a></li>
-                            <li><a href="../zh/">🇨🇳 中文</a></li>
-                            <li><a href="../ko/" class="active">🇰🇷 한국어</a></li>
-                        </ul>
-                    </li>
+<!-- NAV:START -->
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
+    <div class="nav-container">
+
+        <a href="/ko/" class="p-brand" aria-label="Hamburguesería Señarís — 홈">
+            <img src="/cartel.avif" alt="Hamburguesería Señarís 로고" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/ko/#inicio">홈</a></li>
+            <li><a href="/ko/#quienes-somos">저희 소개</a></li>
+            <li><a href="/ko/#nuestro-local">매장 안내</a></li>
+            <li><a href="/ko/menu">메뉴</a></li>
+            <li><a href="/ko/blog/" class="p-link-accent">블로그</a></li>
+            <li><a href="/ko/camino/" class="p-link-gold">순례 가이드</a></li>
+            <li><a href="/ko/#contacto">연락처</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
+            <li class="nav-lang-dropdown">
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>언어</span> ▼
+                </button>
+                <ul id="langDropdown" class="lang-dropdown-list">
+                    <li><a href="/es/">🇪🇸 Español</a></li>
+                    <li><a href="/en/">🇬🇧 English</a></li>
+                    <li><a href="/fr/">🇫🇷 Français</a></li>
+                    <li><a href="/pt/">🇵🇹 Português</a></li>
+                    <li><a href="/de/">🇩🇪 Deutsch</a></li>
+                    <li><a href="/it/">🇮🇹 Italiano</a></li>
+                    <li><a href="/ja/">🇯🇵 日本語</a></li>
+                    <li><a href="/zh/">🇨🇳 中文</a></li>
+                    <li><a href="/ko/" class="active">🇰🇷 한국어</a></li>
                 </ul>
-                <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
-            </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    var btn = document.getElementById('langDropdownBtn'),
-                        list = document.getElementById('langDropdown');
-                    if (btn && list) {
-                        btn.addEventListener('click', function(e) {
-                            e.stopPropagation();
-                            var show = list.style.display === 'block';
-                            list.style.display = show ? 'none' : 'block';
-                            btn.setAttribute('aria-expanded', !show)
-                        });
-                        document.addEventListener('click', function(e) {
-                            if (!btn.contains(e.target) && !list.contains(e.target)) {
-                                list.style.display = 'none';
-                                btn.setAttribute('aria-expanded', false)
-                            }
-                        });
-                        list.querySelectorAll('a').forEach(function(link) {
-                            link.addEventListener('click', function() {
-                                list.style.display = 'none';
-                                btn.setAttribute('aria-expanded', false)
-                            })
-                        })
-                    }
-                });
+            </li>
+        </ul>
 
-            </script>
-        </nav>
-        <main>
-            <section id="inicio" class="hero">
-                <div class="hero-container">
-                    <div class="logo-container"><img src="../cartel.avif" alt="세냐리스 간판"></div>
-                    <h1 class="brand-name">산티아고의 수제 버거·샌드위치·스페인식 오믈렛</h1>
-                    <h2>카페바 세냐리스 · 1999년부터 산페드로 지구에서 이어온 수제 레시피</h2>
-                    <p>신선한 식재료, 전통 레시피, 25년 넘게 이어져 온 가족의 환대.</p>
-                    <div class="btn-group"><a href="#contacto" class="btn btn-primary">📍 찾아오시는 길</a><a href="menu" class="btn btn-secondary">🥘 메뉴 보기</a></div>
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="내비게이션 메뉴 열기" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>
+
+<!-- NAV:END -->
+
+<main>
+
+<!-- ============== HERO ============== -->
+<header id="inicio" class="p-hero">
+    <div class="p-hero-inner">
+        <div class="p-hero-content">
+
+            <span class="p-eyebrow">
+                <span class="p-dot" aria-hidden="true"></span>
+                동네 카페바 · 산티아고 데 콤포스텔라
+            </span>
+
+            <h1>수제 버거·샌드위치·<em>스페인식 오믈렛</em></h1>
+
+            <p class="p-hero-sub">카페바 세냐리스 · 1999년부터 산페드로 지구에서 이어온 수제 레시피</p>
+
+            <p class="p-hero-text">
+                신선한 식재료, 전통 레시피, 25년 넘게 이어져 온 가족의 환대.
+            </p>
+
+            <div class="p-actions">
+                <a href="#contacto" class="p-btn p-btn--primary">📍 찾아오시는 길</a>
+                <a href="menu" class="p-btn p-btn--glass">🥘 메뉴 보기</a>
+            </div>
+
+            <ul class="p-hero-facts">
+                <li>
+                    <span class="p-fact-ico" aria-hidden="true">📍</span>
+                    <span><strong>위치</strong>키로가 팔라시오스 거리 5번지</span>
+                </li>
+                <li>
+                    <span class="p-fact-ico" aria-hidden="true">🥾</span>
+                    <span><strong>순례자 메뉴</strong>12 € · 테이블 서비스</span>
+                </li>
+                <li>
+                    <span class="p-fact-ico" aria-hidden="true">☕</span>
+                    <span><strong>아침 식사</strong>초콜릿 추로스</span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</header>
+
+<!-- ============== INFORMACIÓN PRÁCTICA ============== -->
+<section class="p-infobar" aria-label="매장 안내">
+    <div class="p-wrap">
+        <div class="p-infobar-inner">
+
+            <div class="p-infobar-cell">
+                <span class="p-fact-ico" aria-hidden="true">🕘</span>
+                <div>
+                    <span class="p-ib-label">오늘의 영업</span>
+                    <span class="p-ib-value p-ib-value--green" id="todayHours">영업시간은 아래 표를 확인해 주세요</span>
                 </div>
-            </section>
-            <section class="section">
-                <div class="section-container">
-                    <h2 style="text-align:center;color:#1b3a2e;">테이크아웃 및 단체 옵션</h2>
-                    <p style="text-align:center;color:#666;max-width:650px;margin:0 auto 20px;">단체 관광, 방문객, 그룹을 위한 주문을 준비해 드립니다. 모든 음식은 포장되어 원하시는 시간에 맞춰 제공됩니다.</p>
-                    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;max-width:700px;margin:0 auto;"><a href="pilgrim-menu" style="flex:1 1 280px;background:#fff;border:2px solid #2a7f62;border-radius:12px;padding:20px 24px;text-decoration:none;text-align:center;transition:transform .2s,box-shadow .2s;color:#1b3a2e;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(42,127,98,.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><span style="font-size:2rem;">🥾</span>
-                            <h3 style="font-size:1.1rem;margin:8px 0 4px;">순례자 메뉴 · 12 €</h3>
-                            <p style="font-size:.9rem;color:#666;">갈리시아 고품질 식재료, 테이블 서비스. 순례자 전용.</p>
-                        </a><a href="group-sandwiches-santiago" style="flex:1 1 280px;background:#fff;border:2px solid #1976d2;border-radius:12px;padding:20px 24px;text-decoration:none;text-align:center;transition:transform .2s,box-shadow .2s;color:#1b3a2e;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(25,118,210,.15)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><span style="font-size:2rem;">🚌</span>
-                            <h3 style="font-size:1.1rem;margin:8px 0 4px;">단체 샌드위치 · 5.50 €부터</h3>
-                            <p style="font-size:.9rem;color:#666;">버스·여행사·단체 여행용 정액 메뉴.</p>
-                        </a></div>
+            </div>
+
+            <a class="p-infobar-cell" href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer">
+                <span class="p-fact-ico" aria-hidden="true">📍</span>
+                <div>
+                    <span class="p-ib-label">주소</span>
+                    <span class="p-ib-value">키로가 팔라시오스 거리 5번지</span>
                 </div>
-            </section>
-            <section class="section">
-                <div class="section-container">
-                    <div class="promo-albondigas" style="border-color:#c5a47e;background:linear-gradient(135deg,#fdfaf6 0%,#fff 100%);">
-                        <div class="promo-header"><span class="promo-badge" style="background-color:#c5a47e;">수제</span>
-                            <h2 class="promo-title" style="color:#5d4e37;">시그니처 메뉴</h2>
-                            <p class="promo-subtitle" style="color:#666;">현지 식재료, 전통 레시피, 정성을 담아 준비합니다.</p>
-                        </div>
-                        <div class="promo-content">
-                            <div class="promo-item" style="border-bottom-color:#c5a47e;"><img src="../imagenes/chocolate-churros.avif" alt="핫초콜릿과 수제 추로스" class="promo-image" style="height:220px;" loading="lazy">
-                                <div class="promo-item-content">
-                                    <h3 class="promo-item-title" style="color:#8B4513;"><span>☕</span> 초콜릿 추로스</h3>
-                                    <p class="promo-item-description">핫초콜릿(200ml)과 갓 튀긴 수제 추로스 5개. 매장 또는 테이크아웃 가능.</p>
-                                    <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:1.1rem;font-weight:700;color:#8B4513;">4.50 €</span><span style="font-size:0.85rem;color:#888;">🕘 8:30 — 12:00</span></div>
-                                </div>
-                            </div>
-                            <div class="promo-item" style="border-bottom-color:#2a7f62;"><img src="../imagenes/tortilla-bocadillos.avif" alt="스페인식 오믈렛 샌드위치 4인분" class="promo-image" style="height:220px;" loading="lazy">
-                                <div class="promo-item-content">
-                                    <h3 class="promo-item-title" style="color:#2a7f62;"><span>🥪</span> 오믈렛 샌드위치</h3>
-                                    <p class="promo-item-description">스페인식 오믈렛을 4개의 수제 빵에 담아 제공. 최소 4인. 여행에 최적.</p>
-                                    <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:1.1rem;font-weight:700;color:#2a7f62;">18 €</span><span style="font-size:0.85rem;color:#888;">+ 샐러드 20 €</span></div>
-                                </div>
-                            </div>
-                            <div class="promo-item" style="border-bottom-color:#2a7f62;"><img src="../imagenes/tortilla-grupos.avif" alt="통 스페인식 오믈렛 나눔" class="promo-image" style="height:220px;" loading="lazy">
-                                <div class="promo-item-content">
-                                    <h3 class="promo-item-title" style="color:#2a7f62;"><span>🍳</span> 통 오믈렛 나눔</h3>
-                                    <p class="promo-item-description">통 스페인식 오믈렛과 빵을 함께. 최소 4인. 단체에 최적.</p>
-                                    <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:1.1rem;font-weight:700;color:#2a7f62;">15 €</span><span style="font-size:0.85rem;color:#888;">+ 샐러드 18 €</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="promo-cta" style="margin-top:30px;padding-top:25px;">
-                            <p style="margin-bottom:16px;color:#888;font-size:0.95rem;">📦 오믈렛 테이크아웃 가능 · 사전 주문 부탁드립니다</p><a href="tel:+34881082571" class="btn btn-primary">📞 전화 주문: 881 08 25 71</a>
-                        </div>
-                    </div>
+            </a>
+
+            <a class="p-infobar-cell" href="tel:+34881082571">
+                <span class="p-fact-ico" aria-hidden="true">📞</span>
+                <div>
+                    <span class="p-ib-label">전화번호</span>
+                    <span class="p-ib-value">881 08 25 71</span>
                 </div>
-            </section>
-            <section id="quienes-somos" class="section about">
-                <div class="section-container">
-                    <h2 class="section-title">저희 소개</h2>
-                    <div class="team-grid">
-                        <div class="team-member"><img src="../susana.avif" alt="Susana - 세냐리스 공동 창업자" loading="lazy">
+            </a>
+
+            <div class="p-infobar-cta">
+                <a href="menu" class="p-btn p-btn--dark p-btn--block">메뉴 보기 →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============== QUIÉNES SOMOS ============== -->
+<section id="quienes-somos" class="p-section p-section--cream">
+    <div class="p-wrap">
+        <div class="p-about">
+
+            <div class="p-about-media p-reveal">
+                <figure>
+                    <img src="../susana.avif" alt="Susana - 세냐리스 공동 창업자" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="../antonio.avif" alt="Antonio - 세냐리스 공동 창업자" loading="lazy">
+                </figure>
+            </div>
+
+            <div class="p-about-body">
+                <span class="p-kicker">1999년부터 산페드로 지구에서</span>
+                <h2>저희 소개</h2>
+                <p>
+                    저희는 산티아고 데 콤포스텔라에서 최고의 수제 요리를 제공하는 데 평생을 바쳐온 가족입니다.
+                    신선한 식재료, 진정한 맛, 그리고 집처럼 편안한 서비스를 약속드립니다. 모든 버거와 샌드위치는
+                    지역 최고의 식재료로 정성껏 준비합니다.
+                </p>
+
+                <div class="p-people">
+                    <div class="p-person">
+                        <span class="p-fact-ico" aria-hidden="true">👩‍🍳</span>
+                        <div>
                             <h3>Susana</h3>
                             <p>요식업계 30년 경력의 Susana는 저희 주방의 핵심입니다. 그녀의 헌신과 노하우가 모든 요리를 특별하게 만듭니다.</p>
                         </div>
-                        <div class="team-member"><img src="../antonio.avif" alt="Antonio - 세냐리스 공동 창업자" loading="lazy">
+                    </div>
+                    <div class="p-person">
+                        <span class="p-fact-ico" aria-hidden="true">👨‍🍳</span>
+                        <div>
                             <h3>Antonio</h3>
                             <p>Antonio는 철판의 달인입니다. 세심한 배려와 고객을 향한 따뜻한 마음이 매 방문을 특별한 경험으로 만듭니다.</p>
                         </div>
                     </div>
-                    <div class="local-description">
-                        <p>저희는 산티아고 데 콤포스텔라에서 최고의 수제 요리를 제공하는 데 평생을 바쳐온 가족입니다. 신선한 식재료, 진정한 맛, 그리고 집처럼 편안한 서비스를 약속드립니다. 모든 버거와 샌드위치는 지역 최고의 식재료로 정성껏 준비합니다.</p>
-                    </div>
                 </div>
-            </section>
-            <section id="nuestro-local" class="section local">
-                <div class="section-container">
-                    <h2 class="section-title">매장 안내</h2>
-                    <div class="local-description">
-                        <p>소신학교 옆 산페드로 지구에 위치한 동네 바입니다. 옛 정취가 느껴지는 아늑한 공간에서 여유롭게 저희의 시그니처 메뉴를 즐겨보세요.</p>
-                    </div>
-                    <div class="local-grid">
-                        <div class="local-image"><img src="../local1.avif" alt="세냐리스 매장 내부 - 바와 테이블" loading="lazy"></div>
-                        <div class="local-image"><img src="../local2.avif" alt="세냐리스 매장 내부 - 주방과 준비 공간" loading="lazy"></div>
-                    </div>
-                    <div class="local-description">
-                        <p>편안한 테이블, 넓은 바, 주문 즉시 조리하는 기능적인 주방을 갖추고 있습니다. 주소: 키로가 팔라시오스 거리 5번지, 산페드로 지구. 소신학교 옆, 벨비스 공원 맞은편. 중앙시장에서 도보 10분, 대성당에서 도보 15분.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="contacto" class="section contact">
-                <div class="section-container">
-                    <div class="info-box">
-                        <h2>편하게 들르시거나 전화 주세요</h2>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <h3>📍 찾아오시는 길</h3><a href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer">키로가 팔라시오스 거리 5번지 · 15703 산티아고 데 콤포스텔라</a>
-                            </div>
-                            <div class="contact-item">
-                                <h3>📞 전화번호</h3><a href="tel:+34881082571" class="phone-link">881 08 25 71</a>
-                            </div>
-                            <div class="contact-item">
-                                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 아이콘" style="width:20px;height:20px;vertical-align:middle;margin-right:8px;">소식 채널</h3><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">가입하시면 할인 및 소식을 받아보실 수 있습니다!</a>
-                            </div>
-                        </div>
-                        <div class="schedule-section">
-                            <h3 class="schedule-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#333">
-                                    <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
-                                    <path d="M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z"></path>
-                                </svg> 영업시간</h3>
-                            <ul class="schedule-list">
-                                <li><span class="day">월요일</span><span>8:30 – 16:00</span></li>
-                                <li><span class="day">화요일</span><span>8:30 – 23:30</span></li>
-                                <li><span class="day">수요일</span><span>8:30 – 23:30</span></li>
-                                <li><span class="day">목요일</span><span>8:30 – 23:30</span></li>
-                                <li><span class="day">금요일</span><span>8:30 – 23:30</span></li>
-                                <li><span class="day">토요일</span><span>10:00 – 16:00 및 18:00 – 23:30</span></li>
-                                <li><span class="day">일요일 (공휴일)</span><span>10:00 – 16:00 및 18:00 – 23:30</span></li>
-                            </ul>
-                        </div>
-                        <div style="text-align:center;margin-top:30px;"><a href="menu" class="btn btn-secondary">전체 메뉴 보기</a></div>
-                        <div class="map-container" id="map-container">
-                            <div id="map-placeholder">
-                                <div class="map-overlay">
-                                    <h3>Google Maps에서 위치 보기</h3>
-                                    <p>지도를 보려면 Google 콘텐츠 로드를 수락해 주세요. Google의 쿠키 사용이 수반될 수 있습니다.</p><button id="load-map-button" class="btn btn-primary">수락하고 지도 보기</button>
-                                    <p class="privacy-notice"><a href="privacy-policy-ko" target="_blank">개인정보 처리방침 보기</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="section-container">
-                <p><a href="privacy-policy-ko" style="color:#fff;margin-right:15px;text-decoration:underline;">개인정보 처리방침</a> | &copy; 2026 Hamburguesería Señarís. All rights reserved.</p>
-                <p>키로가 팔라시오스 거리 5번지 - 산티아고 데 콤포스텔라 - 전화: 881 08 25 71</p>
+
+                <ul class="p-stats">
+                    <li><b>+25</b><span>년의 경험</span></li>
+                    <li><b>1999</b><span>창업 연도</span></li>
+                    <li><b>100%</b><span>수제 요리</span></li>
+                </ul>
             </div>
-        </footer>
-        <script>
-            const menuToggle = document.getElementById('menuToggle'),
-                navLinks = document.querySelector('.nav-links');
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                menuToggle.classList.toggle('active')
-            });
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    menuToggle.classList.remove('active')
-                })
-            });
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        })
-                    }
-                })
-            });
-            document.getElementById('load-map-button').addEventListener('click', function() {
-                document.getElementById('map-container').innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.68052166015053!2d-8.536116433927077!3d42.877745104303614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe49b0023f1b%3A0xecd73a49cd995075!2sHamburgueser%C3%ADa%20%2F%20bar%20Se%C3%B1aris!5e1!3m2!1sja!2sjp!4v1760015227842!5m2!1sja!2sjp" title="세냐리스 지도" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
-            })
 
-        </script>
-    </body>
+        </div>
+    </div>
+</section>
 
+<!-- ============== PARA LLEVAR Y GRUPOS ============== -->
+<section class="p-section p-section--paper">
+    <div class="p-wrap">
+
+        <div class="p-head p-reveal">
+            <span class="p-kicker">주문 및 단체</span>
+            <h2>테이크아웃 및 단체 옵션</h2>
+            <p>단체 관광, 방문객, 그룹을 위한 주문을 준비해 드립니다. 모든 음식은 포장되어 원하시는 시간에 맞춰 제공됩니다.</p>
+        </div>
+
+        <div class="p-cards">
+
+            <a class="p-card p-reveal" href="pilgrim-menu" data-delay="1">
+                <div class="p-card-media">
+                    <img src="../imagenes/menu-peregrino-chorizo-grelos.avif" alt="구운 초리소와 그렐로스를 곁들인 순례자 메뉴" loading="lazy">
+                    <span class="p-card-tag p-card-tag--gold">순례자 전용</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>🥾 순례자 메뉴</h3>
+                    <p>갈리시아 고품질 식재료, 테이블 서비스. 순례자 전용.</p>
+                    <div class="p-card-foot">
+                        <span class="p-price">12 €<small>1인 기준</small></span>
+                        <span class="p-arrow">메뉴 보기 →</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="p-card p-reveal" href="group-sandwiches-santiago" data-delay="2">
+                <div class="p-card-media">
+                    <img src="../imagenes/menu-peregrinos-grupos.webp" alt="단체·관광버스용 샌드위치 플래터" loading="lazy">
+                    <span class="p-card-tag p-card-tag--green">버스·여행사</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>🚌 단체 샌드위치</h3>
+                    <p>버스·여행사·단체 여행용 정액 메뉴.</p>
+                    <div class="p-card-foot">
+                        <span class="p-price">5.50 €부터<small>1인 기준</small></span>
+                        <span class="p-arrow">옵션 보기 →</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============== ESPECIALIDADES ============== -->
+<section class="p-section p-section--cream">
+    <div class="p-wrap">
+
+        <div class="p-head p-reveal">
+            <span class="p-kicker">수제</span>
+            <h2>시그니처 메뉴</h2>
+            <p>현지 식재료, 전통 레시피, 정성을 담아 준비합니다.</p>
+        </div>
+
+        <div class="p-specials">
+
+            <article class="p-special p-reveal">
+                <img src="../imagenes/chocolate-churros.avif" alt="수제 추로스를 곁들인 핫초콜릿" loading="lazy">
+                <div class="p-special-body">
+                    <h3><span aria-hidden="true">☕</span> 초콜릿 추로스</h3>
+                    <p>핫초콜릿(200ml)과 갓 튀긴 수제 추로스 5개. 매장 또는 테이크아웃 가능.</p>
+                    <div class="p-card-foot">
+                        <span class="p-price">4.50 €</span>
+                        <span class="p-meta">🕘 8:30 — 12:00</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="p-special p-reveal" data-delay="1">
+                <img src="../imagenes/tortilla-bocadillos.avif" alt="스페인식 오믈렛 샌드위치 4인분" loading="lazy">
+                <div class="p-special-body">
+                    <h3><span aria-hidden="true">🥪</span> 오믈렛 샌드위치</h3>
+                    <p>스페인식 오믈렛을 4개의 수제 빵에 담아 제공. 최소 4인. 여행에 최적.</p>
+                    <div class="p-card-foot">
+                        <span class="p-price">18 €</span>
+                        <span class="p-meta">+ 샐러드 20 €</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="p-special p-reveal" data-delay="2">
+                <img src="../imagenes/tortilla-grupos.avif" alt="나눠 먹는 통 스페인식 오믈렛" loading="lazy">
+                <div class="p-special-body">
+                    <h3><span aria-hidden="true">🍳</span> 통 오믈렛 나눔</h3>
+                    <p>통 스페인식 오믈렛과 빵을 함께. 최소 4인. 단체에 최적.</p>
+                    <div class="p-card-foot">
+                        <span class="p-price">15 €</span>
+                        <span class="p-meta">+ 샐러드 18 €</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="p-note p-reveal">📦 오믈렛 테이크아웃 가능 · 사전 주문 부탁드립니다</p>
+
+        <div class="p-center p-reveal">
+            <a href="tel:+34881082571" class="p-btn p-btn--primary">📞 전화 주문: 881 08 25 71</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============== NUESTRO LOCAL ============== -->
+<section id="nuestro-local" class="p-section p-section--paper">
+    <div class="p-wrap">
+        <div class="p-local">
+
+            <div class="p-local-body">
+                <span class="p-kicker">산페드로 지구</span>
+                <h2>매장 안내</h2>
+                <p>
+                    소신학교 옆 산페드로 지구에 위치한 동네 바입니다. 옛 정취가 느껴지는 아늑한 공간에서
+                    여유롭게 저희의 시그니처 메뉴를 즐겨보세요.
+                </p>
+
+                <ul class="p-local-list">
+                    <li>
+                        <span class="p-fact-ico" aria-hidden="true">🪑</span>
+                        <span>편안한 테이블, 넓은 바, 주문 즉시 조리하는 기능적인 주방을 갖추고 있습니다.</span>
+                    </li>
+                    <li>
+                        <span class="p-fact-ico" aria-hidden="true">⛪</span>
+                        <span>소신학교 옆, 벨비스 공원 맞은편.</span>
+                    </li>
+                    <li>
+                        <span class="p-fact-ico" aria-hidden="true">🚶</span>
+                        <span>중앙시장에서 도보 10분, 대성당에서 도보 15분.</span>
+                    </li>
+                    <li>
+                        <span class="p-fact-ico" aria-hidden="true">📍</span>
+                        <span>키로가 팔라시오스 거리 5번지, 15703 산티아고 데 콤포스텔라.</span>
+                    </li>
+                </ul>
+
+                <div class="p-actions">
+                    <a href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer" class="p-btn p-btn--ghost" aria-label="Google Maps에서 오시는 길 보기(새 탭에서 열림)">🗺️ 오시는 길 · Google Maps <span class="p-ext" aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+
+            <div class="p-gallery p-reveal">
+                <figure>
+                    <img src="../local1.avif" alt="세냐리스 매장 내부 - 바와 테이블" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="../local2.avif" alt="세냐리스 매장 내부 - 주방과 준비 공간" loading="lazy">
+                </figure>
+                <figure>
+                    <img src="../imagenes/seminario-menor.avif" alt="세냐리스 옆 소신학교" loading="lazy">
+                </figure>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============== CONTACTO E INFORMACIÓN ============== -->
+<section id="contacto" class="p-section p-section--cream">
+    <div class="p-wrap">
+
+        <div class="p-head p-reveal">
+            <span class="p-kicker">언제나 가까이</span>
+            <h2>편하게 들르시거나 전화 주세요</h2>
+            <p>예약도, 번거로움도 없습니다. 원하시는 시간에 오시고, 테이크아웃은 미리 전화 주시면 됩니다.</p>
+        </div>
+
+        <div class="p-contact">
+
+            <div class="p-panel p-reveal">
+                <p class="p-panel-lead">
+                    중간 유통 없이 직접 서비스합니다. 단체 방문이나 대량 주문도 미리 말씀해 주시면
+                    약속한 시간에 준비해 드립니다.
+                </p>
+
+                <ul class="p-contact-list">
+                    <li>
+                        <a href="https://maps.app.goo.gl/xQjL1XuYBvGVFsCr8" target="_blank" rel="noopener noreferrer">
+                            <span class="p-fact-ico" aria-hidden="true">📍</span>
+                            <span>
+                                <strong>찾아오시는 길</strong>
+                                <em>키로가 팔라시오스 거리 5번지 · 15703 산티아고 데 콤포스텔라</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+34881082571">
+                            <span class="p-fact-ico" aria-hidden="true">📞</span>
+                            <span>
+                                <strong>전화번호</strong>
+                                <em>881 08 25 71</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">
+                            <span class="p-fact-ico" aria-hidden="true">💬</span>
+                            <span>
+                                <strong>소식 채널</strong>
+                                <em>가입하시면 할인 및 소식을 받아보실 수 있습니다!</em>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="menu" class="p-btn p-btn--primary p-btn--block">전체 메뉴 보기</a>
+            </div>
+
+            <div>
+
+                <div class="p-hours-card p-reveal" data-delay="1">
+                    <h3>🕘 영업시간</h3>
+                    <ul class="p-hours" id="hoursList">
+                        <li data-day="1"><span class="p-day">월요일</span> <span>8:30 – 16:00</span></li>
+                        <li data-day="2"><span class="p-day">화요일</span> <span>8:30 – 23:30</span></li>
+                        <li data-day="3"><span class="p-day">수요일</span> <span>8:30 – 23:30</span></li>
+                        <li data-day="4"><span class="p-day">목요일</span> <span>8:30 – 23:30</span></li>
+                        <li data-day="5"><span class="p-day">금요일</span> <span>8:30 – 23:30</span></li>
+                        <li data-day="6"><span class="p-day">토요일</span> <span>10:00 – 16:00 및 18:00 – 23:30</span></li>
+                        <li data-day="0"><span class="p-day">일요일 (공휴일)</span> <span>10:00 – 16:00 및 18:00 – 23:30</span></li>
+                    </ul>
+                    <p class="p-hours-note">📦 테이크아웃·단체 주문은 미리 연락 주세요.</p>
+                </div>
+
+                <div class="p-map p-reveal" data-delay="2">
+                    <div class="map-container" id="map-container">
+                        <div id="map-placeholder">
+                            <div class="map-overlay">
+                                <h3>Google Maps에서 위치 보기</h3>
+                                <p>지도를 보려면 Google 콘텐츠 로드를 수락해 주세요. Google의 쿠키 사용이 수반될 수 있습니다.</p>
+                                <button id="load-map-button" class="p-btn p-btn--primary">수락하고 지도 보기</button>
+                                <p class="privacy-notice"><a href="privacy-policy-ko" target="_blank">개인정보 처리방침 보기</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER:START -->
+<!-- Generado desde partials/footer.html por scripts/build-nav.mjs · no editar a mano -->
+<footer class="footer p-footer">
+    <div class="p-wrap">
+
+        <div class="p-footer-grid">
+
+            <div>
+                <div class="p-footer-brand">
+                    <img src="/cartel.avif" alt="Hamburguesería Señarís 로고" width="42" height="42" loading="lazy">
+                    <div>
+                        <strong>Señarís</strong>
+                        <span>Café-Bar · 산티아고</span>
+                    </div>
+                </div>
+                <p>1999년부터 산페드로 지역에서 집밥, 버거, 샌드위치를 제공하고 있습니다.</p>
+            </div>
+
+            <div>
+                <h3>내비게이션</h3>
+                <ul>
+                    <li><a href="/ko/#inicio">홈</a></li>
+                    <li><a href="/ko/#quienes-somos">저희 소개</a></li>
+                    <li><a href="/ko/#nuestro-local">매장 안내</a></li>
+                    <li><a href="/ko/#contacto">연락처</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>둘러보기</h3>
+                <ul>
+                    <li><a href="/ko/menu">메뉴</a></li>
+                    <li><a href="/ko/blog/">블로그</a></li>
+                    <li><a href="/ko/camino/">순례 가이드</a></li>
+                    <li><a href="/ko/pilgrim-menu">순례자 메뉴</a></li>
+                    <li><a href="/ko/group-sandwiches-santiago">단체 및 관광버스</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>연락처</h3>
+                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
+                <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp 새소식 채널</a></p>
+            </div>
+
+        </div>
+
+        <div class="p-footer-bottom">
+            <p>&copy; 2026 Hamburguesería Señarís. 모든 권리 보유.</p>
+            <p><a href="/ko/privacy-policy-ko">법적 고지 및 개인정보</a></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FOOTER:END -->
+
+<!-- ============== JAVASCRIPT ============== -->
+<script>
+(function () {
+    'use strict';
+
+    var menuToggle = document.getElementById('menuToggle');
+    var navLinks = document.getElementById('navLinks');
+    var nav = document.getElementById('mainNav');
+
+    /* ---------- Mobile menu ---------- */
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+        nav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+        var open = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active', open);
+        nav.classList.toggle('is-open', open);
+        menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    menuToggle.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
+    });
+
+    /* ---------- Language selector ---------- */
+    var langBtn = document.getElementById('langDropdownBtn');
+    var langList = document.getElementById('langDropdown');
+
+    if (langBtn && langList) {
+        langBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var isOpen = langList.style.display === 'block';
+            langList.style.display = isOpen ? 'none' : 'block';
+            langBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!langBtn.contains(e.target) && !langList.contains(e.target)) {
+                langList.style.display = 'none';
+                langBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    /* ---------- Close the menu when a link is clicked ---------- */
+    navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    /* ---------- Navigation bar on scroll ---------- */
+    function onScroll() {
+        nav.classList.toggle('is-scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- Smooth scrolling ---------- */
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            var id = this.getAttribute('href');
+            if (!id || id.length < 2) { return; }
+            var target = document.querySelector(id);
+            if (!target) { return; }
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    /* ---------- Today's opening hours ---------- */
+    var HOURS = {
+        0: '10:00 – 16:00 및 18:00 – 23:30',
+        1: '8:30 – 16:00',
+        2: '8:30 – 23:30',
+        3: '8:30 – 23:30',
+        4: '8:30 – 23:30',
+        5: '8:30 – 23:30',
+        6: '10:00 – 16:00 및 18:00 – 23:30'
+    };
+
+    var today = new Date().getDay();
+    var todayHours = document.getElementById('todayHours');
+
+    if (todayHours && HOURS[today]) {
+        todayHours.textContent = HOURS[today];
+    }
+
+    var todayRow = document.querySelector('#hoursList li[data-day="' + today + '"]');
+    if (todayRow) {
+        todayRow.classList.add('is-today');
+        var dayLabel = todayRow.querySelector('.p-day');
+        if (dayLabel) {
+            dayLabel.textContent = dayLabel.textContent + ' · 오늘';
+        }
+    }
+
+    /* ---------- Reveal on scroll ---------- */
+    var reveals = document.querySelectorAll('.p-reveal');
+
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+        reveals.forEach(function (el) { observer.observe(el); });
+    } else {
+        reveals.forEach(function (el) { el.classList.add('is-in'); });
+    }
+
+    /* ---------- Google Maps loading with consent ---------- */
+    var mapButton = document.getElementById('load-map-button');
+
+    if (mapButton) {
+        mapButton.addEventListener('click', function () {
+            var mapContainer = document.getElementById('map-container');
+            mapContainer.innerHTML =
+                '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.68052166015053!2d-8.536116433927077!3d42.877745104303614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe49b0023f1b%3A0xecd73a49cd995075!2sHamburgueser%C3%ADa%20%2F%20bar%20Se%C3%B1aris!5e1!3m2!1sja!2sjp!4v1760015227842!5m2!1sja!2sjp" ' +
+                'title="Hamburguesería Señarís location map" ' +
+                'style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+        });
+    }
+})();
+</script>
+
+
+</body>
 </html>

@@ -13,5 +13,9 @@ sync.ffs_db
 node_modules/
 package-lock.json
 
+# Temporal de construcción (ensamblador de landings, previews)
+.tmp/
+es/__preview-tmp.html
+
 # Logs
 *.log

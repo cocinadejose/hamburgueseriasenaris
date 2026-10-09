@@ -657,38 +657,85 @@
         @media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1rem 20px;box-shadow:0 2px 8px rgba(0,0,0,.08);gap:1rem}.nav-links.active{display:flex}.menu-toggle{display:flex}.page{width:100%;padding:15px;overflow:hidden}.preview-notice{top:84px}body{padding-top:84px}}
         @media print{body{padding:0;background:#fff}.preview-notice,.navbar,.footer{display:none!important}}
     </style>
+<link rel="stylesheet" href="/css/style-index.css">
+<link rel="stylesheet" href="/css/style-portada.css">
 </head>
 <body>
 
-<nav class="navbar">
+<!-- NAV:START -->
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
     <div class="nav-container">
-        <a href="../zh/" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
+
+        <a href="/zh/" class="p-brand" aria-label="Hamburguesería Señarís — 首页">
+            <img src="/cartel.avif" alt="Hamburguesería Señarís 标志" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
         <ul class="nav-links" id="navLinks">
-            <li><a href="../zh/">首页</a></li>
-            <li><a href="../zh/menu">菜单</a></li>
-            <li><a href="../zh/camino/" style="color:#f0c674;font-weight:bold;">朝圣者指南</a></li>
+            <li><a href="/zh/#inicio">首页</a></li>
+            <li><a href="/zh/#quienes-somos">关于我们</a></li>
+            <li><a href="/zh/#nuestro-local">我们的店</a></li>
+            <li><a href="/zh/menu">菜单</a></li>
+            <li><a href="/zh/blog/" class="p-link-accent">博客</a></li>
+            <li><a href="/zh/camino/" class="p-link-gold">朝圣指南</a></li>
+            <li><a href="/zh/#contacto">联系我们</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
             <li class="nav-lang-dropdown">
-                <button id="langDropdownBtn" aria-haspopup="true" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-size:1.1em;display:flex;align-items:center;gap:4px;color:#333;padding:0;font-family:inherit">🌐 <span style="font-size:.95em;">语言</span> ▼</button>
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>语言</span> ▼
+                </button>
                 <ul id="langDropdown" class="lang-dropdown-list">
-                    <li><a href="../es/guia-peregrino-2026">🇪🇸 Español</a></li>
-                    <li><a href="../en/guia-peregrino-2026-en">🇬🇧 English</a></li>
-                    <li><a href="../fr/guia-peregrino-2026-fr">🇫🇷 Français</a></li>
-                    <li><a href="../de/guia-peregrino-2026-de">🇩🇪 Deutsch</a></li>
-                    <li><a href="../it/guia-peregrino-2026-it">🇮🇹 Italiano</a></li>
-                    <li><a href="../pt/guia-peregrino-2026-pt">🇵🇹 Português</a></li>
-                    <li><a href="../ja/guia-peregrino-2026-ja">🇯🇵 日本語</a></li>
-                    <li><a href="guia-peregrino-2026-zh" class="active">🇨🇳 中文</a></li>
-                    <li><a href="../ko/guia-peregrino-2026-ko">🇰🇷 한국어</a></li>
+                    <li><a href="/es/">🇪🇸 Español</a></li>
+                    <li><a href="/en/">🇬🇧 English</a></li>
+                    <li><a href="/fr/">🇫🇷 Français</a></li>
+                    <li><a href="/pt/">🇵🇹 Português</a></li>
+                    <li><a href="/de/">🇩🇪 Deutsch</a></li>
+                    <li><a href="/it/">🇮🇹 Italiano</a></li>
+                    <li><a href="/ja/">🇯🇵 日本語</a></li>
+                    <li><a href="/zh/" class="active">🇨🇳 中文</a></li>
+                    <li><a href="/ko/">🇰🇷 한국어</a></li>
                 </ul>
             </li>
         </ul>
-        <div class="menu-toggle" id="menuToggle">
+
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navLinks">
             <span></span>
             <span></span>
             <span></span>
         </div>
+
     </div>
 </nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>
+
+<!-- NAV:END -->
 
 <div class="preview-notice">📄 <strong>2026朝圣者完整指南</strong> — 包含圣地亚哥朝圣之路全部信息的35页指南。 <a href="../zh/camino/consejos/pilgrim-guide-download">免费下载PDF →</a></div>
 
@@ -2827,15 +2874,63 @@
 
     </main>
 
-<footer class="footer">
-    <div class="section-container">
-        <p>
-            <a href="../zh/privacy-policy-zh" style="color:#fff;margin-right:15px;text-decoration:underline;">法律声明和隐私政策</a> |
-            &copy; 2026 Hamburguesería Señarís. All rights reserved.
-        </p>
-        <p>Av. de Quiroga Palacios, 5 - 圣地亚哥 - 德孔波斯特拉 - Tel: <a href="tel:+34881082571" style="color:#fff;">881 08 25 71</a></p>
+<!-- FOOTER:START -->
+<!-- Generado desde partials/footer.html por scripts/build-nav.mjs · no editar a mano -->
+<footer class="footer p-footer">
+    <div class="p-wrap">
+
+        <div class="p-footer-grid">
+
+            <div>
+                <div class="p-footer-brand">
+                    <img src="/cartel.avif" alt="Hamburguesería Señarís 标志" width="42" height="42" loading="lazy">
+                    <div>
+                        <strong>Señarís</strong>
+                        <span>Café-Bar · 圣地亚哥</span>
+                    </div>
+                </div>
+                <p>自 1999 年起在圣佩德罗街区供应家常菜、汉堡和三明治。</p>
+            </div>
+
+            <div>
+                <h3>导航</h3>
+                <ul>
+                    <li><a href="/zh/#inicio">首页</a></li>
+                    <li><a href="/zh/#quienes-somos">关于我们</a></li>
+                    <li><a href="/zh/#nuestro-local">我们的店</a></li>
+                    <li><a href="/zh/#contacto">联系我们</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>探索</h3>
+                <ul>
+                    <li><a href="/zh/menu">菜单</a></li>
+                    <li><a href="/zh/blog/">博客</a></li>
+                    <li><a href="/zh/camino/">朝圣指南</a></li>
+                    <li><a href="/zh/pilgrim-menu">朝圣者套餐</a></li>
+                    <li><a href="/zh/group-sandwiches-santiago">团体与大巴</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>联系我们</h3>
+                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
+                <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp 资讯频道</a></p>
+            </div>
+
+        </div>
+
+        <div class="p-footer-bottom">
+            <p>&copy; 2026 Hamburguesería Señarís. 版权所有。</p>
+            <p><a href="/zh/privacy-policy-zh">法律声明与隐私</a></p>
+        </div>
+
     </div>
 </footer>
+
+<!-- FOOTER:END -->
 
 <script>
     const menuToggle = document.getElementById('menuToggle');

@@ -285,27 +285,84 @@
       }
     }
     </script>
+<link rel="stylesheet" href="/css/style-portada.css">
 </head>
 <body>
     <!-- ============== NAVIGATION ============== -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../#inicio">Startseite</a></li>
-                <li><a href="../#quienes-somos">Über Uns</a></li>
-                <li><a href="../#nuestro-local">Unser Lokal</a></li>
-                <li><a href="../#contacto">Kontakt</a></li>
-                <li><a href="../blog/">Blog</a></li>
-                <li><a href="../menu">Speisekarte</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<!-- NAV:START -->
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
+    <div class="nav-container">
+
+        <a href="/de/" class="p-brand" aria-label="Hamburguesería Señarís — Start">
+            <img src="/cartel.avif" alt="Logo der Hamburguesería Señarís" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/de/#inicio">Start</a></li>
+            <li><a href="/de/#quienes-somos">Über uns</a></li>
+            <li><a href="/de/#nuestro-local">Unser Lokal</a></li>
+            <li><a href="/de/menu">Speisekarte</a></li>
+            <li><a href="/de/blog/" class="p-link-accent">Blog</a></li>
+            <li><a href="/de/camino/" class="p-link-gold">Pilgerführer</a></li>
+            <li><a href="/de/#contacto">Kontakt</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
+            <li class="nav-lang-dropdown">
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>Sprache</span> ▼
+                </button>
+                <ul id="langDropdown" class="lang-dropdown-list">
+                    <li><a href="/es/">🇪🇸 Español</a></li>
+                    <li><a href="/en/">🇬🇧 English</a></li>
+                    <li><a href="/fr/">🇫🇷 Français</a></li>
+                    <li><a href="/pt/">🇵🇹 Português</a></li>
+                    <li><a href="/de/" class="active">🇩🇪 Deutsch</a></li>
+                    <li><a href="/it/">🇮🇹 Italiano</a></li>
+                    <li><a href="/ja/">🇯🇵 日本語</a></li>
+                    <li><a href="/zh/">🇨🇳 中文</a></li>
+                    <li><a href="/ko/">🇰🇷 한국어</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="Navigationsmenü öffnen" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>
+
+<!-- NAV:END -->
     <main>
 
     <section id="blog-post" class="section">
@@ -565,15 +622,63 @@
     </section>
 
     <!-- ============== FOOTER ============== -->
-    <footer class="footer">
-        <div class="section-container">
-            <p>
-                <a href="../datenschutz-impressum-de" style="color:#fff;margin-right:15px;text-decoration:underline;">Datenschutz & Impressum</a> |
-                &copy; 2026 Hamburguesería Señarís. Alle Rechte vorbehalten.
-            </p>
-            <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: <a href="tel:+34881082571" style="color:#fff;">881 08 25 71</a></p>
+<!-- FOOTER:START -->
+<!-- Generado desde partials/footer.html por scripts/build-nav.mjs · no editar a mano -->
+<footer class="footer p-footer">
+    <div class="p-wrap">
+
+        <div class="p-footer-grid">
+
+            <div>
+                <div class="p-footer-brand">
+                    <img src="/cartel.avif" alt="Logo der Hamburguesería Señarís" width="42" height="42" loading="lazy">
+                    <div>
+                        <strong>Señarís</strong>
+                        <span>Café-Bar · Santiago</span>
+                    </div>
+                </div>
+                <p>Hausmannskost, Burger und Sandwiches im Viertel San Pedro seit 1999.</p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="/de/#inicio">Start</a></li>
+                    <li><a href="/de/#quienes-somos">Über uns</a></li>
+                    <li><a href="/de/#nuestro-local">Unser Lokal</a></li>
+                    <li><a href="/de/#contacto">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Entdecken</h3>
+                <ul>
+                    <li><a href="/de/menu">Speisekarte</a></li>
+                    <li><a href="/de/blog/">Blog</a></li>
+                    <li><a href="/de/camino/">Pilgerführer</a></li>
+                    <li><a href="/de/pilgrim-menu">Pilgermenü</a></li>
+                    <li><a href="/de/sandwiches-fur-gruppen-santiago">Gruppen und Reisebusse</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Kontakt</h3>
+                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
+                <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp-News-Kanal</a></p>
+            </div>
+
         </div>
-    </footer>
+
+        <div class="p-footer-bottom">
+            <p>&copy; 2026 Hamburguesería Señarís. Alle Rechte vorbehalten.</p>
+            <p><a href="/de/datenschutz-impressum-de">Impressum und Datenschutz</a></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FOOTER:END -->
     </main>
 
     <script>

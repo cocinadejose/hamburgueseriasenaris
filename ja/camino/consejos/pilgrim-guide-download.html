@@ -297,42 +297,85 @@
       ]
     }
     </script>
+<link rel="stylesheet" href="/css/style-portada.css">
 </head>
 <body>
 
     <!-- ナビゲーション -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../../../ja/" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../../../ja/#inicio">ホーム</a></li>
-                <li><a href="../../../ja/#quienes-somos">私たちについて</a></li>
-                <li><a href="../../../ja/#nuestro-local">当店について</a></li>
-                <li><a href="../../../ja/#contacto">お問い合わせ</a></li>
-                <li><a href="../" style="color: #f0c674; font-weight: bold;">巡礼者ガイド</a></li>
-                <li><a href="../../../ja/menu">メニュー</a></li>
-                <li class="nav-lang-dropdown">
-                    <button id="langDropdownBtn" aria-haspopup="true" aria-expanded="false" style="background:none;border:none;cursor:pointer;font-size:1.1em;display:flex;align-items:center;gap:4px;color:#333;padding:0;font-family:inherit">🌐 <span style="font-size:.95em;">言語</span> ▼</button>
-                    <ul id="langDropdown" class="lang-dropdown-list">
-                        <li><a href="../../../es/camino/consejos/guia-peregrino-descarga">🇪🇸 Español</a></li>
-                        <li><a href="../../../en/camino/consejos/pilgrim-guide-download">🇬🇧 English</a></li>
-                        <li><a href="../../../fr/camino/consejos/guide-pelerin-telechargement">🇫🇷 Français</a></li>
-                        <li><a href="../../../de/camino/consejos/guia-peregrino-descarga">🇩🇪 Deutsch</a></li>
-                        <li><a href="../../../it/camino/consejos/guida-pellegrino-download">🇮🇹 Italiano</a></li>
-                        <li><a href="../../../pt/camino/consejos/guia-peregrino-download">🇵🇹 Português</a></li>
-                        <li><a href="pilgrim-guide-download" class="active">🇯🇵 日本語</a></li>
-                        <li><a href="../../../zh/camino/consejos/pilgrim-guide-download">🇨🇳 中文</a></li>
-                        <li><a href="../../../ko/camino/consejos/pilgrim-guide-download">🇰🇷 한국어</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<!-- NAV:START -->
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
+    <div class="nav-container">
+
+        <a href="/ja/" class="p-brand" aria-label="Hamburguesería Señarís — ホーム">
+            <img src="/cartel.avif" alt="Hamburguesería Señarís のロゴ" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/ja/#inicio">ホーム</a></li>
+            <li><a href="/ja/#quienes-somos">私たちについて</a></li>
+            <li><a href="/ja/#nuestro-local">店内の様子</a></li>
+            <li><a href="/ja/menu">メニュー</a></li>
+            <li><a href="/ja/blog/" class="p-link-accent">ブログ</a></li>
+            <li><a href="/ja/camino/" class="p-link-gold">巡礼ガイド</a></li>
+            <li><a href="/ja/#contacto">お問い合わせ</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
+            <li class="nav-lang-dropdown">
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>言語</span> ▼
+                </button>
+                <ul id="langDropdown" class="lang-dropdown-list">
+                    <li><a href="/es/">🇪🇸 Español</a></li>
+                    <li><a href="/en/">🇬🇧 English</a></li>
+                    <li><a href="/fr/">🇫🇷 Français</a></li>
+                    <li><a href="/pt/">🇵🇹 Português</a></li>
+                    <li><a href="/de/">🇩🇪 Deutsch</a></li>
+                    <li><a href="/it/">🇮🇹 Italiano</a></li>
+                    <li><a href="/ja/" class="active">🇯🇵 日本語</a></li>
+                    <li><a href="/zh/">🇨🇳 中文</a></li>
+                    <li><a href="/ko/">🇰🇷 한국어</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="ナビゲーションメニューを開く" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>
+
+<!-- NAV:END -->
 
     <div class="preview-notice">📄 <strong>2026年版 巡礼者ガイドのプレビュー</strong> — 完全なPDFにオンラインでアクセスするかダウンロードしてください。 <a href="../../guia-peregrino-2026-ja">完全なガイドをオンラインで見る →</a></div>
 
@@ -474,15 +517,63 @@
     </main>
 
     <!-- フッター -->
-    <footer class="footer">
-        <div class="section-container">
-            <p>
-                <a href="../../../ja/privacy-policy-ja" style="color: #fff; margin-right: 15px; text-decoration: underline;">法的通知とプライバシー</a> |
-                &copy; 2026 Hamburguesería Señarís. All rights reserved.
-            </p>
-            <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: 881 08 25 71</p>
+<!-- FOOTER:START -->
+<!-- Generado desde partials/footer.html por scripts/build-nav.mjs · no editar a mano -->
+<footer class="footer p-footer">
+    <div class="p-wrap">
+
+        <div class="p-footer-grid">
+
+            <div>
+                <div class="p-footer-brand">
+                    <img src="/cartel.avif" alt="Hamburguesería Señarís のロゴ" width="42" height="42" loading="lazy">
+                    <div>
+                        <strong>Señarís</strong>
+                        <span>Café-Bar · サンティアゴ</span>
+                    </div>
+                </div>
+                <p>1999年からサン・ペドロ地区で家庭料理、ハンバーガー、サンドイッチを提供しています。</p>
+            </div>
+
+            <div>
+                <h3>ナビゲーション</h3>
+                <ul>
+                    <li><a href="/ja/#inicio">ホーム</a></li>
+                    <li><a href="/ja/#quienes-somos">私たちについて</a></li>
+                    <li><a href="/ja/#nuestro-local">店内の様子</a></li>
+                    <li><a href="/ja/#contacto">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>見どころ</h3>
+                <ul>
+                    <li><a href="/ja/menu">メニュー</a></li>
+                    <li><a href="/ja/blog/">ブログ</a></li>
+                    <li><a href="/ja/camino/">巡礼ガイド</a></li>
+                    <li><a href="/ja/pilgrim-menu">巡礼者メニュー</a></li>
+                    <li><a href="/ja/group-sandwiches-santiago">団体・観光バス</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>お問い合わせ</h3>
+                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
+                <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp 最新情報チャンネル</a></p>
+            </div>
+
         </div>
-    </footer>
+
+        <div class="p-footer-bottom">
+            <p>&copy; 2026 Hamburguesería Señarís. 無断転載を禁じます。</p>
+            <p><a href="/ja/privacy-policy-ja">法的情報とプライバシー</a></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FOOTER:END -->
 
     <!-- スクリプト -->
     <script>

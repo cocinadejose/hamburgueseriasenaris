@@ -1,0 +1,63 @@
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
+    <div class="nav-container">
+
+        <a href="/{{LANG}}/" class="p-brand" aria-label="{{T:brand_aria}}">
+            <img src="/cartel.avif" alt="{{T:brand_alt}}" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/{{LANG}}/#inicio">{{T:inicio}}</a></li>
+            <li><a href="/{{LANG}}/#quienes-somos">{{T:quienes}}</a></li>
+            <li><a href="/{{LANG}}/#nuestro-local">{{T:local}}</a></li>
+            <li><a href="/{{LANG}}/menu">{{T:menu}}</a></li>
+            <li><a href="/{{LANG}}/blog/" class="p-link-accent">{{T:blog}}</a></li>
+            <li><a href="/{{LANG}}/camino/" class="p-link-gold">{{T:camino}}</a></li>
+            <li><a href="/{{LANG}}/#contacto">{{T:contacto}}</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
+            <li class="nav-lang-dropdown">
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>{{T:idioma}}</span> ▼
+                </button>
+                <ul id="langDropdown" class="lang-dropdown-list">
+{{LANG_LIST}}
+                </ul>
+            </li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="{{T:menu_abrir}}" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>

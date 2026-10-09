@@ -285,27 +285,84 @@
       }
     }
     </script>
+<link rel="stylesheet" href="/css/style-portada.css">
 </head>
 <body>
     <!-- ============== 네비게이션 ============== -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="../" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../#inicio">홈</a></li>
-                <li><a href="../#quienes-somos">소개</a></li>
-                <li><a href="../#nuestro-local">매장</a></li>
-                <li><a href="../#contacto">연락처</a></li>
-                <li><a href="../blog/">블로그</a></li>
-                <li><a href="../menu">메뉴</a></li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<!-- NAV:START -->
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
+    <div class="nav-container">
+
+        <a href="/ko/" class="p-brand" aria-label="Hamburguesería Señarís — 홈">
+            <img src="/cartel.avif" alt="Hamburguesería Señarís 로고" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/ko/#inicio">홈</a></li>
+            <li><a href="/ko/#quienes-somos">저희 소개</a></li>
+            <li><a href="/ko/#nuestro-local">매장 안내</a></li>
+            <li><a href="/ko/menu">메뉴</a></li>
+            <li><a href="/ko/blog/" class="p-link-accent">블로그</a></li>
+            <li><a href="/ko/camino/" class="p-link-gold">순례 가이드</a></li>
+            <li><a href="/ko/#contacto">연락처</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
+            <li class="nav-lang-dropdown">
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>언어</span> ▼
+                </button>
+                <ul id="langDropdown" class="lang-dropdown-list">
+                    <li><a href="/es/">🇪🇸 Español</a></li>
+                    <li><a href="/en/">🇬🇧 English</a></li>
+                    <li><a href="/fr/">🇫🇷 Français</a></li>
+                    <li><a href="/pt/">🇵🇹 Português</a></li>
+                    <li><a href="/de/">🇩🇪 Deutsch</a></li>
+                    <li><a href="/it/">🇮🇹 Italiano</a></li>
+                    <li><a href="/ja/">🇯🇵 日本語</a></li>
+                    <li><a href="/zh/">🇨🇳 中文</a></li>
+                    <li><a href="/ko/" class="active">🇰🇷 한국어</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="내비게이션 메뉴 열기" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>
+
+<!-- NAV:END -->
     <main>
 
     <section id="blog-post" class="section">
@@ -569,15 +626,63 @@
     </section>
 
     <!-- ============== 푸터 ============== -->
-    <footer class="footer">
-        <div class="section-container">
-            <p>
-                <a href="../privacy-policy-ko" style="color:#fff;margin-right:15px;text-decoration:underline;">개인정보처리방침</a> |
-                &copy; 2026 Hamburguesería Señarís. All rights reserved.
-            </p>
-            <p>Av. de Quiroga Palacios, 5 - Santiago de Compostela - Tel: <a href="tel:+34881082571" style="color:#fff;">881 08 25 71</a></p>
+<!-- FOOTER:START -->
+<!-- Generado desde partials/footer.html por scripts/build-nav.mjs · no editar a mano -->
+<footer class="footer p-footer">
+    <div class="p-wrap">
+
+        <div class="p-footer-grid">
+
+            <div>
+                <div class="p-footer-brand">
+                    <img src="/cartel.avif" alt="Hamburguesería Señarís 로고" width="42" height="42" loading="lazy">
+                    <div>
+                        <strong>Señarís</strong>
+                        <span>Café-Bar · 산티아고</span>
+                    </div>
+                </div>
+                <p>1999년부터 산페드로 지역에서 집밥, 버거, 샌드위치를 제공하고 있습니다.</p>
+            </div>
+
+            <div>
+                <h3>내비게이션</h3>
+                <ul>
+                    <li><a href="/ko/#inicio">홈</a></li>
+                    <li><a href="/ko/#quienes-somos">저희 소개</a></li>
+                    <li><a href="/ko/#nuestro-local">매장 안내</a></li>
+                    <li><a href="/ko/#contacto">연락처</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>둘러보기</h3>
+                <ul>
+                    <li><a href="/ko/menu">메뉴</a></li>
+                    <li><a href="/ko/blog/">블로그</a></li>
+                    <li><a href="/ko/camino/">순례 가이드</a></li>
+                    <li><a href="/ko/pilgrim-menu">순례자 메뉴</a></li>
+                    <li><a href="/ko/group-sandwiches-santiago">단체 및 관광버스</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>연락처</h3>
+                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
+                <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 WhatsApp 새소식 채널</a></p>
+            </div>
+
         </div>
-    </footer>
+
+        <div class="p-footer-bottom">
+            <p>&copy; 2026 Hamburguesería Señarís. 모든 권리 보유.</p>
+            <p><a href="/ko/privacy-policy-ko">법적 고지 및 개인정보</a></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FOOTER:END -->
     </main>
 
     <script>

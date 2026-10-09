@@ -259,36 +259,84 @@
       ]
     }
     </script>
+<link rel="stylesheet" href="/css/style-portada.css">
 </head>
 <body>
     <!-- ═══════════ NAV ═══════════ -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="./" class="nav-logo">HAMBURGUESERIA SEÑARÍS</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="./#inicio">Início</a></li>
-                <li><a href="menu">Carta completa</a></li>
-                <li><a href="camino/">Guia do Caminho</a></li>
-                <li><a href="sanduiches-para-grupos-santiago">Grupos &amp; Autocarros</a></li>
-                <li><a href="./#contacto">Contacto</a></li>
-                <li class="nav-lang-dropdown">
-                    <button id="langDropdownBtn" aria-haspopup="true" aria-expanded="false">🌐 Idioma ▼</button>
-                    <ul id="langDropdown" class="lang-dropdown-list">
-                        <li><a href="../es/pilgrim-menu">🇪🇸 Español</a></li>
-                        <li><a href="../en/pilgrim-menu">🇬🇧 English</a></li>
-                        <li><a href="../fr/pilgrim-menu">🇫🇷 Français</a></li>
-                        <li><a href="../pt/pilgrim-menu" class="active">🇵🇹 Português</a></li>
-                        <li><a href="../de/pilgrim-menu">🇩🇪 Deutsch</a></li>
-                        <li><a href="../it/pilgrim-menu">🇮🇹 Italiano</a></li>
-                        <li><a href="../ja/pilgrim-menu">🇯🇵 日本語</a></li>
-                        <li><a href="../zh/pilgrim-menu">🇨🇳 中文</a></li>
-                        <li><a href="../ko/pilgrim-menu">🇰🇷 한국어</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+<!-- NAV:START -->
+<!-- Generado desde partials/nav.html por scripts/build-nav.mjs · no editar a mano -->
+<nav class="navbar p-nav" id="mainNav">
+    <div class="nav-container">
+
+        <a href="/pt/" class="p-brand" aria-label="Hamburguesería Señarís — Início">
+            <img src="/cartel.avif" alt="Logótipo da Hamburguesería Señarís" width="42" height="42">
+            <span class="p-brand-text">Señarís<small>Santiago de Compostela</small></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/pt/#inicio">Início</a></li>
+            <li><a href="/pt/#quienes-somos">Quem Somos</a></li>
+            <li><a href="/pt/#nuestro-local">O Nosso Espaço</a></li>
+            <li><a href="/pt/menu">Ementa</a></li>
+            <li><a href="/pt/blog/" class="p-link-accent">Blog</a></li>
+            <li><a href="/pt/camino/" class="p-link-gold">Guia do Caminho</a></li>
+            <li><a href="/pt/#contacto">Contactos</a></li>
+            <li><a href="tel:+34881082571" class="p-link-cta">📞 881 08 25 71</a></li>
+
+            <!-- Selector de idioma integrado -->
+            <li class="nav-lang-dropdown">
+                <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    🌐 <span>Idioma</span> ▼
+                </button>
+                <ul id="langDropdown" class="lang-dropdown-list">
+                    <li><a href="/es/">🇪🇸 Español</a></li>
+                    <li><a href="/en/">🇬🇧 English</a></li>
+                    <li><a href="/fr/">🇫🇷 Français</a></li>
+                    <li><a href="/pt/" class="active">🇵🇹 Português</a></li>
+                    <li><a href="/de/">🇩🇪 Deutsch</a></li>
+                    <li><a href="/it/">🇮🇹 Italiano</a></li>
+                    <li><a href="/ja/">🇯🇵 日本語</a></li>
+                    <li><a href="/zh/">🇨🇳 中文</a></li>
+                    <li><a href="/ko/">🇰🇷 한국어</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
+<!-- Comportamiento del selector de idioma. Delegado en fase de captura: funciona en
+     todas las páginas y anula los scripts antiguos por página (evita el doble toggle). -->
+<script>
+(function () {
+    if (window.__senarisLangDropdownInit) return;
+    window.__senarisLangDropdownInit = true;
+
+    document.addEventListener('click', function (e) {
+        var btn = document.getElementById('langDropdownBtn');
+        var list = document.getElementById('langDropdown');
+        if (!btn || !list) return;
+
+        if (btn.contains(e.target)) {
+            e.stopPropagation();
+            var abierto = list.style.display === 'block';
+            list.style.display = abierto ? 'none' : 'block';
+            btn.setAttribute('aria-expanded', String(!abierto));
+        } else if (!list.contains(e.target)) {
+            list.style.display = 'none';
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    }, true);
+})();
+</script>
+
+<!-- NAV:END -->
 
     <main>
         <!-- ═══════════ BREADCRUMB ═══════════ -->
@@ -472,12 +520,63 @@
     </main>
 
     <!-- ═══════════ FOOTER ═══════════ -->
-    <footer class="footer">
-        <div class="section-container">
-            <p><a href="termos-legais-privacidade-pt" style="color:#fff;text-decoration:underline;">Aviso legal e política de privacidade</a> · Menu do Peregrino Tradicional · 12 € · Produto Galego · Torta de Batata · Chouriço · Arzúa‑Ulloa · Seminário Menor · © 2026 Hamburguesería Señarís</p>
-            <p>Av. de Quiroga Palacios, n.º 5 · 15703 Santiago de Compostela · 📞 <a href="tel:+34881082571" style="color:#fff;">+34 881 08 25 71</a></p>
+<!-- FOOTER:START -->
+<!-- Generado desde partials/footer.html por scripts/build-nav.mjs · no editar a mano -->
+<footer class="footer p-footer">
+    <div class="p-wrap">
+
+        <div class="p-footer-grid">
+
+            <div>
+                <div class="p-footer-brand">
+                    <img src="/cartel.avif" alt="Logótipo da Hamburguesería Señarís" width="42" height="42" loading="lazy">
+                    <div>
+                        <strong>Señarís</strong>
+                        <span>Café-Bar · Santiago</span>
+                    </div>
+                </div>
+                <p>Comida caseira, hambúrgueres e sanduíches no bairro de San Pedro desde 1999.</p>
+            </div>
+
+            <div>
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="/pt/#inicio">Início</a></li>
+                    <li><a href="/pt/#quienes-somos">Quem Somos</a></li>
+                    <li><a href="/pt/#nuestro-local">O Nosso Espaço</a></li>
+                    <li><a href="/pt/#contacto">Contactos</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Descubra</h3>
+                <ul>
+                    <li><a href="/pt/menu">Ementa</a></li>
+                    <li><a href="/pt/blog/">Blog</a></li>
+                    <li><a href="/pt/camino/">Guia do Caminho</a></li>
+                    <li><a href="/pt/pilgrim-menu">Menu do Peregrino</a></li>
+                    <li><a href="/pt/sanduiches-para-grupos-santiago">Grupos e autocarros</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contactos</h3>
+                <p><a href="tel:+34881082571" class="p-footer-tel">881 08 25 71</a></p>
+                <p>Av. de Quiroga Palacios, 5<br>15703 Santiago de Compostela</p>
+                <p><a href="https://whatsapp.com/channel/0029Vb7BrpE8qIzvJnAwTi1p" target="_blank" rel="noopener noreferrer">💬 Canal de novidades no WhatsApp</a></p>
+            </div>
+
         </div>
-    </footer>
+
+        <div class="p-footer-bottom">
+            <p>&copy; 2026 Hamburguesería Señarís. Todos os direitos reservados.</p>
+            <p><a href="/pt/termos-legais-privacidade-pt">Aviso Legal e Privacidade</a></p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FOOTER:END -->
 
     <script>
         const menuToggle=document.getElementById('menuToggle'),navLinks=document.querySelector('.nav-links');

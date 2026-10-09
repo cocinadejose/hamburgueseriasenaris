@@ -1,842 +1,197 @@
+/* ==========================================================================
+   HOJA "INTERIOR" — restos aún en uso tras unificar navegación y footer.
+   Eliminado (diseño unificado en style-portada.css): nav antiguo
+   (navbar/nav-container/nav-logo/nav-links/menu-toggle), desplegable de
+   idioma antiguo, footer antiguo (.footer) y secciones de la landing vieja
+   (promo, team, local, contact, schedule, language-info-banner).
+   Lo que queda lo siguen usando: blog, guía del Camino (hero) y el mapa con
+   consentimiento de menús/grupos.
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f1ea;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4c5a9' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Hero de la guía del Camino ({lang}/camino/)
+   -------------------------------------------------------------------------- */
+.hero {
+    padding: 100px 20px 60px;
+    text-align: center;
+    background: linear-gradient(135deg, #f4f1ea 0%, #e8e0d0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4c5a9' fill-opacity='0.15'%3E%3Cpath d='M40 30L50 50H30z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.hero-container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.brand-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.8rem;
+    color: #c9302c;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.hero h2 {
+    font-size: 1.05rem;
+    color: #999;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 32px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Secciones genéricas (blog / camino)
+   -------------------------------------------------------------------------- */
+.section {
+    padding: 80px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Imagen de artículo de blog */
+.promo-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #f1c40f;
+}
+
+/* Caja de información destacada */
+.info-box {
+    background-color: #f9f9f9;
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.info-box h2 {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Botones genéricos
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: #8b6b4a;
+    color: #fff;
+    border-color: #8b6b4a;
+}
+
+.btn-primary:hover {
+    background-color: #735a3e;
+    border-color: #735a3e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 107, 74, 0.3);
+}
+
+.btn-secondary {
+    background-color: #fff8e1;
+    color: #5d4e37;
+    border-color: #e0d0a0;
+}
+
+.btn-secondary:hover {
+    background-color: #fff3c4;
+    border-color: #c5a47e;
+    color: #5d4e37;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(197, 164, 126, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Mapa con consentimiento (menús / grupos)
+   -------------------------------------------------------------------------- */
+.map-container {
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 350px;
+}
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f1ea;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4c5a9' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* ============== LANGUAGE NAVIGATION ============== */
-
-        /* Dropdown idioma en navbar */
-        .nav-lang-dropdown {
-            position: relative;
-            list-style: none;
-        }
-        .lang-dropdown-list {
-            display: none;
-            position: absolute;
-            right: 0;
-            top: 2.2em;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            padding: 8px 0;
-            min-width: 140px;
-            z-index: 2000;
-        }
-        .nav-lang-dropdown.open .lang-dropdown-list {
-            display: block;
-        }
-        .lang-dropdown-list li {
-            list-style: none;
-        }
-        .lang-dropdown-list a {
-            display: block;
-            padding: 7px 18px;
-            color: #333;
-            text-decoration: none;
-            font-size: 1em;
-            transition: background 0.2s;
-        }
-        .lang-dropdown-list a.active,
-        .lang-dropdown-list a:hover {
-            background: #f0c674;
-            color: #222;
-        }
-
-        /* ============== NAVIGATION ============== */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        /* Evita que el navbar fijo tape el contenido al hacer scroll con anclas */
-        html {
-            scroll-padding-top: 80px;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Bangers', cursive;
-            font-size: 1.5rem;
-            color: #d9534f;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #d9534f;
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: #333;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        /* ============== HERO SECTION ============== */
-        .hero {
-            padding: 100px 20px 60px;
-            text-align: center;
-            background: linear-gradient(135deg, #f4f1ea 0%, #e8e0d0 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4c5a9' fill-opacity='0.15'%3E%3Cpath d='M40 30L50 50H30z'/%3E%3C/g%3E%3C/svg%3E") repeat;
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .hero-container {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo-container {
-            margin-bottom: 20px;
-        }
-
-        .logo-container img {
-            max-width: 200px;
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            transition: transform 0.3s;
-        }
-
-        .logo-container img:hover {
-            transform: scale(1.02);
-        }
-
-        .brand-name {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #999;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .hero h1 {
-            font-family: 'Bangers', cursive;
-            font-size: 2.8rem;
-            color: #c9302c;
-            margin: 0 0 6px 0;
-            letter-spacing: 0.5px;
-            line-height: 1.1;
-        }
-
-        .hero h2 {
-            font-size: 1.05rem;
-            color: #999;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1rem;
-            color: #777;
-            margin-bottom: 32px;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        .hero .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        /* ============== SECTIONS ============== */
-        .section {
-            padding: 80px 20px;
-            position: relative;
-            z-index: 10;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .section-title {
-            font-family: 'Bangers', cursive;
-            font-size: 3rem;
-            color: #d9534f;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        /* ============== MEATBALLS PROMOTION ============== */
-        .promo-albondigas {
-            background: #fdfaf6;            border: 3px solid #f1c40f;
-            border-radius: 20px;
-            padding: 50px 30px;
-            margin: 60px auto;
-            max-width: 1100px;
-            box-shadow: 0 15px 40px rgba(241, 196, 15, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .promo-albondigas::before {
-            content: '🍽️';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            font-size: 100px;
-            opacity: 0.1;
-            transform: rotate(-15deg);
-        }
-
-        .promo-albondigas::after {
-            content: '🍽️';
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            font-size: 100px;
-            opacity: 0.1;
-            transform: rotate(15deg);
-        }
-
-        .promo-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .promo-badge {
-            display: inline-block;
-            background-color: #2a7f62; /* Verde esmeralda - más suave y acogedor */
-            color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(217, 83, 79, 0.3);
-        }
-
-        .promo-title {
-            font-family: 'Bangers', cursive;
-            font-size: 2.8rem;
-            color: #d9534f;
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-
-        .promo-subtitle {
-            font-size: 1.3rem;
-            color: #555;
-            font-weight: 400;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .promo-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .promo-item {
-            background-color: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-        }
-
-        .promo-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .promo-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 3px solid #f1c40f;
-        }
-
-        .promo-item-content {
-            padding: 25px;
-        }
-
-        .promo-item-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #d9534f;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .promo-item-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .promo-cta {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px dashed #f1c40f;
-        }
-
-        .promo-highlight {
-            background: linear-gradient(135deg, #d9534f 0%, #c9302c 100%);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 15px;
-            margin: 30px auto 0;
-            max-width: 700px;
-            box-shadow: 0 8px 20px rgba(217, 83, 79, 0.3);
-        }
-
-        .promo-highlight p {
-            font-size: 1.1rem;
-            margin: 0;
-            color: white;
-            line-height: 1.7;
-        }
-
-        .promo-highlight strong {
-            font-size: 1.3rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        /* ============== ABOUT US ============== */
-        .about {
-            background-color: #fff;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .team-member {
-            text-align: center;
-            padding: 30px;
-            background-color: #f9f9f9;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .team-member img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center top;
-            margin-bottom: 20px;
-            border: 5px solid #d9534f;
-        }
-
-        .team-member h3 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .team-member p {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        /* ============== OUR VENUE ============== */
-        .local {
-            background: linear-gradient(135deg, #f4f1ea 0%, #e8e0d0 100%);
-        }
-
-        .local-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .local-image {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .local-image:hover {
-            transform: scale(1.02);
-        }
-
-        .local-image img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .local-description {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 1.1rem;
-            color: #666;
-        }
-
-        /* ============== CONTACT INFORMATION ============== */
-        .contact {
-            background-color: #fff;
-        }
-
-        .info-box {
-            background-color: #f9f9f9;
-            border: 2px dashed #ccc;
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .info-box h2 {
-            color: #555;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        .contact-item h3 {
-            color: #d9534f;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .contact-item a {
-         color: #a94442; /* Accessible dark red */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .phone-link {
-            font-size: 1.3rem;
-        }
-
-        /* ============== SCHEDULE ============== */
-        .schedule-section {
-            margin: 30px 0;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .schedule-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .schedule-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-        }
-
-        .schedule-list li {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 15px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            border-left: 4px solid #d9534f;
-        }
-
-        .schedule-list .day {
-            font-weight: bold;
-        }
-
-        /* ============== BUTTONS ============== */
-        .btn {
-            display: inline-block;
-            padding: 10px 24px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.25s ease;
-            cursor: pointer;
-            border: 1.5px solid transparent;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn-primary {
-            background-color: #8b6b4a;
-            color: #fff;
-            border-color: #8b6b4a;
-        }
-
-        .btn-primary:hover {
-            background-color: #735a3e;
-            border-color: #735a3e;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(139, 107, 74, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: #fff8e1;
-            color: #5d4e37;
-            border-color: #e0d0a0;
-        }
-
-        .btn-secondary:hover {
-            background-color: #fff3c4;
-            border-color: #c5a47e;
-            color: #5d4e37;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(197, 164, 126, 0.25);
-        }
-
-        .hero .btn-group .btn {
-            padding: 8px 20px;
-            font-size: 0.85rem;
-        }
-
-        /* ============== MAP ============== */
-        .map-container {
-            margin-top: 30px;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 2px solid #eee;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .map-container iframe {
-            border: 0;
-            width: 100%;
-            height: 350px;
-        }
-
-        /* ============== FOOTER ============== */
-        .footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-        }
-
-        /* ============== RESPONSIVE ============== */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 70px;
-            }
-            .hero {
-                padding: 50px 20px 40px;
-            }
-            .language-nav {
-                position: static;
-                text-align: center;
-                margin-bottom: 15px;
-                padding: 6px 10px;
-                border-radius: 15px;
-                z-index: 999;
-            }
-
-            /* En móvil: selector de idioma como grid compacto */
-            .nav-links.active .nav-lang-dropdown #langDropdownBtn {
-                display: none;
-            }
-
-            .nav-links.active .nav-lang-dropdown .lang-dropdown-list {
-                display: grid !important;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 3px;
-                position: relative !important;
-                right: auto !important;
-                top: auto !important;
-                width: 100%;
-                max-height: none !important;
-                overflow: visible !important;
-                border: none;
-                box-shadow: none;
-                background: transparent;
-                padding: 8px 0 0;
-                margin: 0;
-            }
-
-            .nav-links.active .nav-lang-dropdown .lang-dropdown-list li {
-                text-align: center;
-            }
-
-            .nav-links.active .nav-lang-dropdown .lang-dropdown-list a {
-                padding: 6px 4px;
-                font-size: 0.75rem;
-                border-radius: 4px;
-                background: rgba(0,0,0,0.04);
-                text-align: center;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            .nav-links.active .nav-lang-dropdown .lang-dropdown-list a:hover {
-                background: rgba(217, 83, 79, 0.1);
-            }
-
-            .nav-container {
-                flex-wrap: wrap;
-                gap: 0;
-            }
-
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                padding: 8px 0 0;
-                gap: 0;
-                border-top: 1px solid #eee;
-                margin-top: 8px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                text-align: center;
-            }
-
-            .nav-links a {
-                padding: 7px 10px;
-                border-radius: 6px;
-                font-size: 0.9rem;
-                display: block;
-            }
-
-            .nav-links a:hover {
-                background-color: rgba(217, 83, 79, 0.1);
-            }
-
-            .nav-lang-dropdown {
-                padding: 4px 0;
-            }
-
-            .nav-lang-dropdown #langDropdownBtn {
-                padding: 7px 10px;
-                font-size: 0.9rem;
-                justify-content: center;
-                width: 100%;
-            }
-
-            .menu-toggle {
-                display: flex;
-                cursor: pointer;
-                z-index: 1002;
-            }
-
-            .menu-toggle.active {
-                position: fixed;
-                top: 14px;
-                right: 20px;
-                z-index: 1003;
-            }
-
-            .menu-toggle span {
-                transition: all 0.3s ease;
-            }
-
-            .menu-toggle.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            .menu-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .menu-toggle.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .local-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                grid-template-columns: 1fr;
-            }
-
-            .schedule-list {
-                grid-template-columns: 1fr;
-            }
-
-            .promo-title {
-                font-size: 2rem;
-            }
-
-            .promo-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .promo-content {
-                grid-template-columns: 1fr;
-            }
-
-            .section {
-                padding: 40px 20px;
-            }
-
-            .promo-albondigas {
-                padding: 30px 20px;
-                margin: 30px auto;
-            }
-
-            .promo-cta .btn {
-                display: block;
-                width: 100%;
-                margin: 10px 0 !important;
-                box-sizing: border-box;
-                text-align: center;
-            }
-
-            .info-box {
-                padding: 20px 15px;
-            }
-
-            .schedule-section {
-                padding: 0;
-                background-color: transparent;
-                box-shadow: none;
-            }
-
-            .hero .btn-group {
-                flex-direction: row;
-                justify-content: center;
-                gap: 10px;
-            }
-
-            .hero .btn-group .btn {
-                width: auto;
-                min-width: 120px;
-                text-align: center;
-                margin: 0;
-            }
-
-            .team-member img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .promo-image {
-                height: auto;
-                object-fit: contain;
-            }
-        }
-/* ============== MAP PLACEHOLDER ============== */
 #map-placeholder {
     position: relative;
     width: 100%;
@@ -885,7 +240,7 @@
     color: #a94442;
     text-decoration: underline;
 }
-    
+
 /* Ajustes para móvil para el mapa de consentimiento */
 @media (max-width: 768px) {
     #map-placeholder {
@@ -901,92 +256,39 @@
     }
 }
 
-/* ============== BANNER INFORMATIVO PARA IDIOMAS ============== */
-.language-info-banner {
-    background: #fff9e6;
-    border: 1px solid #f0ad4e;
-    border-left: 3px solid #f0ad4e;
-    padding: 12px 40px 12px 40px;
-    margin: 100px auto 20px;
-    max-width: 1000px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.language-info-banner .banner-icon {
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.language-info-banner .banner-content {
-    flex: 1;
-    font-size: 0.95rem;
-    color: #856404;
-    line-height: 1.4;
-}
-
-.language-info-banner .banner-link {
-    color: #d9534f;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid #d9534f;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-
-.language-info-banner .banner-link:hover {
-    color: #a94442;
-    border-bottom-color: #a94442;
-}
-
-.language-info-banner .banner-close {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 1.3rem;
-    color: #856404;
-    cursor: pointer;
-    padding: 5px;
-    line-height: 1;
-    opacity: 0.6;
-    transition: opacity 0.2s;
-}
-
-.language-info-banner .banner-close:hover {
-    opacity: 1;
-}
-
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-    .language-info-banner {
-        margin: 80px 10px 15px;
-        padding: 10px 35px 10px 35px;
-        flex-direction: row;
-        font-size: 0.85rem;
+    /* Compensa la barra fija sólo en páginas interiores; la portada gestiona
+       su propio hueco con --p-nav-h en style-portada.css (y en la landing el
+       padding-top general creaba un hueco bajo la barra) */
+    body:not(.portada) {
+        padding-top: 70px;
     }
-    
-    .language-info-banner .banner-icon {
-        font-size: 1.1rem;
+
+    .hero {
+        padding: 50px 20px 40px;
     }
-    
-    .language-info-banner .banner-content {
-        font-size: 0.85rem;
-        line-height: 1.3;
+
+    .hero h1 {
+        font-size: 2.2rem;
     }
-    
-    .language-info-banner .banner-link {
-        display: block;
-        margin-top: 4px;
+
+    .section-title {
+        font-size: 2.5rem;
     }
-    
-    .language-info-banner .banner-close {
-        font-size: 1.2rem;
-        right: 8px;
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    .info-box {
+        padding: 20px 15px;
+    }
+
+    .promo-image {
+        height: auto;
+        object-fit: contain;
     }
 }

@@ -31,42 +31,72 @@ $host = 'hamburgueseriasenaris.com';
 $keyLocation = 'https://hamburgueseriasenaris.com/5c5f8a8f29df42e28af5c96d4fadfced.txt';
 
 // =====================================================
-// URLs ACTUALIZADAS - 2 Julio 2026
-// Home (9 idiomas) + Menú Peregrino (9 idiomas) + Bocadillos Grupos (9 idiomas · NUEVO)
-// Rediseño integral SEO · Schema.org · hreflang · OpenGraph
+// URLs ACTUALIZADAS - 9 Octubre 2026
+// 51 URLs = 50 páginas HTML modificadas (50 archivos) + sitemap.xml
+// ---------------------------------------------------------------------
+// 1) FAMILIA A · Fiestas del Apóstol: 9 artículos con URL ATEMPORAL
+//    (antes acababan en -2026; las viejas redirigen 301 desde .htaccess)
+// 2) FAMILIA · Monte do Gozo: 9 artículos actualizados
+// 3) Otros 23 artículos modificados (enlaces, hreflang, menús)
+// 4) Índices /blog/ de los 9 idiomas
+// 5) sitemap.xml (nuevas URLs + lastmod)
 // =====================================================
 $urlsActualizadas = [
-    // Home pages - metas, H1, schema actualizados, ruido eliminado
-    'https://hamburgueseriasenaris.com/es/',
-    'https://hamburgueseriasenaris.com/en/',
-    'https://hamburgueseriasenaris.com/fr/',
-    'https://hamburgueseriasenaris.com/de/',
-    'https://hamburgueseriasenaris.com/it/',
-    'https://hamburgueseriasenaris.com/pt/',
-    'https://hamburgueseriasenaris.com/ja/',
-    'https://hamburgueseriasenaris.com/zh/',
-    'https://hamburgueseriasenaris.com/ko/',
-    // Pilgrim menu - reescritura completa en los 9 idiomas
-    'https://hamburgueseriasenaris.com/es/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/en/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/fr/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/de/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/it/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/pt/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/ja/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/zh/pilgrim-menu',
-    'https://hamburgueseriasenaris.com/ko/pilgrim-menu',
-    // Bocadillos para grupos - NUEVA sección (9 idiomas)
-    'https://hamburgueseriasenaris.com/es/bocadillos-grupos-santiago',
-    'https://hamburgueseriasenaris.com/en/sandwiches-for-groups-santiago',
-    'https://hamburgueseriasenaris.com/fr/sandwichs-pour-groupes-saint-jacques',
-    'https://hamburgueseriasenaris.com/de/sandwiches-fur-gruppen-santiago',
-    'https://hamburgueseriasenaris.com/it/panini-per-gruppi-santiago',
-    'https://hamburgueseriasenaris.com/pt/sanduiches-para-grupos-santiago',
-    'https://hamburgueseriasenaris.com/ja/group-sandwiches-santiago',
-    'https://hamburgueseriasenaris.com/zh/group-sandwiches-santiago',
-    'https://hamburgueseriasenaris.com/ko/group-sandwiches-santiago',
-    // Sitemap - actualizado con nueva fecha lastmod
+    // --- 1) Familia A · Fiestas del Apóstol (URL atemporal, sin -2026) ---
+    'https://hamburgueseriasenaris.com/es/blog/fiestas-apostol-santiago',
+    'https://hamburgueseriasenaris.com/en/blog/apostle-santiago-festivals',
+    'https://hamburgueseriasenaris.com/fr/blog/fetes-apotre-saint-jacques',
+    'https://hamburgueseriasenaris.com/de/blog/apostel-jakobus-feste',
+    'https://hamburgueseriasenaris.com/it/blog/feste-apostolo-giacomo',
+    'https://hamburgueseriasenaris.com/pt/blog/festas-apostolo-santiago',
+    'https://hamburgueseriasenaris.com/ja/blog/apostle-santiago-festivals',
+    'https://hamburgueseriasenaris.com/zh/blog/apostle-santiago-festivals',
+    'https://hamburgueseriasenaris.com/ko/blog/apostle-santiago-festivals',
+    // --- 2) Familia Monte do Gozo (9 idiomas) ---
+    'https://hamburgueseriasenaris.com/es/blog/conciertos-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/en/blog/concerts-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/fr/blog/concerts-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/de/blog/konzerte-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/it/blog/concerti-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/pt/blog/concertos-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/ja/blog/concerts-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/zh/blog/concerts-monte-do-gozo',
+    'https://hamburgueseriasenaris.com/ko/blog/concerts-monte-do-gozo',
+    // --- 3) Otros artículos modificados (enlazan a las dos familias) ---
+    'https://hamburgueseriasenaris.com/es/blog/escapadas-playas-cerca-santiago',
+    'https://hamburgueseriasenaris.com/es/blog/san-juan-galicia',
+    'https://hamburgueseriasenaris.com/en/blog/saint-john-galicia',
+    'https://hamburgueseriasenaris.com/en/blog/what-to-do-santiago-if-it-rains',
+    'https://hamburgueseriasenaris.com/fr/blog/saint-jean-galice',
+    'https://hamburgueseriasenaris.com/de/blog/johannistag-galizien',
+    'https://hamburgueseriasenaris.com/de/blog/was-tun-santiago-wenn-es-regnet',
+    'https://hamburgueseriasenaris.com/it/blog/san-giovanni-galizia',
+    'https://hamburgueseriasenaris.com/pt/blog/escapadas-praias-perto-santiago',
+    'https://hamburgueseriasenaris.com/pt/blog/sao-joao-galiza',
+    'https://hamburgueseriasenaris.com/ja/blog/7-mistakes-tourists-santiago',
+    'https://hamburgueseriasenaris.com/ja/blog/day-trips-beaches-near-santiago',
+    'https://hamburgueseriasenaris.com/ja/blog/fair-price-burger-santiago',
+    'https://hamburgueseriasenaris.com/ja/blog/galician-pinchos-traditional-bars',
+    'https://hamburgueseriasenaris.com/ja/blog/heat-santiago-pilgrims',
+    'https://hamburgueseriasenaris.com/ja/blog/saint-john-galicia',
+    'https://hamburgueseriasenaris.com/ja/blog/santiago-pilgrims-museums-guide',
+    'https://hamburgueseriasenaris.com/ja/camino/consejos/espanol',
+    'https://hamburgueseriasenaris.com/ja/camino/oporto/porto-camino-guide',
+    'https://hamburgueseriasenaris.com/zh/blog/day-trips-beaches-near-santiago',
+    'https://hamburgueseriasenaris.com/zh/blog/saint-john-galicia',
+    'https://hamburgueseriasenaris.com/ko/blog/day-trips-beaches-near-santiago',
+    'https://hamburgueseriasenaris.com/ko/blog/saint-john-galicia',
+    // --- 4) Índices /blog/ de los 9 idiomas ---
+    'https://hamburgueseriasenaris.com/es/blog/',
+    'https://hamburgueseriasenaris.com/en/blog/',
+    'https://hamburgueseriasenaris.com/fr/blog/',
+    'https://hamburgueseriasenaris.com/de/blog/',
+    'https://hamburgueseriasenaris.com/it/blog/',
+    'https://hamburgueseriasenaris.com/pt/blog/',
+    'https://hamburgueseriasenaris.com/ja/blog/',
+    'https://hamburgueseriasenaris.com/zh/blog/',
+    'https://hamburgueseriasenaris.com/ko/blog/',
+    // --- 5) Sitemap actualizado ---
     'https://hamburgueseriasenaris.com/sitemap.xml',
 ];
 
@@ -132,7 +162,7 @@ echo "==============================================\n\n";
 $exito = true;
 
 // Envío GENERAL a api.indexnow.org (Bing, Yandex, etc.)
-// Enviamos: 9 homes + 9 pilgrim-menu + 9 bocadillos + sitemap (28 URLs)
+// Enviamos 51 URLs: 9 Familia A (atemporal) + 9 Monte do Gozo + 23 artículos + 9 índices /blog/ + sitemap
 if (!enviarIndexNow(
     'https://api.indexnow.org/indexnow',
     'IndexNow General (Bing, Yandex, etc.)',
