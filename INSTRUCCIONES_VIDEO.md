@@ -3,7 +3,7 @@
 ## ✅ Lo que ya está hecho:
 
 1. ✅ He creado la carpeta `videos/` en la raíz de tu sitio web
-2. ✅ He añadido el código HTML al artículo de fiestas de Santiago
+2. ✅ He añadido el código HTML al artículo de las Fiestas del Apóstol Santiago
 3. ✅ El video se mostrará en una sección especial dentro de la parte de "Fiestas del Apóstol"
 
 ---
@@ -19,7 +19,7 @@ barsusana/
 │   └── fuegos-apostol-preview.avif  ← AQUÍ va la imagen de portada (opcional)
 ├── es/
 │   └── blog/
-│       └── fiestas-santiago-2026.html  ← Ya actualizado
+│       └── fiestas-apostol-santiago.html  ← Ya actualizado
 ```
 
 ---
@@ -88,7 +88,7 @@ poster="../../imagenes/fuegos-apostol-preview.jpg"
 
 Una vez subido, verifica que funciona:
 
-1. Abre: https://hamburgueseriasenaris.com/es/blog/fiestas-santiago-2026
+1. Abre: https://hamburgueseriasenaris.com/es/blog/fiestas-apostol-santiago
 2. Busca la sección "Fiestas del Apóstol Santiago"
 3. Desplázate hasta ver el reproductor de video
 4. Haz clic en "Play" para verificar que funciona
@@ -157,7 +157,7 @@ Si el video dura más de 5 minutos o pesa más de 100 MB:
 2. Renómbralo a: `fuegos-apostol-2025-traca-final.mp4`
 3. Súbelo a la carpeta: `/videos/`
 4. Opcionalmente, crea y sube una imagen de portada
-5. Verifica en: https://hamburgueseriasenaris.com/es/blog/fiestas-santiago-2026
+5. Verifica en: https://hamburgueseriasenaris.com/es/blog/fiestas-apostol-santiago
 
 ---
 

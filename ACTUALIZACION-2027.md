@@ -12,14 +12,14 @@
 
 | Dato | Valor |
 |---|---|
-| **Familia en curso** | **A — Fiestas del Apóstol Santiago: ✅ CERRADA (9/9)** → siguiente familia: **B — Grandes Fiestas de Santiago de Compostela** |
-| **Siguiente archivo a tocar** | `es/blog/fiestas-santiago-2026.html` (**abrir chat nuevo**) |
-| **Ya cerrados** | `es` = `ES-LISTO` · `en` = `TRADUCIDO` · `fr` = `TRADUCIDO` · `de` = `TRADUCIDO` · `it` = `TRADUCIDO` · `pt` = `TRADUCIDO` · `ja` = `TRADUCIDO` · `zh` = `TRADUCIDO` · `ko` = `TRADUCIDO` |
-| **Pendientes de esta familia** | ninguna: **familia A cerrada**. Pendientes globales: **B, C, D, E** (36 archivos), **G** (9), **H** (9 + descargas), **I** (9), **J**, **K** |
-| **Última sesión** | 2026-10-09 — familia A **cerrada** (coreano) y **migrada a URL atemporal**: 9 archivos renombrados, **301** + `sitemap.xml` + **178 enlaces** reescritos |
-| **Nota de la sesión** | Los tres asiáticos (`ja`, `zh`, `ko`) se hicieron **en chats separados** (uno por idioma), con §6.4 y el script de QC de §8 (`scripts/qc-idiomas.mjs`). Los cierres `</span>` sobrantes de `ja`, `zh` y `ko` están **ya corregidos en los tres**. La familia **B** empieza por el `es` (guía); hasta que el usuario apruebe la guía no se traduce ningún idioma. |
+| **Familia en curso** | **B — Grandes Fiestas de Santiago: ✅ CERRADA** (9/9: `es`, `en`, `fr`, `de`, `it`, `pt`, `ja`, `zh`, `ko`) |
+| **Siguiente archivo a tocar** | `es/blog/fiestas-gastronomicas-galicia.html` (arranca la **familia C — Fiestas Gastronómicas de Galicia**; patrón desde `es`) |
+| **Ya cerrados** | **A** completa (9/9, URL atemporal). **B**: `es` = `ES-LISTO` (2026-10-10), `en` = `TRADUCIDO` (2026-10-10), `fr` = `TRADUCIDO` (2026-10-10), `de` = `TRADUCIDO` (2026-10-10), `it` = `TRADUCIDO` (2026-10-10), `pt` = `TRADUCIDO` (2026-10-10), `ja` = `TRADUCIDO` (2026-10-10), `zh` = `TRADUCIDO` (2026-10-10), `ko` = `TRADUCIDO` (2026-10-10) |
+| **Pendientes de esta familia** | ninguna (B cerrada). Pendientes globales: **C, D, E** (27 archivos), **G** (9), **H** (9 + descargas), **I** (9), **J**, **K** |
+| **Última sesión** | 2026-10-10 — familia B: `ja/blog/santiago-festivals.html`, `zh/blog/santiago-festivals.html` y `ko/blog/santiago-festivals.html` **traducidos** (adaptación a 2027 desde el `es`) + tarjetas de los índices `ja`, `zh` y `ko` actualizadas |
+| **Nota de la sesión** | Los tres imitan la guía `es` y **no cubren** las Fiestas del Apóstol (enlazan a `apostle-santiago-festivals` para evitar canibalización): aviso visible (§4.2), índice, bloque variable de la Ascensión + caja «ℹ️» y teléfono del taxista Alejandro en Movilidad. El `ja` conserva la «nota especial japonesa» (hermano con escuela de cocina `cocinadejose.com`, habla japonés, julio–septiembre); el `ko` conserva su sección «한국 방문객을 위한 특별 메시지» (fe y fiesta, `.nota-coreanos`) y añade la línea «종교적 의미» en cada caja de fiesta; el `zh` va directo desde el `es` sin nota local. QC (§8): `ko` = 0 hallazgos; `ja` y `zh` solo con el falso positivo conocido (`한국어` del selector de idioma del nav, común a todos los archivos). |
 | **Regla de oro** | Se traduce **siempre desde `es`**, nunca desde otra traducción |
-| **Familias después de A** | B → C → D → E → G → H → I (ver §9) |
+| **Familias después de A** | B (cerrada) → C → D → E → G → H → I (ver §9) |
 
 **Los 4 pasos de un chat nuevo:**
 1. Lee **solo** este archivo (no reexplores el repo).
@@ -57,7 +57,8 @@
 ## 2. Estado global
 - **HECHO (plantilla):** familia **F — Conciertos Monte do Gozo** (9/9 ya en 2027).
 - **HECHO:** familia **A — Fiestas del Apóstol Santiago** (9/9 ya en 2027: `es` + 8 idiomas).
-- **PENDIENTE:** familias **B, C, D, E** (fiestas del blog) = 36 archivos.
+- **HECHO:** familia **B — Grandes Fiestas de Santiago** (9/9 ya en 2027: `es` = `ES-LISTO` 2026-10-10 + URL atemporal aplicada; `en`, `fr`, `de`, `it`, `pt`, `ja`, `zh`, `ko` traducidos).
+- **PENDIENTE:** familias **C, D, E** (fiestas del blog) = 27 archivos.
 - **PENDIENTE:** **G** tapas (9), **H** guía del peregrino (9 + descargas), **I** índices del blog (9), **J** secundarios, **K** PDFs.
 - `sitemap.xml` y `index.html` de la raíz **no** contienen "2026" → sin cambios por año.
 - **Total mínimo: 63 páginas HTML + PDFs + índices.**
@@ -70,7 +71,7 @@ Leyenda: `·` = `PENDIENTE` · `ES` = `ES-LISTO` (guía cerrada) · `TR` = `TRAD
 |---|---|---|---|---|---|---|---|---|---|
 | **F** — Conciertos Monte do Gozo | TR | TR | TR | TR | TR | TR | TR | TR | TR |
 | **A** — Fiestas del Apóstol | ES | TR | TR | TR | TR | TR | TR | TR | TR |
-| **B** — Grandes Fiestas de Santiago | · | · | · | · | · | · | · | · | · |
+| **B** — Grandes Fiestas de Santiago | ES | TR | TR | TR | TR | TR | QC | QC | QC |
 | **C** — Fiestas Gastronómicas | · | · | · | · | · | · | · | · | · |
 | **D** — Fiestas Culturales | · | · | · | · | · | · | · | · | · |
 | **E** — San Juan / Noite Meiga | · | · | · | · | · | · | · | · | · |
@@ -104,8 +105,23 @@ Leyenda: `·` = `PENDIENTE` · `ES` = `ES-LISTO` (guía cerrada) · `TR` = `TRAD
 > `</span>` sin apertura con la forma `</span></td>` en las celdas de tabla (57 en `zh`, 58 en `ko`).
 > Los tres están corregidos con el reemplazo global `</span></td>` → `</td>` y el QC de §8 da 0 hallazgos.
 
-### B — Grandes Fiestas de Santiago de Compostela — `PENDIENTE` (9)
-`es/blog/fiestas-santiago-2026.html` · `en|ja|zh|ko/blog/santiago-festivals-2026.html` · `fr/blog/fetes-saint-jacques-2026.html` · `de/blog/santiago-feste-2026.html` · `it/blog/feste-santiago-2026.html` · `pt/blog/festas-santiago-2026.html`
+### B — Grandes Fiestas de Santiago de Compostela — 🟡 `ES-LISTO` (es) · ⏱️ **URL ATEMPORAL (2026-10-10)**
+> Las URLs ya **no llevan el año**: se renombraron los 9 archivos, se pusieron **redirecciones 301**
+> (`.htaccess` §3b), se actualizó `sitemap.xml`, el `hreflang`/`canonical` interno y **todos los enlaces
+> internos** con `scripts/migrar-links-atemporales.mjs`. Copia de seguridad de los originales en
+> `backup/familia-b-fiestas-2026/`. La guía `es` **no cubre** las Fiestas del Apóstol (evita
+> canibalización): enlaza a la familia A.
+| idioma | archivo | estado |
+|---|---|---|
+| es | `es/blog/fiestas-santiago.html` | **ES-LISTO (2026-10-10)** |
+| en | `en/blog/santiago-festivals.html` | **TRADUCIDO (2026-10-10)** |
+| fr | `fr/blog/fetes-saint-jacques.html` | **TRADUCIDO (2026-10-10)** |
+| de | `de/blog/santiago-feste.html` | **TRADUCIDO (2026-10-10)** |
+| it | `it/blog/feste-santiago.html` | **TRADUCIDO (2026-10-10)** |
+| pt | `pt/blog/festas-santiago.html` | **TRADUCIDO (2026-10-10)** |
+| ja | `ja/blog/santiago-festivals.html` | **TRADUCIDO (2026-10-10)** |
+| zh | `zh/blog/santiago-festivals.html` | **TRADUCIDO (2026-10-10)** |
+| ko | `ko/blog/santiago-festivals.html` | **TRADUCIDO (2026-10-10)** |
 
 ### C — Fiestas Gastronómicas de Galicia — `PENDIENTE` (9)
 `es/blog/fiestas-gastronomicas-galicia.html` · `en|ja|zh|ko/blog/galician-gastronomic-festivals.html` · `fr/blog/fetes-gastronomiques-galice.html` · `de/blog/gastronomische-feste-galizien.html` · `it/blog/feste-gastronomiche-galizia.html` · `pt/blog/festas-gastronomicas-galiza.html`
@@ -242,11 +258,11 @@ Verificar con el script de la sección 8 y corregir cualquier hallazgo:
 - Precio/fechas/horarios: si cambian de año, actualizar también los números, no solo los textos.
 
 ### 6.6 Nombre de archivo y URLs
-- **Familia A migrada a URLs atemporales** (2026-10-09): los 9 archivos ya **no llevan año**.
-  Al renombrar SIEMPRE hay que aplicar el protocolo completo: copia de seguridad + **301** en
-  `.htaccess` + `sitemap.xml` + `hreflang`/`canonical` + migrar enlaces internos con
-  `scripts/migrar-links-atemporales.mjs`.
-- Las familias **B y H** todavía llevan año en el nombre; **no renombrar** sin aplicar el mismo
+- **Familias A y B migradas a URLs atemporales** (A: 2026-10-09 · B: 2026-10-10): los 9 archivos de
+  cada familia ya **no llevan año**. Al renombrar SIEMPRE hay que aplicar el protocolo completo: copia
+  de seguridad + **301** en `.htaccess` + `sitemap.xml` + `hreflang`/`canonical` + migrar enlaces
+  internos con `scripts/migrar-links-atemporales.mjs`.
+- La familia **H** todavía lleva año en el nombre; **no renombrar** sin aplicar el mismo
   protocolo (301 + sitemap + enlaces) o se romperían enlaces, `hreflang` y SEO.
 - El año se cambia **dentro** del contenido, nunca en la ruta (salvo la migración a atemporal descrita arriba).
 
@@ -279,8 +295,9 @@ Verificar con el script de la sección 8 y corregir cualquier hallazgo:
 
 ## 9. Decisiones pendientes (confirmar con el usuario)
 - ¿Renombrar los archivos A/B/H para quitar "2026" de la URL, o conservarla?
-  ✅ **A hecho (2026-10-09)**: renombrado a URL atemporal con 301 + sitemap + enlaces internos.
-  **Pendiente decidir en B y H** (mismo protocolo con `scripts/migrar-links-atemporales.mjs`).
+  ✅ **A hecho (2026-10-09)** y ✅ **B hecho (2026-10-10)**: renombrado a URL atemporal con 301 + sitemap
+  + enlaces internos (mismo protocolo con `scripts/migrar-links-atemporales.mjs`).
+  **Pendiente decidir en H** (mismo protocolo).
 - ¿Mantener el bloque variable de F como plantilla oficial para todo? (recomendado).
 - ¿"Año Santo 2027" como reclamo principal en A, B, D y G? (recomendado; el sitio hoy dice 2026).
 - Orden de familias a abordar: **A ✅ (cerrada el 2026-10-09) → B → C → D → E → G → H**.
@@ -289,6 +306,7 @@ Verificar con el script de la sección 8 y corregir cualquier hallazgo:
 Se rellena a medida que cada idioma se traduce. **Regla:** quien traduce un idioma nuevo añade su
 columna aquí antes de terminar, para que el siguiente chat no reinvente la terminología.
 Columnas cerradas: `en` (2026-10-09) · `fr` (2026-10-09) · `de` (2026-10-09) · `it` (2026-10-09) · `pt` (2026-10-09) · `ja` (2026-10-09) · `zh` (2026-10-09) · `ko` (2026-10-09).
+Ampliadas con la familia B (2026-10-10): `en`, `fr`, `de`, `it`, `pt`, `ja`, `zh`, `ko` (ver bloques «familia B» más abajo).
 
 | término (`es`) | en | fr | de | it | pt | ja | zh | ko |
 |---|---|---|---|---|---|---|---|---|
@@ -325,6 +343,78 @@ Columnas cerradas: `en` (2026-10-09) · `fr` (2026-10-09) · `de` (2026-10-09) �
 `fuegos del Apóstol` = 사도 축제 불꽃놀이 · `programa oficial pendiente` = 공식 프로그램 발표 대기 중 ·
 `Año Santo` = 성년(희년) · `misa solemne y Ofrenda Nacional` = 엄숙 미사와 국가 봉헌식 ·
 `Pregón de Fiestas` = 축제 선언식(프레곤).
+
+**Términos propios del `en` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = Ascension Festivals · `Entroido` = Entroido (Carnival) ·
+`Fiestas de San Roque` = San Roque Festivals · `Viernes de Dolores` = Friday of Sorrows ·
+`verbena` = verbena · `Punto Lila` = "Punto Lila" (a staffed purple point offering help and support at festivals) ·
+`Romaría das Flores` = Romaría das Flores · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = orellas (Carnival pastries) · `Feria Caballar` = Feria Caballar (livestock fair) ·
+`Banquete de Conxo` = Banquete de Conxo · `Santiago (é) Tapas` = Santiago (é) Tapas ·
+`fiestas del Apóstol (nombre corto)` = the Apostle festivals (el nombre completo es "Apostle Santiago Festivals").
+
+**Términos propios del `fr` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = Fêtes de l'Ascension · `Entroido` = Entroido (Carnaval) ·
+`Fiestas de San Roque` = Fêtes de San Roque · `Viernes de Dolores` = Vendredi des Douleurs ·
+`verbena` = verbena · `Punto Lila` = « Punto Lila » (point violet : espace d'accueil et de soutien pendant les fêtes) ·
+`Romaría das Flores` = Romaría das Flores · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = oreilles (orellas, pâtisseries de carnaval) · `Feria Caballar` = Feria Caballar (foire aux chevaux) ·
+`Banquete de Conxo` = Fête du Banquet de Conxo · `Santiago (é) Tapas` = Santiago (é) Tapas ·
+`cocido` = pot-au-feu · `fiestas del Apóstol (nombre corto)` = les fêtes de l'Apôtre.
+
+**Términos propios del `de` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = Christi-Himmelfahrt-Feste · `Entroido` = Entroido (Karneval) ·
+`Fiestas de San Roque` = San-Roque-Feste · `Viernes de Dolores` = Schmerzensfreitag ·
+`verbena` = Verbena · `Punto Lila` = Punto Lila (violette Anlaufstelle: Raum für Betreuung und Unterstützung während der Feste) ·
+`Romaría das Flores` = Romaría das Flores · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = Orellas (Karnevalsgebäck) · `Feria Caballar` = Feria Caballar (Pferdemarkt) ·
+`Banquete de Conxo` = Fest des Banquets von Conxo · `Santiago (é) Tapas` = Santiago (é) Tapas ·
+`cocido` = Cocido · `fiestas del Apóstol (nombre corto)` = die Apostelfeste.
+
+**Términos propios del `it` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = Feste dell'Ascensione · `Entroido` = Entroido (Carnevale) ·
+`Fiestas de San Roque` = Feste di San Roque · `Viernes de Dolores` = Venerdì dei Dolori ·
+`verbena` = verbena · `Punto Lila` = Punto Lila (punto viola: spazio di accoglienza e supporto durante le feste) ·
+`Romaría das Flores` = Romaría das Flores · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = orecchie (orellas, dolci di carnevale) · `Feria Caballar` = Feria Caballar (mercato dei cavalli) ·
+`Banquete de Conxo` = Festa del Banchetto di Conxo · `Santiago (é) Tapas` = Santiago (é) Tapas ·
+`cocido` = cocido · `fiestas del Apóstol (nombre corto)` = le feste dell'Apostolo.
+
+**Términos propios del `pt` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = Festas da Ascensão · `Entroido` = Entroido (Carnaval) ·
+`Fiestas de San Roque` = Festas de San Roque · `Viernes de Dolores` = Sexta-feira das Dores ·
+`verbena` = verbena · `Punto Lila` = Punto Lila (ponto violeta: espaço de acolhimento e apoio durante as festas) ·
+`Romaría das Flores` = Romaría das Flores · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = orelhas (doces de Entroido) · `Feria Caballar` = Feira Cabalar (mercado de cavalos) ·
+`Banquete de Conxo` = Festa do Banquete de Conxo · `Santiago (é) Tapas` = Santiago (é) Tapas ·
+`cocido` = cozido · `fiestas del Apóstol (nombre corto)` = as festas do Apóstolo.
+
+**Términos propios del `ja` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = 昇天祭 · `Entroido` = エントロイド（カーニバル） · `Fiestas de San Roque` = サン・ロケ祭 ·
+`Viernes de Dolores` = 悲しみの金曜日 · `verbena` = ベルベナ（野外ダンス） · `Punto Lila` = Punto Lila（プント・リラ：祭り期間中の相談・支援スペース）·
+`Romaría das Flores` = ロマリーア・ダス・フローレス · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = オレハ（カーニバルの揚げ菓子） · `Feria Caballar` = アミオ馬市（Feria Caballar） ·
+`Banquete de Conxo` = コンショ宴会祭 · `Santiago (é) Tapas` = Santiago (é) Tapas · `cocido` = コシード ·
+`pulpo á feira` = プルポ・ア・フェイラ（フェリア風タコ） · `fiestas del Apóstol (nombre corto)` = 使徒祭.
+Específico de `ja` (familia B): `nota especial japonesa` = 🇯🇵 日本からのお客様へ（日本語サポート、7月〜9月、cocinadejose.com）.
+
+**Términos propios del `zh` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = 耶稣升天节 · `Entroido` = 狂欢节 · `Fiestas de San Roque` = 圣罗克节 ·
+`Viernes de Dolores` = 圣周五（周五）／孤独圣母游行 · `verbena` = 露天舞会 · `Punto Lila` = 紫色点位（Punto Lila：节日期间的咨询与支援点）·
+`Romaría das Flores` = 罗梅利亚花会 · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = 猪耳（狂欢节糕点） · `Feria Caballar` = 阿米奥马市（Feria Caballar） ·
+`Banquete de Conxo` = 孔霍宴会节 · `Santiago (é) Tapas` = Santiago (é) Tapas · `cocido` = 炖菜 ·
+`pulpo á feira` = 章鱼（pulpo á feira） · `fiestas del Apóstol (nombre corto)` = 使徒节.
+
+**Términos propios del `ko` (fijados al traducir la familia B):**
+`Fiestas de la Ascensión` = 승천 대축일 · `Entroido` = 엔트로이도(카니발) · `Fiestas de San Roque` = 산 로케 축제 ·
+`Viernes de Dolores` = 슬픔의 금요일 · `verbena` = 베르베나(야외 댄스) · `Punto Lila` = 푼토 릴라(Punto Lila: 축제 기간 상담·지원 공간) ·
+`Romaría das Flores` = 로마리아 다시 플로레스 · `Xenerais da Ulla` = Xenerais da Ulla ·
+`orellas` = 돼지 귀(카니발 과자) · `Feria Caballar` = 아미오 말 시장(Feria Caballar) ·
+`Banquete de Conxo` = 콘쇼 연회 축제 · `Santiago (é) Tapas` = Santiago (é) Tapas · `cocido` = 코시도 ·
+`pulpo á feira` = 문어(뿔포 아 페이라) · `fiestas del Apóstol (nombre corto)` = 사도 축제 ·
+`significado religioso (línea en cada caja de fiesta)` = 종교적 의미.
+Específico de `ko` (familia B): `sección especial coreana` = 🇰🇷 한국 방문객을 위한 특별 메시지: 신앙과 축제의 만남 (clase `.nota-coreanos`).
 
 **Términos propios del `ja` (fijados al traducir la familia A):**
 `Compostela` = コンポステーラ · `peregrino del Camino` = 巡礼者 · `Puerta Santa` = 聖なる扉（プエルタ・サンタ） ·
@@ -369,17 +459,28 @@ y dame el relevo (§12) con el siguiente archivo.
 > (qué le interesa a un lector japonés/chino/coreano que viene a Galicia, cómo se informa, qué
 > espera encontrar). Mantener la voz de Susana y Antonio.
 
-**Último relevo entregado (chat del `ko`, 2026-10-09):**
+**Último relevo entregado (chat de las lenguas asiáticas de B, 2026-10-10):**
 ```
 RELEVO
-- Cerrado: ko/blog/apostle-santiago-festivals-2026.html (TRADUCIDO) → familia A COMPLETA (9/9)
-- Siguiente: es/blog/fiestas-santiago-2026.html (familia B, la guía `es`; abrir chat nuevo)
-- Pendientes: familia B (es + 8 idiomas), y después C, D, E (36 archivos), G, H, I, J, K
-- Decisiones de esta sesión: mismo patrón que en ja/zh (bloque variable en Año Santo y programa
-  completo, .warning-box, FAQ a 6 preguntas, Event Schema retirados con comentario, "프로그램은 봄에
-  발표" en lugar de junio); sin bloque cultural coreano previo que conservar; glosario ko fijado en §11.
-- Recordatorio: la familia B arranca por el `es` y NO se traduce ningún idioma hasta que el usuario
-  apruebe la guía; QC obligatorio en ja/zh/ko (§8) con `scripts/qc-idiomas.mjs`.
+- Cerrado: ja/blog/santiago-festivals.html, zh/blog/santiago-festivals.html, ko/blog/santiago-festivals.html
+  (TRADUCIDO) → los tres idiomas asiáticos de la familia B. **Familia B cerrada (9/9).**
+- Cambios: adaptación a 2027 desde el `es` (no calco), aviso visible (§4.2), índice, bloque variable de la
+  Ascensión + caja «ℹ️» (Punto Lila, Romaría das Flores, Feria Caballar), Event Schema 2026 retirados + nota,
+  sección del Apóstol reducida a enlace a `apostle-santiago-festivals` (se retira el vídeo), taxista Alejandro
+  en Movilidad (tel:+34685136343), enlace al Apóstol en el calendario de julio, años fuera de la navegación
+  entre artículos. Contexto local (§6.3): el `ja` conserva la «nota especial japonesa» (hermano con escuela de
+  cocina `cocinadejose.com`, habla japonés, julio–septiembre); el `ko` conserva su sección «한국 방문객을 위한
+  특별 메시지» (fe y fiesta, clase `.nota-coreanos`) y añade la línea «종교적 의미» en cada caja de fiesta;
+  el `zh` va directo desde el `es`, sin nota local propia.
+- Índice: tarjetas de `ja/blog/index.html`, `zh/blog/index.html` y `ko/blog/index.html` actualizadas a 2027
+- QC (`scripts/qc-idiomas.mjs`): `ko` = **0 hallazgos**; `ja` y `zh` limpios salvo el `한국어` del selector de
+  idioma del nav generado (falso positivo común a TODOS los archivos, incluida la `es` aprobada)
+- Siguiente: `es/blog/fiestas-gastronomicas-galicia.html` → arranca la **familia C — Fiestas Gastronómicas de Galicia**
+- Pendientes: familias C, D, E (27 archivos), G (9), H (9 + descargas), I (9), J, K
+- Decisiones: se mantienen las de `es`, `en`, `fr`, `de`, `it` y `pt` (la guía NO cubre el Apóstol; Ascensión 2027 =
+  6-10 may; Entroido = 5-9 feb, 9 feb festivo; San Roque 14-17 ago; Event Schema 2026 retirados). Términos
+  `ja`, `zh` y `ko` de B añadidos a §11. Pendiente global: el `&copy; 2026` del pie sigue en `partials/footer.html`
+  (afecta a todos los idiomas, no se toca a mano).
 ```
 
 ## 10. Registro de cambios y avance
@@ -403,5 +504,27 @@ RELEVO
 | 2026-10-09 | A | `.htaccess` (§3b): **redirecciones 301** de las 9 URLs antiguas a las nuevas | HECHO |
 | 2026-10-09 | A | `sitemap.xml`: entrada antigua sustituida por la atemporal (loc + `hreflang`) | HECHO |
 | 2026-10-09 | A | `scripts/migrar-links-atemporales.mjs`: **178 enlaces** migrados en 43 archivos | HECHO |
+| 2026-10-10 | B | `es/blog/fiestas-santiago.html` (guía `es`; sin cubrir el Apóstol, enlaza a A) | ES-LISTO |
+| 2026-10-10 | B | 9 archivos renombrados a **URL atemporal** (sin año) + copia en `backup/familia-b-fiestas-2026/` | HECHO |
+| 2026-10-10 | B | `.htaccess` (§3b): **redirecciones 301** de las 9 URLs antiguas a las nuevas | HECHO |
+| 2026-10-10 | B | `sitemap.xml`: entrada antigua sustituida por la atemporal (loc + `hreflang`) | HECHO |
+| 2026-10-10 | B | `scripts/migrar-links-atemporales.mjs`: **216 enlaces** migrados en 65 archivos | HECHO |
+| 2026-10-10 | B | `en/blog/santiago-festivals.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro) | TRADUCIDO |
+| 2026-10-10 | B | `en/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | `fr/blog/fetes-saint-jacques.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro) | TRADUCIDO |
+| 2026-10-10 | B | `fr/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | `de/blog/santiago-feste.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro) | TRADUCIDO |
+| 2026-10-10 | B | `de/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | `it/blog/feste-santiago.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro) | TRADUCIDO |
+| 2026-10-10 | B | `it/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | `pt/blog/festas-santiago.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro) | TRADUCIDO |
+| 2026-10-10 | B | `pt/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | `ja/blog/santiago-festivals.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro; nota especial japonesa) | TRADUCIDO |
+| 2026-10-10 | B | `ja/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | `zh/blog/santiago-festivals.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro) | TRADUCIDO |
+| 2026-10-10 | B | `zh/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | `ko/blog/santiago-festivals.html` (adaptación a 2027; Apóstol enlaza a A; taxista Alejandro; sección especial coreana «신앙과 축제의 만남») | TRADUCIDO |
+| 2026-10-10 | B | `ko/blog/index.html`: tarjeta del artículo actualizada a 2027 | HECHO |
+| 2026-10-10 | B | **familia B cerrada: 9/9 en 2027** (QC §8: `ko` 0 hallazgos; `ja`/`zh` solo el falso positivo conocido `한국어` del nav) | HECHO |
 |  |  |  |  |
 

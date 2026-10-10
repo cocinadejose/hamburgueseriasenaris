@@ -21,12 +21,20 @@ import { join, extname, relative } from 'node:path';
 // Añadir aquí las familias futuras (B, H…) cuando se migren.
 // ---------------------------------------------------------------------------
 const MAPA = {
+  // Familia A — Fiestas del Apóstol (migrada 2026-10-09)
   'fiestas-apostol-santiago-2026': 'fiestas-apostol-santiago',
   'apostle-santiago-festivals-2026': 'apostle-santiago-festivals',
   'fetes-apotre-saint-jacques-2026': 'fetes-apotre-saint-jacques',
   'apostel-jakobus-feste-2026': 'apostel-jakobus-feste',
   'feste-apostolo-giacomo-2026': 'feste-apostolo-giacomo',
   'festas-apostolo-santiago-2026': 'festas-apostolo-santiago',
+  // Familia B — Grandes Fiestas de Santiago (migrada 2026-10-10)
+  'fiestas-santiago-2026': 'fiestas-santiago',
+  'santiago-festivals-2026': 'santiago-festivals',
+  'fetes-saint-jacques-2026': 'fetes-saint-jacques',
+  'santiago-feste-2026': 'santiago-feste',
+  'feste-santiago-2026': 'feste-santiago',
+  'festas-santiago-2026': 'festas-santiago',
 };
 
 const RAIZ = process.cwd();

@@ -443,21 +443,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/blog/tarta-santiago-receta-tradicional"/>
   </url>
 
-  <!-- ARTÍCULO: GRANDES FIESTAS DE SANTIAGO 2026 - EN 9 IDIOMAS -->
+  <!-- ARTÍCULO: GRANDES FIESTAS DE SANTIAGO (ATEMPORAL, SIN AÑO EN URL) - EN 9 IDIOMAS -->
   <url>
-    <loc>https://hamburgueseriasenaris.com/es/blog/fiestas-santiago-2026</loc>
-    <lastmod>2026-05-04T10:00:00+02:00</lastmod>
+    <loc>https://hamburgueseriasenaris.com/es/blog/fiestas-santiago</loc>
+    <lastmod>2026-10-10T10:00:00+02:00</lastmod>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/blog/fiestas-santiago-2026"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/blog/santiago-festivals-2026"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/blog/fetes-saint-jacques-2026"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/blog/santiago-feste-2026"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/blog/feste-santiago-2026"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/blog/festas-santiago-2026"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/blog/santiago-festivals-2026"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/blog/santiago-festivals-2026"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/blog/santiago-festivals-2026"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/blog/fiestas-santiago-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/blog/fiestas-santiago"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/blog/santiago-festivals"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/blog/fetes-saint-jacques"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/blog/santiago-feste"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/blog/feste-santiago"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/blog/festas-santiago"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/blog/santiago-festivals"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/blog/santiago-festivals"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/blog/santiago-festivals"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/blog/fiestas-santiago"/>
   </url>
 
   <!-- ARTÍCULO: FIESTAS DEL APÓSTOL SANTIAGO (ATEMPORAL, SIN AÑO EN URL) - EN 9 IDIOMAS -->
