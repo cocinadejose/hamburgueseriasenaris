@@ -494,10 +494,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/blog/escapadas-playas-cerca-santiago"/>
   </url>
 
-  <!-- ARTÍCULO: AEROPUERTO SANTIAGO GUÍA TRANSPORTE - EN 9 IDIOMAS (MAYO 2026) ✅ ABIERTO -->
+  <!-- ARTÍCULO: AEROPUERTO SANTIAGO GUÍA TRANSPORTE - EN 9 IDIOMAS (NOVIEMBRE 2026) ✅ ABIERTO -->
   <url>
     <loc>https://hamburgueseriasenaris.com/es/blog/aeropuerto-santiago-cerrado-alternativas</loc>
-    <lastmod>2026-05-29T00:00:00+02:00</lastmod>
+    <lastmod>2026-11-13T10:00:00+01:00</lastmod>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/blog/aeropuerto-santiago-cerrado-alternativas"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/blog/santiago-airport-closed-alternatives"/>
@@ -526,6 +526,23 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/blog/fair-price-burger-santiago"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/blog/fair-price-burger-santiago"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/blog/precio-justo-hamburguesa-santiago"/>
+  </url>
+
+  <!-- ARTÍCULO: PULPO A LA GALLEGA / GALICIAN OCTOPUS - 9 IDIOMAS (13 NOVIEMBRE 2026) 🆕 -->
+  <url>
+    <loc>https://hamburgueseriasenaris.com/es/blog/pulpo-a-feira</loc>
+    <lastmod>2026-11-13T10:00:00+01:00</lastmod>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hamburgueseriasenaris.com/es/blog/pulpo-a-feira"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hamburgueseriasenaris.com/en/blog/galician-octopus-recipe"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hamburgueseriasenaris.com/fr/blog/poulpe-a-la-galicienne"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hamburgueseriasenaris.com/de/blog/galizischer-oktopus"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://hamburgueseriasenaris.com/it/blog/polpo-alla-galiziana"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://hamburgueseriasenaris.com/pt/blog/polvo-a-galega"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hamburgueseriasenaris.com/ja/blog/galician-octopus-recipe-jp"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://hamburgueseriasenaris.com/zh/blog/galician-octopus-recipe-cn"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hamburgueseriasenaris.com/ko/blog/galician-octopus-recipe-kr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hamburgueseriasenaris.com/es/blog/pulpo-a-feira"/>
   </url>
 
   <!-- ARTÍCULO: CALOR SANTIAGO PEREGRINOS - GUÍA DE CALOR (9 IDIOMAS - 26 JUNIO 2026) 🆕 -->
